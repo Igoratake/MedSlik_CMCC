@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-10T14:14:03.589Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="s9xQ_E8QZJei3LUqH3qZ" version="22.0.3" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-10T14:23:14.833Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="uqIeUFM88j3J39ftbLm_" version="22.0.3" type="github">
   <diagram name="Page-1" id="GoSRVR4qmbdzTxvfHTVG">
     <mxGraphModel dx="2639" dy="1066" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -419,6 +419,9 @@
         <mxCell id="dbq1p6qKIH94W6vMfUMa-69" value="Stokes drift&lt;br&gt;(jonswap)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="2874" y="3650" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-158" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-70" target="dbq1p6qKIH94W6vMfUMa-157">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-70" value="Sea surface temperature" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="2874" y="3730" width="120" height="60" as="geometry" />
         </mxCell>
@@ -551,12 +554,15 @@
         <mxCell id="dbq1p6qKIH94W6vMfUMa-109" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;Model Loop&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="1930" y="3140" width="1520" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-116" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=6;" edge="1" parent="1" target="dbq1p6qKIH94W6vMfUMa-93">
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-116" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=6;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="dbq1p6qKIH94W6vMfUMa-93">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="3045.9993983451186" y="5105" as="sourcePoint" />
+            <mxPoint x="3170" y="4110" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="3334" y="5104.900000000001" />
-              <mxPoint x="3334" y="4129.900000000001" />
+              <mxPoint x="3334" y="5105" />
+              <mxPoint x="3334" y="4180" />
+              <mxPoint x="3110" y="4180" />
+              <mxPoint x="3110" y="4171" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -604,10 +610,21 @@
         <mxCell id="dbq1p6qKIH94W6vMfUMa-149" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-132" target="dbq1p6qKIH94W6vMfUMa-66">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-132" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;fctscur_1hr&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;constructs current field in case of HOURLY forecast data.&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;time = current time in hours after 0 hrs on date of spill&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#432D57;fillColor=#76608a;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2380" y="3488" width="250" height="80" as="geometry" />
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-154" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-132" target="dbq1p6qKIH94W6vMfUMa-70">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-147" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-137" target="dbq1p6qKIH94W6vMfUMa-139">
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-159" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-132" target="dbq1p6qKIH94W6vMfUMa-139">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2505" y="3490" />
+              <mxPoint x="2199" y="3490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-132" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;fctscur_1hr&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;constructs current field in case of HOURLY forecast data.&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;time = current time in hours after 0 hrs on date of spill&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#432D57;fillColor=#76608a;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="2380" y="3510" width="250" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-160" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-137" target="dbq1p6qKIH94W6vMfUMa-139">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-137" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;interpol&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;interpolate an array to the medslik grid - dble precision&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#B20000;fillColor=#e51400;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
@@ -617,7 +634,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-139" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px; background-color: initial;&quot;&gt;readfctscur_1hr&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;read forecast hourly current data and interpolate to Medslik grid&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#432D57;fillColor=#76608a;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2074" y="3488" width="250" height="81" as="geometry" />
+          <mxGeometry x="2074" y="3510" width="250" height="81" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-140" value="&lt;font size=&quot;1&quot; style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 22px;&quot;&gt;Currents&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#76608a;strokeColor=#432D57;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="2074" y="3391" width="520" height="76" as="geometry" />
@@ -629,11 +646,14 @@
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="2670" y="3806" />
-              <mxPoint x="2670" y="3765" />
-              <mxPoint x="2790" y="3765" />
+              <mxPoint x="2670" y="3710" />
+              <mxPoint x="2790" y="3710" />
               <mxPoint x="2790" y="3505" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-161" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-142" target="dbq1p6qKIH94W6vMfUMa-143">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-142" value="&lt;h1&gt;ski_ecmwf_wind&lt;br&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;constructs wind velocity field in case of forecast wind&lt;/div&gt;&lt;div&gt;c&amp;nbsp; &amp;nbsp; &amp;nbsp;(winx,winy) = forecast wind velocity at grid point (m,n)&lt;/div&gt;&lt;div&gt;c&amp;nbsp; &amp;nbsp; &amp;nbsp;(dwinx,dwiny) = increment per time step&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#2D7600;fillColor=#60a917;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="2358.5" y="3740" width="250" height="131" as="geometry" />
@@ -647,6 +667,9 @@
         <mxCell id="dbq1p6qKIH94W6vMfUMa-144" value="&lt;font size=&quot;1&quot; style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 22px;&quot;&gt;Winds&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="2079.5" y="3605" width="509" height="74" as="geometry" />
         </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-156" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-145" target="dbq1p6qKIH94W6vMfUMa-155">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-145" value="Select depth to use currents" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="2874" y="3399" width="120" height="60" as="geometry" />
         </mxCell>
@@ -657,9 +680,7 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="2850" y="3880" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="2016" y="3642" />
-              <mxPoint x="2016" y="3700" />
-              <mxPoint x="2030" y="3700" />
+              <mxPoint x="2030" y="3642" />
               <mxPoint x="2030" y="3910" />
               <mxPoint x="2840" y="3910" />
               <mxPoint x="2840" y="3680" />
@@ -668,6 +689,12 @@
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-152" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;calcfetch&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;iFetch calculation for JONSWAP formulation&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#B20000;fillColor=#e51400;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="1748" y="3602" width="248" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-155" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Uses only one layer&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;Code allows to select one among 4 different layers&lt;/div&gt;" style="text;html=1;strokeColor=default;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="3073" y="3360" width="212" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-157" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Different possibilities&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;medslik5.inp defines where SST is read from. Patern is to use fctscur_1hr&lt;/div&gt;" style="text;html=1;strokeColor=default;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="3060" y="3700" width="260" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
