@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-10T14:29:27.684Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="zlTNOBjHb4pEbHUWoMyf" version="22.0.3" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-10T14:37:29.042Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="h2RtnBPi7nr4LLITj9AD" version="22.0.3" type="github">
   <diagram name="Page-1" id="GoSRVR4qmbdzTxvfHTVG">
     <mxGraphModel dx="2639" dy="1066" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -707,20 +707,44 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-169" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-163" target="dbq1p6qKIH94W6vMfUMa-165">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-170" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-163" target="dbq1p6qKIH94W6vMfUMa-166">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-171" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-163" target="dbq1p6qKIH94W6vMfUMa-167">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-175" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-163" target="dbq1p6qKIH94W6vMfUMa-168">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-163" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px; background-color: initial;&quot;&gt;coast&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;reads coastal segment data&lt;/div&gt;&lt;div&gt;c&amp;nbsp; &amp;nbsp; &amp;nbsp;selects those coastal segments that are close enough to spill&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="2338.5" y="4050" width="250" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-165" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px; background-color: initial;&quot;&gt;setcst&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;reads coastal segment data&lt;/div&gt;&lt;div&gt;c&amp;nbsp; &amp;nbsp; &amp;nbsp;selects those coastal segments that are close enough to spill&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2073" y="4050" width="250" height="110" as="geometry" />
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-172" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-165" target="dbq1p6qKIH94W6vMfUMa-163">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-166" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;hlseep&lt;/span&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;reads coastal segment data&lt;/div&gt;&lt;div&gt;c&amp;nbsp; &amp;nbsp; &amp;nbsp;selects those coastal segments that are close enough to spill&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2073" y="4191.8" width="250" height="110" as="geometry" />
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-165" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px; background-color: initial;&quot;&gt;setcst&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;constructs coastal segments from regional map&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="4050" width="250" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-167" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;hlwash&lt;/span&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;reads coastal segment data&lt;/div&gt;&lt;div&gt;c&amp;nbsp; &amp;nbsp; &amp;nbsp;selects those coastal segments that are close enough to spill&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="1748" y="4140" width="250" height="110" as="geometry" />
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-173" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-166" target="dbq1p6qKIH94W6vMfUMa-163">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-168" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;ed&lt;/span&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;reads coastal segment data&lt;/div&gt;&lt;div&gt;c&amp;nbsp; &amp;nbsp; &amp;nbsp;selects those coastal segments that are close enough to spill&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="1748" y="4276.3" width="250" height="110" as="geometry" />
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-166" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;function hlseep&lt;/span&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;half-life for seepage into the beach; beach type = ib. 9 types of beach types&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="4189.2" width="250" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-174" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-167" target="dbq1p6qKIH94W6vMfUMa-163">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-167" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;function hlwash&lt;/span&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;half-life for washing off the beach&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="4319.2" width="250" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-176" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-168" target="dbq1p6qKIH94W6vMfUMa-163">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-168" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;ed&lt;/span&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;computes evaporation probability (eprob) and&lt;/div&gt;&lt;div&gt;dispersion probability (dprob) and emulsification rate&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="4450" width="250" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
