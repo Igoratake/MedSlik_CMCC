@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-10T14:23:14.833Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="uqIeUFM88j3J39ftbLm_" version="22.0.3" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-10T14:29:27.684Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="zlTNOBjHb4pEbHUWoMyf" version="22.0.3" type="github">
   <diagram name="Page-1" id="GoSRVR4qmbdzTxvfHTVG">
     <mxGraphModel dx="2639" dy="1066" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -682,8 +682,8 @@
             <Array as="points">
               <mxPoint x="2030" y="3642" />
               <mxPoint x="2030" y="3910" />
-              <mxPoint x="2840" y="3910" />
-              <mxPoint x="2840" y="3680" />
+              <mxPoint x="2820" y="3910" />
+              <mxPoint x="2820" y="3680" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -695,6 +695,32 @@
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-157" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Different possibilities&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;medslik5.inp defines where SST is read from. Patern is to use fctscur_1hr&lt;/div&gt;" style="text;html=1;strokeColor=default;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="3060" y="3700" width="260" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-162" value="&lt;span style=&quot;font-size: 22px;&quot;&gt;&lt;b&gt;Oil Fate&lt;/b&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;strokeColor=#005700;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="2085" y="3940" width="509" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-164" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-163" target="dbq1p6qKIH94W6vMfUMa-71">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2840" y="4092" />
+              <mxPoint x="2840" y="3850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-163" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px; background-color: initial;&quot;&gt;coast&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;reads coastal segment data&lt;/div&gt;&lt;div&gt;c&amp;nbsp; &amp;nbsp; &amp;nbsp;selects those coastal segments that are close enough to spill&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="2338.5" y="4050" width="250" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-165" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px; background-color: initial;&quot;&gt;setcst&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;reads coastal segment data&lt;/div&gt;&lt;div&gt;c&amp;nbsp; &amp;nbsp; &amp;nbsp;selects those coastal segments that are close enough to spill&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="2073" y="4050" width="250" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-166" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;hlseep&lt;/span&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;reads coastal segment data&lt;/div&gt;&lt;div&gt;c&amp;nbsp; &amp;nbsp; &amp;nbsp;selects those coastal segments that are close enough to spill&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="2073" y="4191.8" width="250" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-167" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;hlwash&lt;/span&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;reads coastal segment data&lt;/div&gt;&lt;div&gt;c&amp;nbsp; &amp;nbsp; &amp;nbsp;selects those coastal segments that are close enough to spill&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1748" y="4140" width="250" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-168" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;ed&lt;/span&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;reads coastal segment data&lt;/div&gt;&lt;div&gt;c&amp;nbsp; &amp;nbsp; &amp;nbsp;selects those coastal segments that are close enough to spill&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1748" y="4276.3" width="250" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
