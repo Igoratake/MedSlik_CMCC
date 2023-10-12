@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-10-12T14:26:55.723Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="WFfOl82DDfr-xr0rIIHN" version="22.0.3" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-12T15:27:30.426Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="sQ8GmB8WvOge5Otq6Ozr" version="22.0.3" type="github">
   <diagram name="Page-1" id="GoSRVR4qmbdzTxvfHTVG">
-    <mxGraphModel dx="3847" dy="1777" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="9887" dy="5330" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -365,77 +365,98 @@
         <mxCell id="dbq1p6qKIH94W6vMfUMa-16" value="&lt;font style=&quot;font-size: 48px;&quot;&gt;&lt;b&gt;MEDSLIK-II&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="-670" y="2840" width="5070" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-110" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-19" target="dbq1p6qKIH94W6vMfUMa-94">
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-264" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-20" target="dbq1p6qKIH94W6vMfUMa-21">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-19" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;START&lt;/b&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="-660" y="3130" width="120" height="80" as="geometry" />
-        </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-20" value="Declare output netcfs&lt;br&gt;(spill_properties_nc)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-426" y="3230" width="120" height="60" as="geometry" />
+          <mxGeometry x="-404" y="3150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-265" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-21" target="dbq1p6qKIH94W6vMfUMa-95">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-21" value="Open Modeel Parameters&lt;br&gt;(config2.txt)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-276" y="3230" width="120" height="60" as="geometry" />
+          <mxGeometry x="-220" y="3149" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-112" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-22" target="dbq1p6qKIH94W6vMfUMa-109">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-22" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;Model declarations, checks and prepare for computation loop&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="-80" y="3140" width="2120" height="60" as="geometry" />
+          <mxGeometry x="-54" y="3015" width="2554" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-267" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-30" target="dbq1p6qKIH94W6vMfUMa-100">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-30" value="&amp;nbsp;model parameter options" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="80" y="3230" width="120" height="60" as="geometry" />
+          <mxGeometry x="110" y="3150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-250" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-49" target="dbq1p6qKIH94W6vMfUMa-51">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-49" value="Inputs from satellite initial conditions" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="884" y="3376" width="120" height="60" as="geometry" />
+          <mxGeometry x="900" y="3281" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-275" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-51" target="dbq1p6qKIH94W6vMfUMa-254">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-51" value="Number of minispill and parcels" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1180" y="3230" width="120" height="60" as="geometry" />
+          <mxGeometry x="1061.5" y="3149" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-277" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-52" target="dbq1p6qKIH94W6vMfUMa-258">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-52" value="Defining oil density" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1320" y="3230" width="120" height="60" as="geometry" />
+          <mxGeometry x="1381.5" y="3149" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-282" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-57" target="dbq1p6qKIH94W6vMfUMa-58">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-57" value="Define thick and thin slick initial states" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1457" y="3231" width="120" height="60" as="geometry" />
+          <mxGeometry x="1851.5" y="3148.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-283" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-58" target="dbq1p6qKIH94W6vMfUMa-60">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-58" value="Initial assignment of minispill properties" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1597" y="3231" width="120" height="60" as="geometry" />
+          <mxGeometry x="2020" y="3148.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-284" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-60" target="dbq1p6qKIH94W6vMfUMa-64">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-60" value="Initial assignment of parcel status" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1743" y="3230" width="120" height="60" as="geometry" />
+          <mxGeometry x="2196" y="3148.5" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-64" value="Adding conditions to netcdf output flie" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1883" y="3230" width="120" height="60" as="geometry" />
+          <mxGeometry x="2372" y="3148.5" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-66" value="Compute currents" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3534" y="3387" width="120" height="60" as="geometry" />
+          <mxGeometry x="3650" y="3260" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-67" value="Compute wind speed and direction" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3534" y="3543" width="120" height="59" as="geometry" />
+          <mxGeometry x="3650" y="3416" width="120" height="59" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-69" value="Stokes drift&lt;br&gt;(jonswap)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3534" y="3718" width="120" height="60" as="geometry" />
+          <mxGeometry x="3650" y="3591" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-158" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-70" target="dbq1p6qKIH94W6vMfUMa-157">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-70" value="Sea surface temperature" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3534" y="3798" width="120" height="60" as="geometry" />
+          <mxGeometry x="3650" y="3671" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-71" value="Read Coastal segments" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3534" y="3888" width="120" height="60" as="geometry" />
+          <mxGeometry x="3650" y="3761" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-72" value="Release new minispill" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3534" y="3968" width="120" height="60" as="geometry" />
+          <mxGeometry x="3650" y="3841" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-74" value="Evaporating and dispersed particles" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3542" y="4405" width="120" height="60" as="geometry" />
+          <mxGeometry x="3999.5" y="4344.6" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-76" value="Displace and transform lagrangian parcels" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3570" y="4815" width="120" height="59" as="geometry" />
+          <mxGeometry x="4012" y="4746" width="120" height="59" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-77" value="advection displacement" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3570" y="5105" width="120" height="60" as="geometry" />
+          <mxGeometry x="4012" y="5036" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-210" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-78" target="dbq1p6qKIH94W6vMfUMa-206">
           <mxGeometry relative="1" as="geometry" />
@@ -447,76 +468,84 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-78" value="check if beached parcels are released" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3570" y="5295" width="120" height="60" as="geometry" />
+          <mxGeometry x="4012" y="5226" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-79" value="check if hits coast" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3570" y="5885" width="120" height="60" as="geometry" />
+          <mxGeometry x="4012" y="5816" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-82" value="vertical diffusion" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3570" y="5965" width="120" height="60" as="geometry" />
+          <mxGeometry x="4012" y="5896" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-83" value="Count heavy and light fractions left in mini spill" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3570" y="6045" width="120" height="60" as="geometry" />
+          <mxGeometry x="4012" y="5976" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-86" value="Print spill output" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3570" y="6355" width="120" height="60" as="geometry" />
+          <mxGeometry x="4012" y="6286" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-87" value="Write to netcdf" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3570" y="6435" width="120" height="60" as="geometry" />
+          <mxGeometry x="4012" y="6366" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-88" value="Write fate values" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3570" y="6515" width="120" height="60" as="geometry" />
+          <mxGeometry x="4012" y="6446" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-89" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;END&lt;br&gt;OF&lt;br&gt;SIMULATION&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="4200" y="3080" width="210" height="150" as="geometry" />
+          <mxGeometry x="4248" y="2910" width="210" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-290" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-92" target="dbq1p6qKIH94W6vMfUMa-66">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-92" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;Start Calculation Loop&lt;/b&gt;&lt;/font&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="3508" y="3287" width="177" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-93" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;Start mini spill loop&lt;/b&gt;&lt;/font&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="3534" y="4094.2" width="167" height="80" as="geometry" />
+          <mxGeometry x="3310" y="3110" width="380" height="120" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-94" target="dbq1p6qKIH94W6vMfUMa-22">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-94" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;Initial declarations&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="-430" y="3140" width="280" height="60" as="geometry" />
+          <mxGeometry x="-404" y="3015" width="280" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-95" value="Declaring Model dimensions" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-80" y="3230" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-100" value="Check environmental fiels" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="250" y="3230" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-105" value="" style="group;fillColor=default;fontColor=#333333;strokeColor=#666666;container=0;" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="-361" y="3391" width="290" height="280" as="geometry" />
-        </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-109" target="dbq1p6qKIH94W6vMfUMa-89">
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-266" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-95" target="dbq1p6qKIH94W6vMfUMa-30">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-95" value="Declaring Model dimensions" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="3150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-268" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-100" target="dbq1p6qKIH94W6vMfUMa-125">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-100" value="Check environmental fiels" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="3150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-109">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="4224" y="2980" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-109" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;Model Loop&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="2590" y="3125" width="1520" height="60" as="geometry" />
+          <mxGeometry x="3308" y="2965" width="825" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-114" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;END&lt;br&gt;MINI SPILL&lt;br&gt;INSTANCE&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="2618" y="5435" width="182" height="110" as="geometry" />
+          <mxGeometry x="4580" y="6559" width="182" height="110" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-115" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;END&lt;br&gt;TIME STEP CALCULATIONS&lt;br&gt;&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="2450" y="5575" width="190" height="120" as="geometry" />
+          <mxGeometry x="4370" y="6780" width="190" height="120" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-122" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;Next Minispill&amp;nbsp;&lt;br&gt;calculations&lt;br&gt;&lt;/b&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="2840" y="5445" width="170" height="109" as="geometry" />
+          <mxGeometry x="4760" y="6650" width="170" height="109" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-123" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;Next time step calculation&lt;br&gt;&lt;/b&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="2728" y="5609.5" width="170" height="109" as="geometry" />
+          <mxGeometry x="4648" y="6814.5" width="170" height="109" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-269" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-125" target="dbq1p6qKIH94W6vMfUMa-245">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-125" value="Grid Checking" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="468.5" y="3229" width="120" height="60" as="geometry" />
+          <mxGeometry x="498.5" y="3149" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-127" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-124" target="dbq1p6qKIH94W6vMfUMa-125">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-129" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;Subroutines and Functions&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="2312" y="3287" width="1092" height="74" as="geometry" />
+          <mxGeometry x="1540" y="3520" width="1680" height="74" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-149" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-132" target="dbq1p6qKIH94W6vMfUMa-66">
           <mxGeometry relative="1" as="geometry" />
@@ -527,37 +556,39 @@
         <mxCell id="dbq1p6qKIH94W6vMfUMa-159" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-132" target="dbq1p6qKIH94W6vMfUMa-139">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="3165" y="3475" />
-              <mxPoint x="2859" y="3475" />
+              <mxPoint x="3085" y="3705.4" />
+              <mxPoint x="2779" y="3705.4" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-132" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;fctscur_1hr&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;constructs current field in case of HOURLY forecast data.&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;time = current time in hours after 0 hrs on date of spill&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#432D57;fillColor=#76608a;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="3040" y="3495" width="250" height="80" as="geometry" />
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-132" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;fctscur_1hr&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;constructs current field in case of HOURLY forecast data.&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;time = current time in hours after 0 hrs on date of spill&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#001DBC;fillColor=#0050ef;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="2960" y="3725.4" width="250" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-160" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-137" target="dbq1p6qKIH94W6vMfUMa-139">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-160" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-137" target="dbq1p6qKIH94W6vMfUMa-139">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2324.000000000002" y="4090.400000000001" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-137" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;interpol&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;interpolate an array to the medslik grid - dble precision&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#B20000;fillColor=#e51400;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2220" y="3936" width="248" height="80" as="geometry" />
+          <mxGeometry x="1971.5" y="3990" width="248" height="80" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-148" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-139" target="dbq1p6qKIH94W6vMfUMa-132">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-139" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px; background-color: initial;&quot;&gt;readfctscur_1hr&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;read forecast hourly current data and interpolate to Medslik grid&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#432D57;fillColor=#76608a;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2734" y="3495" width="250" height="81" as="geometry" />
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-139" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px; background-color: initial;&quot;&gt;readfctscur_1hr&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;read forecast hourly current data and interpolate to Medslik grid&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#001DBC;fillColor=#0050ef;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="2654" y="3725.4" width="250" height="81" as="geometry" />
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-140" value="&lt;font size=&quot;1&quot; style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 22px;&quot;&gt;Currents&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#76608a;strokeColor=#432D57;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2734" y="3376" width="520" height="76" as="geometry" />
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-140" value="&lt;font size=&quot;1&quot; style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 22px;&quot;&gt;Currents&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="2570" y="3617.4" width="650" height="65" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-141" value="&lt;font size=&quot;1&quot; style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 22px;&quot;&gt;Utility&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e51400;strokeColor=#B20000;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="1920" y="3845" width="550" height="74" as="geometry" />
+          <mxGeometry x="1633" y="3894.4" width="634" height="74" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-151" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-142" target="dbq1p6qKIH94W6vMfUMa-67">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="3450" y="3791" />
-              <mxPoint x="3450" y="3573" />
+              <mxPoint x="3450" y="4021" />
+              <mxPoint x="3450" y="3456" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -565,54 +596,53 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-142" value="&lt;h1&gt;ski_ecmwf_wind&lt;br&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;constructs wind velocity field in case of forecast wind&lt;/div&gt;&lt;div&gt;c&amp;nbsp; &amp;nbsp; &amp;nbsp;(winx,winy) = forecast wind velocity at grid point (m,n)&lt;/div&gt;&lt;div&gt;c&amp;nbsp; &amp;nbsp; &amp;nbsp;(dwinx,dwiny) = increment per time step&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#2D7600;fillColor=#60a917;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="3018.5" y="3725" width="250" height="131" as="geometry" />
+          <mxGeometry x="2938.5" y="3955.4" width="250" height="131" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-150" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-143" target="dbq1p6qKIH94W6vMfUMa-142">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-143" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px; background-color: initial;&quot;&gt;readwind&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;read wind forecast data and interpolate to Medslik grid&lt;/div&gt;&lt;div&gt;c&amp;nbsp; &amp;nbsp; &amp;nbsp;optional interpolation also over land points&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#2D7600;fillColor=#60a917;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2728" y="3735" width="250" height="110" as="geometry" />
+          <mxGeometry x="2648" y="3965.4" width="250" height="110" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-144" value="&lt;font size=&quot;1&quot; style=&quot;&quot;&gt;&lt;b style=&quot;font-size: 22px;&quot;&gt;Winds&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2739.5" y="3590" width="509" height="74" as="geometry" />
+          <mxGeometry x="2659.5" y="3820.4" width="509" height="74" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-156" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-145" target="dbq1p6qKIH94W6vMfUMa-155">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-145" value="Select depth to use currents" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3534" y="3467" width="120" height="60" as="geometry" />
+          <mxGeometry x="3650" y="3340" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-146" value="wind-induced drift velocity for the oil parcels" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3534" y="3636" width="120" height="59" as="geometry" />
+          <mxGeometry x="3650" y="3509" width="120" height="59" as="geometry" />
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-153" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-152" target="dbq1p6qKIH94W6vMfUMa-69">
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-153" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-152" target="dbq1p6qKIH94W6vMfUMa-69">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="3510" y="3865" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="2630" y="4079" />
-              <mxPoint x="2630" y="3895" />
-              <mxPoint x="3480" y="3895" />
-              <mxPoint x="3480" y="3748" />
+              <mxPoint x="3480" y="4133" />
+              <mxPoint x="3480" y="3631" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-152" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;calcfetch&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;iFetch calculation for JONSWAP formulation&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#B20000;fillColor=#e51400;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2222" y="4039" width="248" height="80" as="geometry" />
+          <mxGeometry x="1971.5" y="4092" width="248" height="80" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-155" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Uses only one layer&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;Code allows to select one among 4 different layers&lt;/div&gt;" style="text;html=1;strokeColor=default;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="3748" y="3484" width="212" height="90" as="geometry" />
+          <mxGeometry x="3858" y="3335" width="212" height="90" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-157" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Different possibilities&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;medslik5.inp defines where SST is read from. Patern is to use fctscur_1hr&lt;/div&gt;" style="text;html=1;strokeColor=default;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="3720" y="3768" width="260" height="100" as="geometry" />
+          <mxGeometry x="3857" y="3659" width="260" height="100" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-162" value="&lt;span style=&quot;font-size: 22px;&quot;&gt;&lt;b&gt;Oil Fate&lt;/b&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;strokeColor=#005700;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2745" y="3925" width="509" height="74" as="geometry" />
+          <mxGeometry x="2570" y="4155.4" width="640" height="74" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-164" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-163" target="dbq1p6qKIH94W6vMfUMa-71">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
+              <mxPoint x="3044" y="4077" />
               <mxPoint x="3500" y="4077" />
-              <mxPoint x="3500" y="3918" />
+              <mxPoint x="3500" y="3801" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -623,185 +653,211 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-163" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px; background-color: initial;&quot;&gt;coast&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;reads coastal segment data&lt;/div&gt;&lt;div&gt;c&amp;nbsp; &amp;nbsp; &amp;nbsp;selects those coastal segments that are close enough to spill&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2998.5" y="4035" width="250" height="110" as="geometry" />
+          <mxGeometry x="2918.5" y="4265.4" width="250" height="110" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-172" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-165" target="dbq1p6qKIH94W6vMfUMa-163">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-165" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px; background-color: initial;&quot;&gt;setcst&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;constructs coastal segments from regional map&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2680" y="4035" width="250" height="110" as="geometry" />
+          <mxGeometry x="2600" y="4265.4" width="250" height="110" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-173" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-166" target="dbq1p6qKIH94W6vMfUMa-163">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-166" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;function hlseep&lt;/span&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;half-life for seepage into the beach; beach type = ib. 9 types of beach types&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2680" y="4174.2" width="250" height="110" as="geometry" />
+          <mxGeometry x="2600" y="4404.599999999999" width="250" height="110" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-174" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-167" target="dbq1p6qKIH94W6vMfUMa-163">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-167" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;function hlwash&lt;/span&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;half-life for washing off the beach&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2680" y="4304.2" width="250" height="110" as="geometry" />
+          <mxGeometry x="2600" y="4534.599999999999" width="250" height="110" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-177" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-168" target="dbq1p6qKIH94W6vMfUMa-74">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-168" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;ed&lt;/span&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;computes evaporation probability (eprob) and&lt;/div&gt;&lt;div&gt;dispersion probability (dprob) and emulsification rate&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#005700;fillColor=#008a00;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2998.5" y="4205" width="250" height="110" as="geometry" />
+          <mxGeometry x="2918.5" y="4435.4" width="250" height="110" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-178" value="&lt;span style=&quot;font-size: 22px;&quot;&gt;&lt;b&gt;Diffusivity&lt;/b&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e3c800;strokeColor=#B09500;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="2735" y="4465" width="509" height="74" as="geometry" />
+          <mxGeometry x="2570" y="4695.4" width="640" height="74" as="geometry" />
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-187" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-180" target="dbq1p6qKIH94W6vMfUMa-186">
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-187" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-180" target="dbq1p6qKIH94W6vMfUMa-186">
           <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2920" y="4800" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="3450" y="4620" />
-              <mxPoint x="3450" y="4340" />
+              <mxPoint x="3450" y="4850" />
+              <mxPoint x="3450" y="4280" />
+              <mxPoint x="4000" y="4280" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-180" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;smag&lt;/span&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;compute horizontal diffusity from Smagorinsky model&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#B09500;fillColor=#e3c800;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="2874.5" y="4565" width="250" height="110" as="geometry" />
+          <mxGeometry x="2794.5" y="4795.4" width="250" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-200" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-181" target="dbq1p6qKIH94W6vMfUMa-195">
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-200" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-181" target="dbq1p6qKIH94W6vMfUMa-195">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="3130" y="4760" as="sourcePoint" />
-            <mxPoint x="3276.2" y="5024.5" as="targetPoint" />
+            <mxPoint x="3970" y="4970" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="3416" y="4760" />
-              <mxPoint x="3416" y="4995" />
+              <mxPoint x="3416" y="4990" />
+              <mxPoint x="3416" y="4960" />
+              <mxPoint x="3970" y="4960" />
+              <mxPoint x="3970" y="4970" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-181" value="&lt;h1&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;function vertd&lt;/span&gt;&lt;/div&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;computes the mean diffusion step at depth &#39;dep&#39;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#B09500;fillColor=#e3c800;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="2874.5" y="4705" width="250" height="110" as="geometry" />
+          <mxGeometry x="2794.5" y="4935.4" width="250" height="110" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-183" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Calculations for each parcel&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;Loops through all parcels in the oil spill simulation&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="3730" y="4095" width="330" height="100" as="geometry" />
+          <mxGeometry x="4180" y="3880" width="330" height="100" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-184" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Calculations for each time step&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;all physical process are computed and saved for 1 hr time step in Medslik-II&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="3720" y="3277" width="340" height="100" as="geometry" />
+          <mxGeometry x="3796" y="3040" width="340" height="100" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-185" value="Computes centres of the spreading part and the whole minislick" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3557.5" y="4205" width="120" height="60" as="geometry" />
+          <mxGeometry x="3999.5" y="4136" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-186" value="computes&amp;nbsp;Smagorinsky diffusivity at centre of each mini-slick&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3557.5" y="4304.2" width="132.5" height="70.8" as="geometry" />
+          <mxGeometry x="3999.5" y="4235.2" width="132.5" height="70.8" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-188" value="if satellite" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3553.25" y="4525" width="152.5" height="120" as="geometry" />
+          <mxGeometry x="3983.5" y="4467" width="152.5" height="120" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-189" value="aged spill properties" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3744" y="4635" width="120" height="60" as="geometry" />
+          <mxGeometry x="4172" y="4607.8" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-193" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-190" target="dbq1p6qKIH94W6vMfUMa-76">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="2610" y="4203" />
-              <mxPoint x="2610" y="4845" />
-              <mxPoint x="3558" y="4845" />
+              <mxPoint x="2540" y="4256" />
+              <mxPoint x="2540" y="4920" />
+              <mxPoint x="3558" y="4920" />
+              <mxPoint x="3558" y="4776" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-194" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-190" target="dbq1p6qKIH94W6vMfUMa-192">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="2610" y="4203" />
-              <mxPoint x="2610" y="4935" />
+              <mxPoint x="2540" y="4256" />
+              <mxPoint x="2540" y="4920" />
+              <mxPoint x="3920" y="4920" />
+              <mxPoint x="3920" y="4866" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-197" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-190" target="dbq1p6qKIH94W6vMfUMa-195">
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-197" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.007;entryY=0.173;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryPerimeter=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-190" target="dbq1p6qKIH94W6vMfUMa-195">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="2610" y="4203" />
-              <mxPoint x="2610" y="5025" />
+              <mxPoint x="2220" y="4256" />
+              <mxPoint x="2540" y="4256" />
+              <mxPoint x="2540" y="4920" />
+              <mxPoint x="3980" y="4920" />
+              <mxPoint x="3980" y="4936" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-291" value="Text" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dbq1p6qKIH94W6vMfUMa-197">
+          <mxGeometry x="-0.9997" y="9" relative="1" as="geometry">
+            <mxPoint x="-8" y="7" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-205" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-190" target="dbq1p6qKIH94W6vMfUMa-78">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="2610" y="4203" />
-              <mxPoint x="2610" y="5325" />
+              <mxPoint x="2540" y="4256" />
+              <mxPoint x="2540" y="5325" />
+              <mxPoint x="4012" y="5325" />
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-292" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-190" target="dbq1p6qKIH94W6vMfUMa-152">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-190" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;randmedslik&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;function rand computes random numbers between 0.0 and 1.0&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#B20000;fillColor=#e51400;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2220" y="4150" width="248" height="105" as="geometry" />
+          <mxGeometry x="1971.5" y="4227.799999999999" width="248" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-255" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-191" target="dbq1p6qKIH94W6vMfUMa-254">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-257" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-191" target="dbq1p6qKIH94W6vMfUMa-49">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-191" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;seedmedslik&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;calculates an approximately random first seed for rand&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#B20000;fillColor=#e51400;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="1923" y="4215" width="248" height="80" as="geometry" />
+          <mxGeometry x="1674.5" y="4103.599999999999" width="248" height="80" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-192" value="Spreading displacement" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3570" y="4905" width="120" height="59" as="geometry" />
+          <mxGeometry x="4012" y="4836" width="120" height="59" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-195" value="diffusion&lt;br&gt;&amp;nbsp;displacement" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3570" y="4995" width="120" height="59" as="geometry" />
+          <mxGeometry x="4012" y="4926" width="120" height="59" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-196" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Calculations for each parcel&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;Thick slick contains most of the oil&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;since mechanical spreading is stopped after sprdmx = 24 hrs)&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;new parcels randomly &amp;amp; uniformly distributed within initial thick&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;slick radius rtk0. (Thin slick volume is initially v small)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="3730" y="4884.5" width="400" height="100" as="geometry" />
+          <mxGeometry x="4172" y="4815.5" width="400" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-199" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-198">
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-199" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-198">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="3570" y="5055" as="targetPoint" />
+            <mxPoint x="2270" y="4430" as="sourcePoint" />
+            <mxPoint x="3470" y="5055" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="2550" y="4337" />
-              <mxPoint x="2550" y="5055" />
+              <mxPoint x="2450" y="4415" />
+              <mxPoint x="2450" y="5055" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-198" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;intrpl0&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;interpolates values of an array q&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;from grid values to a point (x,y)&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#B20000;fillColor=#e51400;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2222" y="4284.2" width="248" height="105" as="geometry" />
+          <mxGeometry x="1973.5" y="4361.999999999999" width="248" height="105" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-202" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-201" target="dbq1p6qKIH94W6vMfUMa-77">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="2500" y="4478" />
-              <mxPoint x="2500" y="5135" />
+              <mxPoint x="2500" y="4531" />
+              <mxPoint x="2500" y="5066" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-201" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;intrpl&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;interpolates values of an array q from grid&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;values to a point (x,y) taking account of land/water mask&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#B20000;fillColor=#e51400;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2220" y="4425" width="248" height="105" as="geometry" />
+          <mxGeometry x="1971.5" y="4502.799999999999" width="248" height="105" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-203" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Bilinear interpolation&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;compute advective displacements of surface &amp;amp; dispersed parcels&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;include wind drift &amp;amp; correction term from observation(s) of spill&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="3720" y="5085" width="400" height="100" as="geometry" />
+          <mxGeometry x="4162" y="5016" width="400" height="100" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-204" value="displace parcels on surface and dispersed parcels" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3570" y="5195" width="120" height="60" as="geometry" />
+          <mxGeometry x="4012" y="5126" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-214" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-206" target="dbq1p6qKIH94W6vMfUMa-213">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-206" value="sfrac&lt;br&gt;fraction of beached oil seeping into sand per step at &#39;ns&#39;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3384" y="5405" width="142" height="70" as="geometry" />
+          <mxGeometry x="3826" y="5336" width="142" height="70" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-215" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-207">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="3629.5" y="5545" as="targetPoint" />
+            <mxPoint x="4071.5" y="5476" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-207" value="prel&lt;br&gt;probability of beached oil being washed off at &#39;ns&#39;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3565" y="5405" width="129" height="70" as="geometry" />
+          <mxGeometry x="4007" y="5336" width="129" height="70" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-216" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-208" target="dbq1p6qKIH94W6vMfUMa-213">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-208" value="seep&lt;br&gt;volume of oil at the impacted coastal segment &#39;nsg&#39;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3744" y="5405" width="132" height="70" as="geometry" />
+          <mxGeometry x="4186" y="5336" width="132" height="70" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-219" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-213" target="dbq1p6qKIH94W6vMfUMa-218">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-213" value="if booms" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3553.75" y="5535" width="152.5" height="120" as="geometry" />
+          <mxGeometry x="3995.75" y="5466" width="152.5" height="120" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-218" value="hits coast" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3770" y="5655" width="120" height="60" as="geometry" />
+          <mxGeometry x="4212" y="5586" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-220" value="hits coast" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3770" y="5745" width="120" height="60" as="geometry" />
+          <mxGeometry x="4212" y="5676" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-228" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-221" target="dbq1p6qKIH94W6vMfUMa-222">
           <mxGeometry relative="1" as="geometry" />
@@ -822,37 +878,37 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-221" value="Compute totals for output" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3570" y="6135" width="120" height="60" as="geometry" />
+          <mxGeometry x="4012" y="6066" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-222" value="vol of oil stll spreading" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3170" y="6245" width="120" height="60" as="geometry" />
+          <mxGeometry x="3612" y="6176" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-223" value="vol of oil on surface but not spreading" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3326" y="6245" width="120" height="60" as="geometry" />
+          <mxGeometry x="3768" y="6176" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-224" value="vol of oil dispersed" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3485" y="6245" width="120" height="60" as="geometry" />
+          <mxGeometry x="3927" y="6176" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-225" value="vol of oil on the coast but not permanently there" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3648" y="6245" width="120" height="60" as="geometry" />
+          <mxGeometry x="4090" y="6176" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-226" value="vol of oil-water mousse" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3810" y="6245" width="120" height="60" as="geometry" />
+          <mxGeometry x="4252" y="6176" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-227" value="total vol of oil-water mousse incl releasable oil on coast" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3980" y="6245" width="120" height="60" as="geometry" />
+          <mxGeometry x="4422" y="6176" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-234" value="&lt;div&gt;count up and print barrels permanently stuck on coast&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="3570" y="6605" width="120" height="60" as="geometry" />
+          <mxGeometry x="4012" y="6536" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-235" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;Subroutines and Functions&lt;br&gt;in the Code, but not used&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;glass=0;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
-          <mxGeometry x="-600" y="3920.5" width="1092" height="74" as="geometry" />
+          <mxGeometry x="1460" y="5412.25" width="1680" height="74" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-236" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;ll2mer&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;converts latitude, longitude to mer coords&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#B20000;fillColor=#e51400;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="175" y="4160.5" width="248" height="80" as="geometry" />
+          <mxGeometry x="2515" y="5652.25" width="248" height="80" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-237" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;ll2mer&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;onverts mercator metric coords to latitude, longitude&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#B20000;fillColor=#e51400;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="175" y="4030.5" width="248" height="80" as="geometry" />
+          <mxGeometry x="2515" y="5522.25" width="248" height="80" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-239" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-238" target="dbq1p6qKIH94W6vMfUMa-237">
           <mxGeometry relative="1" as="geometry" />
@@ -861,76 +917,142 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-238" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;merparam&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;parameters for mercator metric coords&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#B20000;fillColor=#e51400;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="-132" y="4080.5" width="248" height="80" as="geometry" />
+          <mxGeometry x="2208" y="5572.25" width="248" height="80" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-241" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;hsmoot&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;smooth the bathymetry - slmin = max bottom slope&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#B20000;fillColor=#e51400;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="-514" y="4080.5" width="248" height="80" as="geometry" />
+          <mxGeometry x="1826" y="5572.25" width="248" height="80" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-242" value="&lt;h1&gt;readsstfcts&lt;/h1&gt;&lt;div&gt;read forecast SST data and interpolate to Medslik grid&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#001DBC;fillColor=#0050ef;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="-514" y="4230" width="248" height="80" as="geometry" />
+          <mxGeometry x="1826" y="5721.75" width="248" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-246" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-243" target="dbq1p6qKIH94W6vMfUMa-49">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-256" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-243" target="dbq1p6qKIH94W6vMfUMa-49">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="798" y="3600" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-243" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;readsat&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;reads satellite contour&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#B20000;fillColor=#e51400;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="1923" y="4105" width="248" height="80" as="geometry" />
+          <mxGeometry x="1674.5" y="4227.799999999999" width="248" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-96" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-361" y="3391" width="290" height="280" as="geometry" />
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-248" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-245" target="dbq1p6qKIH94W6vMfUMa-49">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-23" value="Environmental dimensions" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-353.5" y="3411" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-24" value="Oil Slick&lt;br&gt;dimensions" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-203.5" y="3411" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-25" value="common &lt;br&gt;declarations" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-353.5" y="3511" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-26" value="declarations for oil and spill&lt;br&gt;characteristics" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-203.5" y="3511" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-27" value="Declaring netcdf variables and dimensions" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-276" y="3591" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-102" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-5" y="3520" width="290" height="190" as="geometry" />
-        </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-34" value="Physical parameters" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="58" y="3545" width="90" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-35" value="evaporation&lt;br&gt;constants" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="-5" y="3620" width="90" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-36" value="emulsion&lt;br&gt;constants" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="89" y="3620" width="90" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-37" value="dispersion&lt;br&gt;constants" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="165" y="3545" width="90" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-38" value="spreading&lt;br&gt;constants" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="185" y="3620" width="90" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-99" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="175" y="3370" width="270" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-45" value="Current files&amp;nbsp;&lt;br&gt;(.mrc)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="189" y="3390" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-46" value="Wind files&lt;br&gt;(.eri)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="316" y="3390" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-124" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="393.5" y="3507" width="270" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-47" value="Grid parameters and bathymetry&lt;br&gt;(.map)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="405.5" y="3530" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-48" value="Horizontal and vertical diffusion&lt;br&gt;check stability" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="532.5" y="3530" width="120" height="60" as="geometry" />
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-249" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-245" target="dbq1p6qKIH94W6vMfUMa-51">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-245" value="if satellite" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="701.5" y="3210" width="152.5" height="120" as="geometry" />
+          <mxGeometry x="733.5" y="3120" width="152.5" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-251" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Yes&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="809" y="3281" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-252" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;No&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="877" y="3160" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-276" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-254" target="dbq1p6qKIH94W6vMfUMa-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-254" value="Convert volume from tons to barrels" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="3150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-278" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-258" target="dbq1p6qKIH94W6vMfUMa-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-279" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-258" target="dbq1p6qKIH94W6vMfUMa-259">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-258" value="if booms" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1561.5" y="3119" width="152.5" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-281" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-259" target="dbq1p6qKIH94W6vMfUMa-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-259" value="read boom data" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1714" y="3281" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-263" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-261" target="dbq1p6qKIH94W6vMfUMa-94">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-261" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;START&lt;br&gt;OF&lt;br&gt;SIMULATION&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="-670" y="2970" width="210" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-270" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="423" y="3459" width="270" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-124" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="dbq1p6qKIH94W6vMfUMa-270">
+          <mxGeometry width="270" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-47" value="Grid parameters and bathymetry&lt;br&gt;(.map)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="dbq1p6qKIH94W6vMfUMa-270">
+          <mxGeometry x="12" y="23" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-48" value="Horizontal and vertical diffusion&lt;br&gt;check stability" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="dbq1p6qKIH94W6vMfUMa-270">
+          <mxGeometry x="139" y="23" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-271" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="25" y="3496" width="290" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-102" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="dbq1p6qKIH94W6vMfUMa-271">
+          <mxGeometry width="290" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-34" value="Physical parameters" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="dbq1p6qKIH94W6vMfUMa-271">
+          <mxGeometry x="63" y="25" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-35" value="evaporation&lt;br&gt;constants" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="dbq1p6qKIH94W6vMfUMa-271">
+          <mxGeometry y="100" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-36" value="emulsion&lt;br&gt;constants" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="dbq1p6qKIH94W6vMfUMa-271">
+          <mxGeometry x="94" y="100" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-37" value="dispersion&lt;br&gt;constants" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="dbq1p6qKIH94W6vMfUMa-271">
+          <mxGeometry x="170" y="25" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-38" value="spreading&lt;br&gt;constants" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="dbq1p6qKIH94W6vMfUMa-271">
+          <mxGeometry x="190" y="100" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-272" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-329" y="3330" width="290" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-105" value="" style="group;fillColor=default;fontColor=#333333;strokeColor=#666666;container=0;" vertex="1" connectable="0" parent="dbq1p6qKIH94W6vMfUMa-272">
+          <mxGeometry width="290" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-96" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="dbq1p6qKIH94W6vMfUMa-272">
+          <mxGeometry width="290" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-23" value="Environmental dimensions" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="dbq1p6qKIH94W6vMfUMa-272">
+          <mxGeometry x="7.5" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-24" value="Oil Slick&lt;br&gt;dimensions" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="dbq1p6qKIH94W6vMfUMa-272">
+          <mxGeometry x="157.5" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-25" value="common &lt;br&gt;declarations" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="dbq1p6qKIH94W6vMfUMa-272">
+          <mxGeometry x="7.5" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-26" value="declarations for oil and spill&lt;br&gt;characteristics" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="dbq1p6qKIH94W6vMfUMa-272">
+          <mxGeometry x="157.5" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-27" value="Declaring netcdf variables and dimensions" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="dbq1p6qKIH94W6vMfUMa-272">
+          <mxGeometry x="85" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-273" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="205" y="3330" width="270" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-99" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="dbq1p6qKIH94W6vMfUMa-273">
+          <mxGeometry width="270" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-45" value="Current files&amp;nbsp;&lt;br&gt;(.mrc)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="dbq1p6qKIH94W6vMfUMa-273">
+          <mxGeometry x="14" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-46" value="Wind files&lt;br&gt;(.eri)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="dbq1p6qKIH94W6vMfUMa-273">
+          <mxGeometry x="141" y="20" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-289" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-285" target="dbq1p6qKIH94W6vMfUMa-185">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4060" y="4010" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-285" value="&lt;b style=&quot;border-color: var(--border-color); font-size: 20px;&quot;&gt;Start mini spill loop&lt;/b&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="3644" y="3949.9999999999995" width="380" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
