@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-10-16T10:44:44.110Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="GKcmkr5MOY6Ciot9h_60" version="22.0.3" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-16T14:04:38.336Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="q_DNR4Qp0WSm56absm4Q" version="22.0.3" type="github">
   <diagram name="Page-1" id="GoSRVR4qmbdzTxvfHTVG">
-    <mxGraphModel dx="6557" dy="2665" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="12287" dy="5330" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1092,10 +1092,10 @@
           <mxGeometry x="1752" y="6055.25" width="1680" height="74" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-236" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;ll2mer&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;converts latitude, longitude to mer coords&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#B20000;fillColor=#e51400;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2807" y="6295.25" width="248" height="80" as="geometry" />
+          <mxGeometry x="2833" y="6370" width="248" height="80" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-237" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;ll2mer&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;onverts mercator metric coords to latitude, longitude&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#B20000;fillColor=#e51400;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2807" y="6165.25" width="248" height="80" as="geometry" />
+          <mxGeometry x="2833" y="6240" width="248" height="80" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-239" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-238" target="dbq1p6qKIH94W6vMfUMa-237">
           <mxGeometry relative="1" as="geometry" />
@@ -1104,7 +1104,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-238" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;merparam&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;parameters for mercator metric coords&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#B20000;fillColor=#e51400;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="2500" y="6215.25" width="248" height="80" as="geometry" />
+          <mxGeometry x="2526" y="6290" width="248" height="80" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-241" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;hsmoot&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;smooth the bathymetry - slmin = max bottom slope&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=#B20000;fillColor=#e51400;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="2118" y="6215.25" width="248" height="80" as="geometry" />
