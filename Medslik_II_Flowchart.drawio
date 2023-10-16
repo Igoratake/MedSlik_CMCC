@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-10-16T08:52:37.066Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="2FG_L8LP01MkboxTAItk" version="22.0.3" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-16T10:31:51.228Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="9oawZ7IScpekq_YSnaVL" version="22.0.3" type="github">
   <diagram name="Page-1" id="GoSRVR4qmbdzTxvfHTVG">
-    <mxGraphModel dx="4101" dy="1523" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2737" dy="888" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -737,8 +737,8 @@
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="3572" y="4963" />
-              <mxPoint x="3572" y="4843" />
-              <mxPoint x="3792" y="4843" />
+              <mxPoint x="3572" y="4810" />
+              <mxPoint x="3792" y="4810" />
               <mxPoint x="3792" y="4434" />
             </Array>
           </mxGeometry>
@@ -821,7 +821,7 @@
         <mxCell id="dbq1p6qKIH94W6vMfUMa-313" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-185" target="dbq1p6qKIH94W6vMfUMa-186">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="dbq1p6qKIH94W6vMfUMa-185" value="Computes centres of the spreading part and the whole minislick" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-185" value="Computes centre of the spreading part for the whole minislick" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="4371.25" y="4776.8" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-314" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-186" target="dbq1p6qKIH94W6vMfUMa-74">
@@ -1504,6 +1504,18 @@
         </mxCell>
         <mxCell id="dbq1p6qKIH94W6vMfUMa-425" value="&lt;div&gt;plot mass balance&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="3407.25" y="9156" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dbq1p6qKIH94W6vMfUMa-430" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fillColor=#008a00;strokeColor=#005700;" edge="1" parent="1" source="dbq1p6qKIH94W6vMfUMa-168" target="dbq1p6qKIH94W6vMfUMa-185">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="3471" y="4973" as="sourcePoint" />
+            <mxPoint x="3952" y="4444" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="3690" y="5133" />
+              <mxPoint x="3690" y="4853" />
+              <mxPoint x="4270" y="4853" />
+              <mxPoint x="4270" y="4807" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
