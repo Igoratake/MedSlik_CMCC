@@ -1,0 +1,44 @@
+medf           Name of region of Mediterranean Sea in which spill is located
+01   01        Mode (1/0 for oil slick/trajectory simulation); Number of superimposed spills
+0    0         Indicates if simulation is to restart at the given hour
+06 08 2008     Date of Spill
+0951           Hour of Spill
+0000           Duration of Spill (hrs)
+38 14.40       Latitude of Spill (degrees & minutes)
+5 58.84       Longitude of Spill (degrees & minutes)
+out            Three-letter Prefix for Output Filenames
+0036           Length of Simulation (hrs)
+001            Interval for Printing Results to Output File
+70             Indicates water current data from Climatology (0), Forecasts (1-80), User-defined uniform (88) or non-uniform currents (99)
+06             Indicates wind from Climatology (0), MFS water-current Forecasts (1), SKIRON 3-hourly forecasts (4), SKIRON Hourly Forecasts (5) or User-defined in file 'medslik.wnd' (8)
+00             Indicates that the spill positions will/will not (1/0) be corrected in accordance with the file 'medslik.crn'
+000680.00      Spill Rate (units/hr)
+tons           Units for Oil Volume (tons, bbls or cu.m)
+0             Slick Age
+1             0/1 if Satellite Data is used
+West
+22.40          API of Oil
+0.919          Density of Oil
+0.956          Residual Density of Oil
+69.52          Residual Percent of Oil
+95.50          Viscosity of Oil
+15.00          Temperature at which Viscosity determined
+0.184          Vapour Pressure of Oil (bar)
+01             Indicates SST from Climatology (0), MFS water-current Forecasts (1) or User-defined (8)
+00.0           Sea Surface Temperature in case preceding index = 8
+00             Indicates if booms deployed (0 or 1)
+150.0            Spatial resolution (m) of the oil tracer grid
+3
+080805_U.nc 1
+080805_V.nc 1
+080805_T.nc 1
+080806_U.nc 1
+080806_V.nc 1
+080806_T.nc 1
+080807_U.nc 1
+080807_V.nc 1
+080807_T.nc 1
+3
+ecm_080806.ecm 1
+ecm_080807.ecm 1
+ecm_080808.ecm 1

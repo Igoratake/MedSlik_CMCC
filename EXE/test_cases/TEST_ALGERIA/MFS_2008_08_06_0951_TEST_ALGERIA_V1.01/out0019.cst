@@ -1,0 +1,11 @@
+tons of oil on coast
+  19     : Hours after start of spill
+    680. : tons of oil released so far
+  38.240   5.981  : Lat & Long of spill location
+ 150.0    : Pixel size (m) for spill plotting
+  %evap   %srf   %disp    %cst  srf vol  Tot srf vol
+  30.4800  68.9561   0.5639   0.0000   0.13272E+04   0.13272E+04
+     0     : Number of data points
+   Lat      Lon      Lat      Lon        tons/km
+Total tons =        0.000
+ 0       : Number of booms
