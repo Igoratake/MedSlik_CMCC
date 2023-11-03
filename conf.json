@@ -1,0 +1,49 @@
+{
+    "preproc_winds": {
+	"input_folder": "/${INSTALLATION_FOLDER}/MEDSLIK_II_2.01/METOCE_INP/ORIGINAL/MET/",
+	"output_folder": "/${INSTALLATION_FOLDER}/MEDSLIK_II_2.01/METOCE_INP/PREPROC/MET/",
+	"start_date": { "year": 2017, "month": 4, "day": 23 },
+	"end_date": { "year": 2017, "month": 4, "day": 28 },
+	"output_ref_hours": {"start": 0, "end": 24},
+	"input_ref_hours": [0, 6, 12, 18, 24],
+	"grid_corners": {
+	    "xE": -58.0, "xW": -90.0, "yN": 23.0, "yS": 9.0
+	}
+    },
+    "preproc_currents": {
+	"input_folder": "/${INSTALLATION_FOLDER}/MEDSLIK_II_2.01/METOCE_INP/ORIGINAL/OCE/",
+	"output_folder": "/${INSTALLATION_FOLDER}/MEDSLIK_II_2.01/METOCE_INP/PREPROC/OCE/",
+	"start_date": { "year": 2017, "month": 4, "day": 23 },
+	"end_date": { "year": 2017, "month": 4, "day": 29 },
+	"output_ref_hours": {"start": 13, "end": 37},
+	"input_ref_hours": [12, 36, 60],
+	"grid_corners": {
+	    "xE": -60.0, "xW": -70.0, "yN": 15.0, "yS": 5.0
+	}
+    },
+    "preproc_gshhs": {
+	"gshhs_filename": "/${INSTALLATION_FOLDER}/MEDSLIK_II_2.01/DTM_INP/DTM_SRC/gshhs_f.b",
+	"output_dir": "/${INSTALLATION_FOLDER}/MEDSLIK_II_2.01/DTM_INP/",
+	"oce_dir": "/${INSTALLATION_FOLDER}/MEDSLIK_II_2.01/METOCE_INP/PREPROC/OCE"
+    },
+    "preproc_gebco": {
+	"gebco_filename": "/${INSTALLATION_FOLDER}/MEDSLIK_II_2.01/DTM_INP/DTM_SRC/GEBCO_2014_1D.nc",
+	"output_dir": "/${INSTALLATION_FOLDER}/MEDSLIK_II_2.01/DTM_INP/",
+	"oce_dir": "/${INSTALLATION_FOLDER}/MEDSLIK_II_2.01/METOCE_INP/PREPROC/OCE"
+    },
+    "oil_track": {
+	"spill_prop_file": "/${INSTALLATION_FOLDER}/MEDSLIK_II_2.01/OUT/MERCATOR_global_2017_04_24_1300_paria_casestudy/spill_properties.nc",
+	"output_folder": "/${INSTALLATION_FOLDER}/MEDSLIK_II_2.01/OUT/MERCATOR_global_2017_04_24_1300_paria_casestudy/plots",
+	"time_line": {
+	    "start": 0, "end": 120, "increment": 1
+	}
+    },
+    "oil_beached": {
+	"spill_prop_file": "/${INSTALLATION_FOLDER}/MEDSLIK_II_2.01/OUT/MERCATOR_global_2017_04_24_1300_paria_casestudy/spill_properties.nc",
+	"output_folder": "/${INSTALLATION_FOLDER}/MEDSLIK_II_2.01/OUT/MERCATOR_global_2017_04_24_1300_paria_casestudy/plots",
+	"coast_file": "/${INSTALLATION_FOLDER}/MEDSLIK_II_2.01/DTM_INP/vnzl.txt",
+	"time_line": {
+	    "start": 0, "end": 120, "increment": 1
+	}
+    } 
+}
