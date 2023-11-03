@@ -1,0 +1,56 @@
+medf           Name of region of Mediterranean Sea in which spill is located
+01   01        Mode (1/0 for oil slick/trajectory simulation); Number of superimposed spills
+0    0         Indicates if simulation is to restart at the given hour
+24 04 2017     Date of Spill
+1300           Hour of Spill
+0120           Duration of Spill (hrs)
+10 18.880       Latitude of Spill (degrees & minutes)
+-61 -34.800       Longitude of Spill (degrees & minutes)
+out            Three-letter Prefix for Output Filenames
+0120           Length of Simulation (hrs)
+001            Interval for Printing Results to Output File
+74             Indicates water current data from Climatology (0), Forecasts (1-80), User-defined uniform (88) or non-uniform currents (99)
+5             Indicates wind from Climatology (0), MFS water-current Forecasts (1), SKIRON 3-hourly forecasts (4), SKIRON Hourly Forecasts (5) or User-defined in file 'medslik.wnd' (8)
+00             Indicates that the spill positions will/will not (1/0) be corrected in accordance with the file 'medslik.crn'
+00001.50      Spill Rate (units/hr)
+tons           Units for Oil Volume (tons, bbls or cu.m)
+0             Slick Age
+0             0/1 if Satellite Data is used
+Sylvestre
+28.40          API of Oil
+0.885          Density of Oil
+0.928          Residual Density of Oil
+64.16          Residual Percent of Oil
+14.10          Viscosity of Oil
+38.00          Temperature at which Viscosity determined
+0.366          Vapour Pressure of Oil (bar)
+01             Indicates SST from Climatology (0), MFS water-current Forecasts (1) or User-defined (8)
+00.0           Sea Surface Temperature in case preceding index = 8
+00             Indicates if booms deployed (0 or 1)
+150.0            Spatial resolution (m) of the oil tracer grid
+6
+170424_U.nc 1
+170424_V.nc 1
+170424_T.nc 1
+170425_U.nc 1
+170425_V.nc 1
+170425_T.nc 1
+170426_U.nc 1
+170426_V.nc 1
+170426_T.nc 1
+170427_U.nc 1
+170427_V.nc 1
+170427_T.nc 1
+170428_U.nc 1
+170428_V.nc 1
+170428_T.nc 1
+170429_U.nc 1
+170429_V.nc 1
+170429_T.nc 1
+6
+sk1_170424.sk1 1
+sk1_170425.sk1 1
+sk1_170426.sk1 1
+sk1_170427.sk1 1
+sk1_170428.sk1 1
+sk1_170429.sk1 1

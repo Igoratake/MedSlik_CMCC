@@ -1,4 +1,4 @@
-# Medslik-II version 1.02 09/2015
+# Medslik-II version 1.02 07/2018
 
 This version currently has all the files, pre and post processing scripts as in its original releases.
 
@@ -10,30 +10,38 @@ Down below, the instructions to use it are displayed as it was intended to be.
 
 # Quick-start guide
 
-Medslik-II version 1.02 is written in FORTRAN-77/90, with in no machine- dependent elements, so that it can be installed without modifications on most platforms. The architecture currently supported is Linux (tested on Ubuntu 10.04 LTS, Lubuntu 14.04, Debian 7 and Centos 5).
+The currently supported architectures is Linux.
+Software Requirements:
+1. FORTRAN 90/95 compiler (gfortran is fully compatible):
+to Install gfortran
+compiler:
+sudo apt-get install gfortran
+2. NetCDF library.
+sudo apt-get install netcdf-bin
+sudo apt-get install libnetcdf-dev
+Installation
+1. Download the model and put the tarball in your home directory.
+2. Extract the contents of the tarball:
+tar -xvzf MEDSLIK_II_v2.0.tar.gz MEDSLIK_II_v2.0
+3. Open /home/user/MEDSLIK_II_v2.0/EXE/source/compile.sh and give the correct path for your netCDF installation to HOME_MEDSLIK.
 
-The following external libraries are needed in order to run Medslik-II version 1.02:
+4. Now go to /home/user/MEDSLIK_II_v2.0/EXE and compile the code:
+sh source/compile.sh
+5. The model should be compiled now. Two last steps:
+open /home/user/MEDSLIK_II_v2.0/EXE/medslik_II_ens.sh and inform the correct MEDSLIK installation folder (/home/user/MEDSLIK_II_v2.0) to the HOME_MEDSLIK variable
+repeat the same procedure for /home/user/MEDSLIK_II_v2.0/EXE/RUN.sh
+6. You should be now ready to run the test case. Start by extracting the file paria_casestudy.tar.gz
 
-1.MEDSLIK-II requires NetCDF 4.3 fortran libraries or later. Documentation on how to install properly NetCDF4 FORTRAN libraries can be found at http://www.unidata.ucar.edu/netcdf
-2.Documentation on how to install properly PyNGL can be found at
-https: //www.pyngl.ucar.edu/Download/
-3.Documentation on how to install properly PyNIO can be found at https://www.pyngl.ucar.edu/Download/
-A GNU Fortran compiler is needed.
-
-## INSTALLATION
-
-After downloading the version 1.02 code, it is needed to move and extract the gzip compressed tar archive in the chosen installation path:
-
-mv /${DOWNLOAD_FOLDER}/MEDSLIK_II_1.02.tar.gz /${INSTALLATION_FOLDER}
-cd /${INSTALLATION_FOLDER}
-tar -xvzf MEDSLIK_II_1.02.tar.gz
-
-The variables ${DOWNLOAD_FOLDER} and ${INSTALLATION_FOLDER} have to be replaced by the user specific path of the DOWNLOAD and user chosen INSTALLATION folders, respectively. The source code is located inside /${INSTALLATION_FOLDER}/MEDSLIK_II_1.02/SRC directory:
-
-To compile properly the model FORTRAN code, first it is needed to open the compile.sh file with any editor and change the bash variable NETCDF_DIR adding the exact absolute path of the NetCDF libraries installation directory. Once you are sure that the file has execute permission, just run the build process with the following command:
-
-
-./compile.sh
-
-A detailed description of the model and all the steps needed to run a simulation is given in the
-User manual
+7. Copy the input files to your MEDSLIK-II installation
+copy the contents from the oce_files folder into
+/home/user/MEDSLIK_II_v2/DATA/fcst/H3k
+copy the contents from the met_files folder into
+/home/user/MEDSLIK_II_v2/DATA/fcst/SK1
+copy the contents from the bnc_files folder into
+/home/user/MEDSLIK_II_v2/EXE/data
+copy the contents from the xp_files folder into
+/home/user/MEDSLIK_II_v2/EXE
+8. You are ready to launch your simulation:
+go to /home/user/MEDSLIK_II_v2/EXE/
+launch the model: ./RUN.sh
+9. The MEDSLIK-II outputs can be found in /home/user/MEDSLIK_II_v2/EXE/outputs

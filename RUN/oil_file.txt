@@ -1,8 +1,0 @@
-West
-22.40          API of Oil
-0.919          Density of Oil
-0.956          Residual Density of Oil
-69.52          Residual Percent of Oil
-95.50          Viscosity of Oil
-15.00          Temperature at which Viscosity determined
-0.184          Vapour Pressure of Oil (bar)
