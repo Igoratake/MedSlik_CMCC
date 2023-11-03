@@ -1,4 +1,4 @@
-# Medslik-II version 1.02 07/2018
+# Medslik-II version 2.00 07/2018
 
 This version currently has all the files, pre and post processing scripts as in its original releases.
 
