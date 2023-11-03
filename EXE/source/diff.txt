@@ -1,129 +1,0 @@
-							      >	      character outfile_medess*21,ahm*4,text*57								
-	logical ex							      |		logical ex,iexch								
-							      >	         if(icurrents.eq.76)then								
-							      >	      fcstfn((i-1)*24+nt)='medf'//indate(count)(1:6)//ora(1:2								
-							      >	         print *, fcstfn((i-1)*24+nt)								
-							      >	         endif								
-							      >									
-							      >	c------------------------------------------------------------								
-							      >	c START - MEDESS output file - HEADING								
-							      >	c------------------------------------------------------------								
-							      >	      write(a2,'(a2)') '_F'								
-							      >									
-							      >	      if(iyr.ge.2000) write(ay,'(i2.2)') iyr-2000								
-							      >	      if(iyr.lt.2000) write(ay,'(i2.2)') iyr-1900								
-							      >	         write(am,'(i2.2)') imm								
-							      >	         write(ad,'(i2.2)') idd								
-							      >	         write(ahm,'(i4.4)') istart								
-							      >	         write(a3,'(i3.3)') ihrestart								
-							      >	         								
-							      >	         outfile_medess=pref//ay//am//ad//'_'//ahm//a2//'.out								
-							      >	         print *, outfile_medess								
-							      >	         open(93,file = outfile_medess)								
-							      >	         ndefrec = 0								
-							      >									
-							      >	c------------------------------------------------------------								
-							      >	c END - MEDESS output file - HEADING								
-							      >	c------------------------------------------------------------								
-							      >									
-							      >	      								
-	  else if(icurrents.eq.70) then							      |		  else if(icurrents.eq.70.or.icurrents.eq.76) then								
-      if(icurrents.eq.10.or.icurrents.eq.70) write(6,645)							      |	      if(icurrents.eq.10.or.icurrents.eq.70								
-							      >	     &               .or.icurrents.eq.76) write(6,645)								
-      if(icurrents.eq.10.or.icurrents.eq.70) write(90,645)							      |	      if(icurrents.eq.10.or.icurrents.eq.70								
-							      >	     &               .or.icurrents.eq.76) write(90,645)								
-							      >									
-							      |	        xavg_lon=glon(xavg)								
-							      >	        yavg_lat=glat(yavg)								
-							      >									
-							      >	            if (iexch) open(92,file='temp.out')								
-							      >	             n93=0								
-							      >									
-							      >									
-							      >									
-							      >	              if (iexch) then								
-							      >									
-							      >	                 is1=10								
-							      >	                 blon=(blon1+blon2)/2.								
-							      >	                 blat=(blat1+blat2)/2.								
-							      >	                 depth=0.d0								
-							      >	                 cumoil=vcst(nsg)*rbm3								
-							      >	                 thickness=cumoil/dist								
-							      >	                 write(92,683) blat,blon,depth,is1,cumoil,den								
-							      >	                 n93=n93+1								
-							      >									
-							      >	              endif								
-							      >									
-							      >	              if (iexch) then								
-							      >	                      if (j.ne.4) then								
-							      >	                           n93 = n93 + 1								
-							      >	                           if (j.eq.2) then ! surface parcels								
-							      >	                               is1 = 5								
-							      >	c                              depth = 0.								
-							      >	c                               depth = avgdep(mp,np)								
-							      >	                           endif								
-							      >	                           if (j.eq.3) then ! dispersed parce								
-							      >	                               is1 = 1								
-							      >	c                              depth = 0. ! to be modified								
-							      >	c                               depth = avgdep(mp,np)								
-							      >	                           endif								
-							      >	                           cumoil = poll(mp,np)* rbm3 * area!								
-							      >	c                           cumoil = poll(mp,np) * fac11 ! cu								
-							      >	                           thickness = cumoil / area !in micr								
-							      >									
-							      >	                           write(92,683) blat,blon,depth,is1,								
-							      >	     &                                   den(1),vis(1)								
-							      >	c     &                          visco(mp,np)								
-							      >	                      endif								
-							      >	                   endif								
-							      >									
-							      >	     								
-							      >	          if (iexch) then								
-							      >									
-							      >	             write(93,'(a25)')'Spill_num  GC_lat  GC_lon'								
-							      >	             ndefrec = 1								
-							      >	             write(93,681) ndefrec,yavg_lat,xavg_lon								
-							      >	             write(93,'(a78)') 'time   N   %ev   %srf   %em  								
-							      >	     &       '   %cst   %btm   max_visc   min_visc   dens'								
-							      >	             pippo=-99 ! Valori che la specifica MEDESS preve								
-							      >	             								
-							      >	             write(93,682) float(jtime),n93,pcevp,pcsrf,pippo								
-							      >	     &               pcdsp,pccsttot,pippo,vis(1),vis(1),den(1								
-							      >	             write(93,'(a52)') 'Lat   Lon   Dpth   Status'//								
-							      >	     &       '   Volume(m3)   Dens   Visc'								
-							      >									
-							      >	             rewind(92)								
-							      >	             do n=1,n93								
-							      >	                read (92,'(a80)',end=90) empty								
-							      >	                write(93,'(a56)') empty								
-							      >	             enddo								
-							      >	 90          continue								
-							      >	             close(92)								
-							      >									
-							      >	          endif								
-							      >									
-							      >	c 681      format(i4,3x,2f10.5,3x,a21)								
-							      >	 681      format(i5,4x,f8.4,1x,f8.4)								
-							      >	 682      format(f5.1,i7,9f8.2)								
-							      >	c,1x,f5.1)								
-							      >	 683      format(f8.4,f9.4,f8.1,i4,f9.3,f9.1,f9.1)								
-							      >									
-							      >											
-							      >	c         read(72,'(10(F12.8))') alat,alon,(wx1(k),wy1(k),k=1								
-							      >	c          write(6,*) alat,alon,(wx1(k),wy1(k),k=1,nrecs)								
-      common /fcst/ sst(mm,nm),wx(mm,nm),wy(mm,nm),us(mm,nm),							      |	      common /fcst/ sst(mm,nm),us(mm,nm),vs(mm,nm),								
-     &      vs(mm,nm),u10(mm,nm),v10(mm,nm),u30(mm,nm),v30(mm							      |	     &      u10(mm,nm),v10(mm,nm),u30(mm,nm),v30(mm,nm),u120(								
-     &      u120(mm,nm),v120(mm,nm),dsst(mm,nm),dwx(mm,nm),dw							      |	     &      v120(mm,nm),dsst(mm,nm),dus(mm,nm),								
-     &      dusrf(mm,nm),dvsrf(mm,nm),du10(mm,nm),dv10(mm,nm)							      |	     &      dvs(mm,nm),du10(mm,nm),dv10(mm,nm),du30(mm,nm),dv								
-     &    du30(mm,nm),dv30(mm,nm),du120(mm,nm),dv120(mm,nm)  							      |	     &	  du120(mm,nm),dv120(mm,nm)								
-							      <
-							      >	c      common /fcst/ sst(mm,nm),us(mm,nm),vs(mm,nm),								
-							      >	c     &      u10(mm,nm),v10(mm,nm),u30(mm,nm),v30(mm,nm),u120								
-							      >	c     &      v120(mm,nm),dsst(mm,nm),dus(mm,nm),								
-							      >	c     &      dvs(mm,nm),du10(mm,nm),dv10(mm,nm),du30(mm,nm),d								
-							      >	c     &	    du120(mm,nm),dv120(mm,nm)								
-							      >	c     &      ,wx(mm,nm),wy(mm,nm),dwx(mm,nm),dwy(mm,nm)								
-     &      dusrf(mm,nm),dvsrf(mm,nm),du10(mm,nm),dv10(mm,nm)							      |	     &      dus(mm,nm),dvs(mm,nm),du10(mm,nm),dv10(mm,nm),								
-							      >									
-     &.or.icurrents.eq.73.or.icurrents.eq.75.or.icurrents.eq.							      |	     &.or.icurrents.eq.73.or.icurrents.eq.75.or.icurrents.eq.								
-							      >	     &.or.icurrents.eq.76) then								

@@ -1,0 +1,3 @@
+REGION   CURRENTS WIND WAVES 
+MIN_LON_DEGREES     MAX_LON_DEGREES         Min & Max Longitudes
+MIN_LAT_DEGREES     MAX_LAT_DEGREES         Min & Max Latitudes

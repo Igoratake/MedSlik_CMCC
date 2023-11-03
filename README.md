@@ -1,4 +1,4 @@
-## Medslik-II version 1.01 10/2012
+# Medslik-II version 1.02 09/2015
 
 This version currently has all the files, pre and post processing scripts as in its original releases.
 
@@ -9,53 +9,31 @@ Modifying files is adviced to use this version properly.
 Down below, the instructions to use it are displayed as it was intended to be.
 
 # Quick-start guide
-The currently supported architectures is Linux (tested on Ubuntu 10.04 LTS and 11.04 LTS).
-Software Requirements:
-1. FORTRAN 90/95 compiler (gfortran is fully compatible):
-to Install gfortran
-compiler:
-sudo apt-get install gfortran
-2. NetCDF library.
-sudo apt-get install netcdf-bin
-sudo apt-get install libnetcdf-dev
-3. NCL (provided within the model for the visualization).
 
-Installation
-1. Download the model and put the tarball in your home directory.
-The file downloaded will have a different name according to the version.
+Medslik-II version 1.02 is written in FORTRAN-77/90, with in no machine- dependent elements, so that it can be installed without modifications on most platforms. The architecture currently supported is Linux (tested on Ubuntu 10.04 LTS, Lubuntu 14.04, Debian 7 and Centos 5).
 
-2. Uncompress and extract the contents of the tarball.
-tar –xvzf MEDSLIK_II_1.01.tar.gz MEDSLIK_II_1.01
+The following external libraries are needed in order to run Medslik-II version 1.02:
 
-This operation will create and populate the directories MEDSLIK_II_1.01/EXE containing the source
-files and script files and executables for running and visualizing the test case.
-The MEDSLIK_II_1.01 system is composed of six main parts, i.e.:
+1.MEDSLIK-II requires NetCDF 4.3 fortran libraries or later. Documentation on how to install properly NetCDF4 FORTRAN libraries can be found at http://www.unidata.ucar.edu/netcdf
+2.Documentation on how to install properly PyNGL can be found at
+https: //www.pyngl.ucar.edu/Download/
+3.Documentation on how to install properly PyNIO can be found at https://www.pyngl.ucar.edu/Download/
+A GNU Fortran compiler is needed.
 
-source code (directory source);
-input data files (directory data);
-output data files (directory output);
-script files to compile and execute in a Linux operative system;
-visualization software (directory medslik_plots);
-Test Case set-up (directory test_cases).
-3. Enter MEDSLIK_II_1.01 and compile the code. For example:
-cd $HOME/MEDSLIK_II_1.01/EXE
-sh source/compile.sh
+## INSTALLATION
 
-4. At this stage, you need the sample current and wind files.
-Pick up the sample current file Currents
-Pick up the sample wind file Wind
+After downloading the version 1.02 code, it is needed to move and extract the gzip compressed tar archive in the chosen installation path:
 
-5. Unzip and place currents in $HOME/MEDSLIK_II_1.01/DATA/fcst_data/O1h and winds in $HOME/MEDSLIK_II_1.01/DATA/fcst_data/ECM.
+mv /${DOWNLOAD_FOLDER}/MEDSLIK_II_1.02.tar.gz /${INSTALLATION_FOLDER}
+cd /${INSTALLATION_FOLDER}
+tar -xvzf MEDSLIK_II_1.02.tar.gz
 
-6. Copy the Algeria test case input file
-cd $HOME/MEDSLIK_II_1.01/EXE
-cp test_cases/TEST_ALGERIA/medslik_inputfile.txt .
-cp test_cases/TEST_ALGERIA/observation_0808071050.txt .
+The variables ${DOWNLOAD_FOLDER} and ${INSTALLATION_FOLDER} have to be replaced by the user specific path of the DOWNLOAD and user chosen INSTALLATION folders, respectively. The source code is located inside /${INSTALLATION_FOLDER}/MEDSLIK_II_1.02/SRC directory:
 
-7. Now you are ready to run the code. Just type
-./RUN.sh
+To compile properly the model FORTRAN code, first it is needed to open the compile.sh file with any editor and change the bash variable NETCDF_DIR adding the exact absolute path of the NetCDF libraries installation directory. Once you are sure that the file has execute permission, just run the build process with the following command:
 
-The simulation will start and after few minutes in the directory
-$HOME/MEDSLIK_II_1.01/EXE/output/MFS_2008_08_06_0951_TEST_ALGERIA/plots
-you will find the pictures of the initial position of the slick and its predicted position every 6 hours.
-You can also visualize the pictures by opening the file index.html (in the diretory plots) with a web browser.
+
+./compile.sh
+
+A detailed description of the model and all the steps needed to run a simulation is given in the
+User manual
