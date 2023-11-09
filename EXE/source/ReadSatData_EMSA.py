@@ -86,7 +86,7 @@ for i in range(0, n_points0-1,2):
 name="initial" #+year+month+day+hour+minutes 
 
 
-file1=file(name+".txt",'w')
+file1=open(name+".txt",'w')
 file1.writelines(document)
 file1.close()
 
@@ -108,6 +108,6 @@ document2=document2+"step_output "+"001"+"\n"
 #document2=document2+"wind "+winds+"\n"          
 #document2=document2+"currents "+currents+"\n"
 
-file2=file("medslik_sat.inp",'w')
+file2=open("medslik_sat.inp",'w')
 file2.writelines(document2)
 file2.close()

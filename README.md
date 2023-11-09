@@ -1,61 +1,57 @@
-## Medslik-II version 1.01 10/2012
+# [MEDSLIK-II](http://www.medslik-ii.org/index.html) v1.01 (10/2012)
 
-This version currently has all the files, pre and post processing scripts as in its original releases.
+MEDSLIK-II software can be run on GNU/Linux Operative Systems.
+> You can download MEDSLIK-II source code from the [website](http://www.medslik-ii.org/users/login.php), after registering.
 
-Please bear in minf that some of the scripts might be outdated and need older versions in order to be able to run.
+## GET STARTED!
+1. If not done yet, you need to install conda or miniconda, following the instructions on conda [website](https://docs.conda.io/projects/miniconda/en/latest/), with python3.x.
 
-Modifying files is adviced to use this version properly.
-
-Down below, the instructions to use it are displayed as it was intended to be.
-
-# Quick-start guide
-The currently supported architectures is Linux (tested on Ubuntu 10.04 LTS and 11.04 LTS).
-Software Requirements:
-1. FORTRAN 90/95 compiler (gfortran is fully compatible):
-to Install gfortran
-compiler:
-sudo apt-get install gfortran
-2. NetCDF library.
-sudo apt-get install netcdf-bin
-sudo apt-get install libnetcdf-dev
-3. NCL (provided within the model for the visualization).
-
-Installation
-1. Download the model and put the tarball in your home directory.
-The file downloaded will have a different name according to the version.
-
-2. Uncompress and extract the contents of the tarball.
-tar –xvzf MEDSLIK_II_1.01.tar.gz MEDSLIK_II_1.01
-
-This operation will create and populate the directories MEDSLIK_II_1.01/EXE containing the source
-files and script files and executables for running and visualizing the test case.
-The MEDSLIK_II_1.01 system is composed of six main parts, i.e.:
-
-source code (directory source);
-input data files (directory data);
-output data files (directory output);
-script files to compile and execute in a Linux operative system;
-visualization software (directory medslik_plots);
-Test Case set-up (directory test_cases).
-3. Enter MEDSLIK_II_1.01 and compile the code. For example:
-cd $HOME/MEDSLIK_II_1.01/EXE
-sh source/compile.sh
-
-4. At this stage, you need the sample current and wind files.
-Pick up the sample current file Currents
-Pick up the sample wind file Wind
-
-5. Unzip and place currents in $HOME/MEDSLIK_II_1.01/DATA/fcst_data/O1h and winds in $HOME/MEDSLIK_II_1.01/DATA/fcst_data/ECM.
-
-6. Copy the Algeria test case input file
-cd $HOME/MEDSLIK_II_1.01/EXE
+2.  Move the tarball to your home directory. Extract the tarball contents and enter the main folder.
+```
+mv MEDSLIK_II_1.01.tar.gz $HOME
+cd $HOME
+tar –zxvf MEDSLIK_II_1.01.tar.gz MEDSLIK_II_1.01
+cd MEDSLIK_II_1.01
+```
+3. You can install the required libraries and programs through the requirements bash script.
+```
+chmod +x requirements.sh
+sudo ./requirements.sh
+```
+4. Install ncl within a new conda environment and activate it.
+```
+conda create -n mdk1.01 -c conda-forge ncl
+conda activate mdk1.01
+```
+5. Download the _sample currents_ within the forecast data folder.
+```
+cd DATA/fcst_data
+wget http://www.medslik-ii.org/data/O1h.tar.gz
+tar -zxvf O1h.tar.gz O1h
+rm O1h.tar.gz
+```
+6. Download the _sample wind_ within the forecast data folder.
+```
+wget http://www.medslik-ii.org/data/ECM.tar.gz
+tar -zxvf ECM.tar.gz ECM
+rm ECM.tar.gz
+cd ../..
+```
+7. Copy the _Algeria_ test case input file in the execution folder.
+```
+cd EXE
 cp test_cases/TEST_ALGERIA/medslik_inputfile.txt .
 cp test_cases/TEST_ALGERIA/observation_0808071050.txt .
-
-7. Now you are ready to run the code. Just type
+```
+8. Compile the source code and execute.
+```
+sh source/compile.sh
 ./RUN.sh
+```
+9. You can now find the output files in the relative output folder and list them.
+```
+cd output/MFS_2008_08_06_0951_TEST_ALGERIA_V1.01
+ls -l 
+```
 
-The simulation will start and after few minutes in the directory
-$HOME/MEDSLIK_II_1.01/EXE/output/MFS_2008_08_06_0951_TEST_ALGERIA/plots
-you will find the pictures of the initial position of the slick and its predicted position every 6 hours.
-You can also visualize the pictures by opening the file index.html (in the diretory plots) with a web browser.
+# Enjoy!

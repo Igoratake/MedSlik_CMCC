@@ -54,7 +54,7 @@ HOME_MEDSLIK=$HOME/MEDSLIK_II_1.01
 F_DATA=$HOME_MEDSLIK/DATA
 
 source medslik_inputfile.txt
-python read_oil_data.py $OIL "$OIL_TYPE" 
+python3 read_oil_data.py $OIL "$OIL_TYPE" 
 
 
 ###############################################################################
@@ -200,7 +200,7 @@ rm initial0.txt
 if [ "$SAT_DATA" == "YES" ]
 then
 
-python source/ReadSatData_EMSA.py $namefileGML $N_OS
+python3 source/ReadSatData_EMSA.py $namefileGML $N_OS
 
 
 myFile="medslik_sat.inp"
