@@ -1,4 +1,4 @@
-# RUNNING MEDSLIK 1.01
+# RUNNING MEDSLIK-II v1.01
 
 If not done yet, you can install the needed packages following the instructions in the [explanatory file](https://github.com/Igoratake/Medslik-II/tree/medslik_II_1_01/doc/installing_requirements.md).
 
