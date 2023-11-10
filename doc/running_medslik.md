@@ -19,9 +19,10 @@ tar -zxvf "paria_casestudy.tar.gz"
 ```
 4. Copy the input files within the DATA folder and unzip them. Create data folder if it does not exist.
 ```
-mkdir -p ../DATA/fcst/H3k
-cp Users/stage/Downloads/paria_casestudy/oce_files/* ../DATA/fcst/H3k/
-mkdir -p ../DATA/fcst/SK1
+mkdir -p ../DATA/fcst_data/H3k
+cp Users/stage/Downloads/paria_casestudy/oce_files/* ../DATA/fcst_data/H3k/
+mkdir -p ../DATA/fcst_data/SK1
+cp Users/stage/Downloads/paria_casestudy/met_files/* ../DATA/fcst_data/SK1/
 cp Users/stage/Downloads/paria_casestudy/bnc_files/* ../EXE/data/
 cp Users/stage/Downloads/paria_casestudy/xp_files/* ../EXE/
 ```
