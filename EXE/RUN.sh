@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # set where you have placed MEDSLIK_II folder
-HOME_MEDSLIK=/scratch/surf/MEDSLIK_II_v2
+HOME_MEDSLIK=HOME_MEDSLIK=${PWD%/EXE*}
 MEDSLIK=$HOME_MEDSLIK/EXE
 
 # generate update timelog file
