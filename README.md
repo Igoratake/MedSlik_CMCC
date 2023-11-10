@@ -15,12 +15,12 @@ pip install -r pip_requirements.txt
 tar –zxvf MEDSLIK_II_v2.tar.gz MEDSLIK_II_v2
 cd MEDSLIK_II_v2
 ```
-3. You can now run the test case for Medslik II (v1.02).
+3. You can now run the test case for Medslik II (v2.00).
 ```
 chmod +x run_testcase.sh
 sudo ./run_testcase.sh
 ```
 
-For more details about running MEDSLIK-II 1.02 and installing software requirements, please see the [documentation folder](https://github.com/Igoratake/Medslik-II/tree/medslik_II_2_00/doc/).
+For more details about running MEDSLIK-II 2.00 and installing software requirements, please see the [documentation folder](https://github.com/Igoratake/Medslik-II/tree/medslik_II_2_00/doc/).
 
 # Enjoy!

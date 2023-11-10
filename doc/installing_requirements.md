@@ -1,4 +1,4 @@
-# INSTALLING REQUIREMENTS for MEDSLIK-II v1.02
+# INSTALLING REQUIREMENTS for MEDSLIK-II v2.00
 
 1. Install fortran compiler from apt-get.
 ```
