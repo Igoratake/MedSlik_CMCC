@@ -61,7 +61,7 @@ def config1_gen_pointsource(iots_dir, xp_name, api_string, duration_string,\
 	print('Spill coordinates: ')
 	print('Lon: ' + str(lon_deg) + 'deg ' + str(lon_sec) + 'min')
 	print('Lon: ' + str(lat_deg) + 'deg ' + str(lat_sec) + 'min')
-	print lon_deg,lon_sec,lon_mean,lat_mean
+	print (lon_deg,lon_sec,lon_mean,lat_mean)
 
 	# add simulation mame
 	os.system("LC_CTYPE=C && LANG=C sed 's/RUNNAME/" + xp_name + "/' /scratch/work/scripts//templates/config1_pointsource_template_0.txt > " + xp_folder + "/xp_files/config1_template_1.txt")
@@ -106,7 +106,7 @@ def config1_gen_polysource(iots_dir, xp_name, api_string, duration_string,\
 	print('Spill coordinates: ')
 	print('Lon: ' + str(lon_deg) + 'deg ' + str(lon_sec) + 'min')
 	print('Lon: ' + str(lat_deg) + 'deg ' + str(lat_sec) + 'min')
-	print lon_deg,lon_sec,lon_mean,lat_mean
+	print (lon_deg,lon_sec,lon_mean,lat_mean)
 
 	# add simulation mame
 	os.system("LC_CTYPE=C && LANG=C sed 's/RUNNAME/" + xp_name + "/' /scratch/work/scripts//templates/config1_template_0.txt > " + xp_folder + "/xp_files/config1_template_1.txt")
@@ -179,11 +179,11 @@ def get_shp2mdk_parts(sShapeDirectory,xp_folder):
                     string2 = ('S' + str(spill_counter) + 'lat[' + str(counter) + ']=' + str(lats_p[zz]) + '\n')
                     text_file.write(string2)
                     counter = counter + 1
-                    print '**************'
-                    print string1
-                    print string2
-                    print str(spill_counter)
-                    print '**************'
+                    print ('**************')
+                    print (string1)
+                    print (string2)
+                    print (str)(spill_counter)
+                    print ('**************')
                 
                 spill_counter = spill_counter + 1
                 
@@ -200,11 +200,11 @@ def get_shp2mdk_parts(sShapeDirectory,xp_folder):
     sN = numpy.max(lats_p)
     lon_mean = (sW+sE)/2.
     lat_mean = (sS+sN)/2.
-    print 'Location centre of the spill'
-    print lon_mean,lat_mean
-    print 'in degs'
-    print int(lon_mean),int(lat_mean)
-    print 'and minutes'
+    print ('Location centre of the spill')
+    print (lon_mean,lat_mean)
+    print ('in degs')
+    print (int(lon_mean),int(lat_mean))
+    print ('and minutes')
     print (lon_mean-int(lon_mean))*60.,(lat_mean-int(lat_mean))*60.
     
 
@@ -698,7 +698,7 @@ def extract_coastline(x_mod,y_mod,sOutputFile):
 		try:
 			A,cnt=getheader(fid)
 		except:
-			print 'Data extraction process has finished. Slicing...'
+			print ('Data extraction process has finished. Slicing...')
 			break
 
 	#Getting rid of unused rows
@@ -707,7 +707,7 @@ def extract_coastline(x_mod,y_mod,sOutputFile):
 	Area=numpy.delete(Area, (numpy.arange((l+1), Area.size+1)), axis=0)
 	k=numpy.delete( k , ( numpy.arange ( (l+2) , k.size+1)), axis=0)
 
-	print '...Done. Printing it on a txt file...'
+	print ('...Done. Printing it on a txt file...')
 
 	iSegmentLength=numpy.diff(k,n=1,axis=0)
 
@@ -718,7 +718,7 @@ def extract_coastline(x_mod,y_mod,sOutputFile):
 	CoastFile=open(sOutputFile,'w')
 	CoastFile.write("%-4.0f \n" % (IX.size))
 	iTargetSites=[]
-        iTargetSite=numpy.array([0.,0.,0.,0.])
+	iTargetSite=numpy.array([0.,0.,0.,0.])
 
 	# prints coastline data island by island
 
@@ -773,9 +773,9 @@ def interp_gebco(iLatitude, iLongitude, Z, x_mod, y_mod):
 	iLongitudeMin= numpy.min(x_mod)
 	iLongitudeMax= numpy.max(x_mod)
 
-	print 'Cropping bat file for:'
-	print str(iLongitudeMin), str(iLongitudeMax), ' Longitude'
-	print str(iLatitudeMin), str(iLatitudeMax), ' Latitude'
+	print ('Cropping bat file for:')
+	print (str(iLongitudeMin), str(iLongitudeMax), ' Longitude')
+	print (str(iLatitudeMin), str(iLatitudeMax), ' Latitude')
 	# Crop to area of interest
 	iLonIndex=numpy.argwhere((iLongitude>=iLongitudeMin) & (iLongitude<=iLongitudeMax))
 	iLatIndex=numpy.argwhere((iLatitude>=iLatitudeMin) & (iLatitude<=iLatitudeMax))

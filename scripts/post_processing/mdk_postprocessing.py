@@ -18,33 +18,33 @@ with open(sim_folder + '/config1.txt') as f:
 
 # sim_length
 ss = lines[1]
-print ss
+print (ss)
 rr = re.search('=(.*)\n',ss)
 sim_length = int(lines[1][11:15])
 # sim_day
 ss = lines[5]
-print ss
+print (ss)
 rr = re.search('=(.*)\n',ss)
 dd = int(rr.group(1))
 # sim_month
 ss = lines[6]
-print ss
+print (ss)
 rr = re.search('=(.*)\n',ss)
 mm = int(rr.group(1))
 # sim_year
 ss = lines[7]
-print ss
+print (ss)
 rr = re.search('=(.*)\n',ss)
 yy = rr.group(1)
 yy = '20' + yy
 # sim_hora
 ss = lines[8]
-print ss
+print (ss)
 rr = re.search('=(.*)\n',ss)
 hh = int(rr.group(1))
 # sim_minute
 ss = lines[9]
-print ss
+print (ss)
 rr = re.search('=(.*)\n',ss)
 mmin = int(rr.group(1))
 

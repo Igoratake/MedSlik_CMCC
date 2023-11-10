@@ -6,12 +6,12 @@ from datetime import  *
 import pdb
 import sys
 import os
-import re
+import re\
 
 """
 Application:
-    This script has been developed to plot oil concentrations found at the 
-    coast based on MEDSLIK II outputs. The outputs are png figures.
+	This script has been developed to plot oil concentrations found at the 
+	coast based on MEDSLIK II outputs. The outputs are png figures.
 """
 
 def haversine(lon1, lat1, lon2, lat2):
@@ -61,20 +61,20 @@ def dist(point,segments): # x3,y3 is the point
 
 def set_grid(sNcFile,time_line,ds):
 
-    ncfile = netCDF4.Dataset(sNcFile,'r')
+	ncfile = netCDF4.Dataset(sNcFile,'r')
 
-    # variable extraction
-    lats = ncfile.variables['latitude'][time_line,:]
-    lons = ncfile.variables['longitude'][time_line,:]
+	# variable extraction
+	lats = ncfile.variables['latitude'][time_line,:]
+	lons = ncfile.variables['longitude'][time_line,:]
 
-    # generate output grid
-    grid_min_longitude = numpy.min(lons)-ds
-    grid_min_latitude = numpy.min(lats)-ds
-    grid_max_longitude = numpy.max(lons)+ds
-    grid_max_latitude = numpy.max(lats)+ds
-    
-    return grid_min_longitude,grid_max_longitude,grid_min_latitude,grid_max_latitude
-    
+	# generate output grid
+	grid_min_longitude = numpy.min(lons)-ds
+	grid_min_latitude = numpy.min(lats)-ds
+	grid_max_longitude = numpy.max(lons)+ds
+	grid_max_latitude = numpy.max(lats)+ds
+	
+	return grid_min_longitude,grid_max_longitude,grid_min_latitude,grid_max_latitude
+	
 ################################################################################
 # USER INPUTS
 ################################################################################
@@ -90,7 +90,7 @@ sNcFile = (input_folder + '/spill_properties.nc')
 
 # get sim _ info
 with open(input_folder + '/config1.txt') as f:
-    lines = f.readlines()
+	lines = f.readlines()
 
 # sim_length
 ss = lines[1]
@@ -173,20 +173,20 @@ print ("Spill initial location = " + str(x0) + "W ::::: " + str(y0) + "N ")
 if ii==time_line[0]:
 
 	grid_min_longitude,grid_max_longitude,grid_min_latitude,grid_max_latitude = set_grid(sNcFile,time_line,grid_resolution)
-    	
-    	print('MEDSLIK-II grid boundaries')
-    	print('')
-    	print('LatMin: ',grid_min_latitude)
-    	print('LatMax: ',grid_max_latitude)
-    	print('LonMin: ',grid_min_longitude)
-    	print('LonMax: ',grid_max_longitude)
-    	
-        m = Basemap(llcrnrlon=grid_min_longitude,llcrnrlat=grid_min_latitude,\
-            urcrnrlon=grid_max_longitude,urcrnrlat=grid_max_latitude,\
-            rsphere=(6378137.00,6356752.3142),\
-            resolution='f',projection='merc',\
-            lat_0=(grid_max_latitude + grid_min_latitude)/2.,\
-			lon_0=(grid_max_longitude + grid_min_longitude)/2.,epsg=4326)
+		
+	print('MEDSLIK-II grid boundaries')
+	print('')
+	print('LatMin: ',grid_min_latitude)
+	print('LatMax: ',grid_max_latitude)
+	print('LonMin: ',grid_min_longitude)
+	print('LonMax: ',grid_max_longitude)
+	
+	m = Basemap(llcrnrlon=grid_min_longitude,llcrnrlat=grid_min_latitude,\
+		urcrnrlon=grid_max_longitude,urcrnrlat=grid_max_latitude,\
+		rsphere=(6378137.00,6356752.3142),\
+		resolution='f',projection='merc',\
+		lat_0=(grid_max_latitude + grid_min_latitude)/2.,\
+		lon_0=(grid_max_longitude + grid_min_longitude)/2.,epsg=4326)
 			
 #dt = np.max(time_index)
 #max_ds = (dt*.5)/110
@@ -206,108 +206,108 @@ iSegmentLengths=haversine(iTargetSites[:,0],iTargetSites[:,1],iTargetSites[:,2],
 # extract values of interest
 cc = 0
 for ii in time_index:
-    
-    print ('Drawing timestep ' +  '%03d' % (ii+1))
-    
-    #print ('...loading nc file - time step...')    
-    # lon, lat and status for each oil parcel at time step ii
-    lats = ncfile.variables['latitude'][ii,:]
-    lons = ncfile.variables['longitude'][ii,:]
-    particle_status = ncfile.variables['particle_status'][ii,:]
+	
+	print ('Drawing timestep ' +  '%03d' % (ii+1))
+	
+	#print ('...loading nc file - time step...')    
+	# lon, lat and status for each oil parcel at time step ii
+	lats = ncfile.variables['latitude'][ii,:]
+	lons = ncfile.variables['longitude'][ii,:]
+	particle_status = ncfile.variables['particle_status'][ii,:]
 
 
-    #print ('...searching for beached parcels...') 
-    # removing parcels other than beached
-    iNoise=np.argwhere(particle_status >= 0)
-    lats = np.delete(lats, (iNoise), axis=0)
-    lons = np.delete(lons, (iNoise), axis=0)
-    particle_status = np.delete(particle_status, (iNoise), axis=0)
-    iBeaching=(np.transpose(lons),np.transpose(lats),np.transpose(particle_status))
-    
-    # output matrices
-    iAssignedSegment=np.zeros(np.shape(lons)[0])
-    iConcentrationsParcels=np.zeros(len(iTargetSites))
-    iCP=np.zeros(len(iTargetSites))
+	#print ('...searching for beached parcels...') 
+	# removing parcels other than beached
+	iNoise=np.argwhere(particle_status >= 0)
+	lats = np.delete(lats, (iNoise), axis=0)
+	lons = np.delete(lons, (iNoise), axis=0)
+	particle_status = np.delete(particle_status, (iNoise), axis=0)
+	iBeaching=(np.transpose(lons),np.transpose(lats),np.transpose(particle_status))
+	
+	# output matrices
+	iAssignedSegment=np.zeros(np.shape(lons)[0])
+	iConcentrationsParcels=np.zeros(len(iTargetSites))
+	iCP=np.zeros(len(iTargetSites))
 
-    #print ('...assigning parcels to coastal segments...') 
-    # assign a target site to the beached parcels
-    for jj in range(0,np.shape(lons)[0]):
-        iParcelPosition=(iBeaching[0][jj],iBeaching[1][jj])
-        iParcelDistance=dist(iParcelPosition,iTargetSites)
-        iParcelDistance[np.isnan(iParcelDistance)]=9999 # border segments are removed
-        iClosestSegmentDist=np.min(iParcelDistance)
+	#print ('...assigning parcels to coastal segments...') 
+	# assign a target site to the beached parcels
+	for jj in range(0,np.shape(lons)[0]):
+		iParcelPosition=(iBeaching[0][jj],iBeaching[1][jj])
+		iParcelDistance=dist(iParcelPosition,iTargetSites)
+		iParcelDistance[np.isnan(iParcelDistance)]=9999 # border segments are removed
+		iClosestSegmentDist=np.min(iParcelDistance)
 
-        if iClosestSegmentDist<.1/110:
-            if len(np.argwhere(iParcelDistance==iClosestSegmentDist))>1:
-                iAssignedSegment[jj]=np.argwhere(iParcelDistance==iClosestSegmentDist)[0]
+		if iClosestSegmentDist<.1/110:
+			if len(np.argwhere(iParcelDistance==iClosestSegmentDist))>1:
+				iAssignedSegment[jj]=np.argwhere(iParcelDistance==iClosestSegmentDist)[0]
 
-            else:
-                iAssignedSegment[jj]=np.argwhere(iParcelDistance==iClosestSegmentDist)
+			else:
+				iAssignedSegment[jj]=np.argwhere(iParcelDistance==iClosestSegmentDist)
 
-        iObservedOil=((-iBeaching[2][jj])/iSegmentLengths[int(iAssignedSegment[jj])])/barrel2tonnes
-        iCP[int(iAssignedSegment[jj])]=iObservedOil
+		iObservedOil=((-iBeaching[2][jj])/iSegmentLengths[int(iAssignedSegment[jj])])/barrel2tonnes
+		iCP[int(iAssignedSegment[jj])]=iObservedOil
 
 
-    if cc == 0:
+	if cc == 0:
 
-        #print('...starting mapping...')
-        m = Basemap(llcrnrlon=grid_min_longitude,llcrnrlat=grid_min_latitude,\
-            urcrnrlon=grid_max_longitude,urcrnrlat=grid_max_latitude,\
-            rsphere=(6378137.00,6356752.3142),\
-            resolution='f',projection='merc',\
-            lat_0=(grid_max_latitude + grid_min_latitude)/2,\
+		#print('...starting mapping...')
+		m = Basemap(llcrnrlon=grid_min_longitude,llcrnrlat=grid_min_latitude,\
+			urcrnrlon=grid_max_longitude,urcrnrlat=grid_max_latitude,\
+			rsphere=(6378137.00,6356752.3142),\
+			resolution='f',projection='merc',\
+			lat_0=(grid_max_latitude + grid_min_latitude)/2,\
 			lon_0=(grid_max_longitude + grid_min_longitude)/2)     
-        x0,y0 = m(x0,y0)
+		x0,y0 = m(x0,y0)
 
-        
+		
 
-    # Plot coastlines
-    m.drawcoastlines(linewidth=0.05)
-    #m.fillcontinents(alpha=0.1)
-    m.drawmeridians(np.arange(grid_min_longitude,grid_max_longitude,(grid_max_longitude-grid_min_longitude)/4.),labels=[0,0,0,1],color='white',linewidth=0.03,fontsize = 8) # draw parallels
-    m.drawparallels(np.arange(grid_min_latitude,grid_max_latitude,(grid_max_latitude-grid_min_latitude)/4.),labels=[1,0,0,0],color='white',linewidth=0.03,fontsize = 8) # draw meridians
+	# Plot coastlines
+	m.drawcoastlines(linewidth=0.05)
+	#m.fillcontinents(alpha=0.1)
+	m.drawmeridians(np.arange(grid_min_longitude,grid_max_longitude,(grid_max_longitude-grid_min_longitude)/4.),labels=[0,0,0,1],color='white',linewidth=0.03,fontsize = 8) # draw parallels
+	m.drawparallels(np.arange(grid_min_latitude,grid_max_latitude,(grid_max_latitude-grid_min_latitude)/4.),labels=[1,0,0,0],color='white',linewidth=0.03,fontsize = 8) # draw meridians
 
-    # Setting time
-    jday = np.floor(real_time[cc])
-    hh = np.round((real_time[cc]-jday)*24)
-    if hh == 0:
-        full_date = date.fromordinal(int(jday-1))
-        YY = full_date.strftime('%y')
-        mm = full_date.strftime('%m')
-        dd = full_date.strftime('%d')
-        hh = 24
-    else:
-        full_date = date.fromordinal(int(jday))
-        YY = full_date.strftime('%y')
-        mm = full_date.strftime('%m')
-        dd = full_date.strftime('%d')
+	# Setting time
+	jday = np.floor(real_time[cc])
+	hh = np.round((real_time[cc]-jday)*24)
+	if hh == 0:
+		full_date = date.fromordinal(int(jday-1))
+		YY = full_date.strftime('%y')
+		mm = full_date.strftime('%m')
+		dd = full_date.strftime('%d')
+		hh = 24
+	else:
+		full_date = date.fromordinal(int(jday))
+		YY = full_date.strftime('%y')
+		mm = full_date.strftime('%m')
+		dd = full_date.strftime('%d')
 	
 	
-    #print ('...plotting results...') 
-    if len(iCP>0):
-        #pdb.set_trace()	
-        aa=np.argwhere(iCP>0)
-        x_m=(iTargetSites[:,0]+iTargetSites[:,2])/2.
-        y_m=(iTargetSites[:,1]+iTargetSites[:,3])/2.
+	#print ('...plotting results...') 
+	if len(iCP>0):
+		#pdb.set_trace()	
+		aa=np.argwhere(iCP>0)
+		x_m=(iTargetSites[:,0]+iTargetSites[:,2])/2.
+		y_m=(iTargetSites[:,1]+iTargetSites[:,3])/2.
 
-        x_m,y_m=m(x_m,y_m)
-        sorted_concs=np.argsort(iCP)
+		x_m,y_m=m(x_m,y_m)
+		sorted_concs=np.argsort(iCP)
    
-        for ss in sorted_concs:
-            ax1=plt.subplot(111)           
+		for ss in sorted_concs:
+			ax1=plt.subplot(111)           
 
-            if iCP[ss]>0:
-                cs = plt.scatter(x_m[ss],y_m[ss], s=(iCP[ss]/np.max(iCP))*80, c = iCP[ss], vmin = 0.0, vmax = 8,edgecolor='',alpha=0.3,cmap='gist_rainbow')                
-                cbar = m.colorbar(cs,location='bottom',pad=0.2)#pad="5%")
-                cbar.set_label('tons/km')
-                cbar.ax.tick_params(labelsize=4)
+			if iCP[ss]>0:
+				cs = plt.scatter(x_m[ss],y_m[ss], s=(iCP[ss]/np.max(iCP))*80, c = iCP[ss], vmin = 0.0, vmax = 8,edgecolor='',alpha=0.3,cmap='gist_rainbow')                
+				cbar = m.colorbar(cs,location='bottom',pad=0.2)#pad="5%")
+				cbar.set_label('tons/km')
+				cbar.ax.tick_params(labelsize=4)
 
-    m.plot(x0,y0,'k+',markersize=5)
-    plt.title('Beached oil concentrations for '+ dd + '.' + mm + '.20' + YY + ' ' + '%02d' % (hh) + ':' + '%02d' % (iStartMinute) + ' UTC')
-    plt.savefig(output_folder + '/beached_oil_' + '%03d' % (ii+1) + 'h.png',bbox_inches='tight',dpi=300)
-    print('Output has been saved')    
-    plt.close('all')
-    cc = cc + 1      
+	m.plot(x0,y0,'k+',markersize=5)
+	plt.title('Beached oil concentrations for '+ dd + '.' + mm + '.20' + YY + ' ' + '%02d' % (hh) + ':' + '%02d' % (iStartMinute) + ' UTC')
+	plt.savefig(output_folder + '/beached_oil_' + '%03d' % (ii+1) + 'h.png',bbox_inches='tight',dpi=300)
+	print('Output has been saved')    
+	plt.close('all')
+	cc = cc + 1      
 
-    
-    
+	
+	
