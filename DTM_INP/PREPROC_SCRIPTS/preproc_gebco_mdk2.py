@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# Modified by Marco Seracini - Released 08 Nov 2023
 
 # Application:
 # to extract subsets from GEBCO 30'' files and transform it into MEDSLIK-II
@@ -13,11 +14,11 @@ import json
 
 
 # Functions
-# open GEBCO
-def load_gebco(filename):
+# open and crop GEBCO
+def load_interp_gebco(filename, x_mod, y_mod):
 
 	fGEBCO = netCDF4.Dataset(filename)
-	zz=fGEBCO.variables["z"][:]
+	
 	cols, rows = fGEBCO.variables["dimension"]
 	iDs = fGEBCO.variables["spacing"][0]
 
@@ -28,29 +29,30 @@ def load_gebco(filename):
 	iLatitude=np.arange(iNECorner[0],iSWCorner[0],-iDs)
 	iLongitude=np.arange(iNECorner[1],iSWCorner[1],iDs)
 
-	# Reshape bathymetry into m x n matrix
-	
-	a=np.shape(iLongitude)[0]
-	b=np.shape(iLatitude)[0]
-	Z = zz.reshape(b, a)
-	return iLatitude, iLongitude, Z
-
-# crop GEBCO
-def interp_gebco(iLatitude, iLongitude, Z, x_mod, y_mod):
-
 	iLatitudeMin= np.min(y_mod)
 	iLatitudeMax= np.max(y_mod)
 	iLongitudeMin= np.min(x_mod)
 	iLongitudeMax= np.max(x_mod)
 
-	# Crop to area of interest
+    
+    # Crop to area of interest
 	iLonIndex=np.argwhere((iLongitude>=iLongitudeMin) & (iLongitude<=iLongitudeMax))
 	iLatIndex=np.argwhere((iLatitude>=iLatitudeMin) & (iLatitude<=iLatitudeMax))
 
+	Offset=iLatIndex[0]*cols+iLonIndex[0]
+
+	rowsNumber=np.count_nonzero(iLatIndex)
+	colsNumber=np.count_nonzero(iLonIndex)
+
 	x_crop, y_crop = np.meshgrid(iLongitude[iLonIndex],iLatitude[iLatIndex])
-	z_crop = Z[np.min(iLatIndex):(np.max(iLatIndex)+1),np.min(iLonIndex):(np.max(iLonIndex)+1)]
-    	#z_crop[z_crop>0] = 0.
-    
+
+	z_crop = np.empty(shape=(np.max(iLatIndex)-np.min(iLatIndex)+1,np.max(iLonIndex)-np.min(iLonIndex)+1))
+
+
+
+	for i in range(rowsNumber):
+		z_crop[i,:] = fGEBCO.variables["z"][int(Offset+i*cols):int(Offset+i*cols+colsNumber)]
+
 
 	# Generate interpolator
 	y_crop = np.flipud(y_crop)
@@ -63,8 +65,7 @@ def interp_gebco(iLatitude, iLongitude, Z, x_mod, y_mod):
 	z_proc = z_int(y_mod,x_mod)
 
      # Fix orientation 
-	#y_mod = np.flipud(y_mod)
-	#x_mod = np.flipud(x_mod)
+
 	z_proc = np.flipud(z_proc)
     
 	# Convert bathymetry to MDK-II
@@ -142,8 +143,8 @@ else:
 # bugs/errors are expected and, in case you do find one,
 # feel free to send us comments/corrections.
 
-# load GEBCO file
-iLatitude, iLongitude, Z = load_gebco(gebco_filename)
+
+
 
 
 # open an ocean forecast file
@@ -152,8 +153,8 @@ oce_filename = (oce_dir + "/MDK_ocean_170423_T.nc")
 x_mod, y_mod = oce_grid(oce_filename)
 
 
-# extract bathymetry
-mdk_x, mdk_y, mdk_z, c_, r_ = interp_gebco(iLatitude, iLongitude, Z, x_mod, y_mod)
+# load GEBCO file and extract bathymetry
+mdk_x, mdk_y, mdk_z, c_, r_ = load_interp_gebco(gebco_filename, x_mod, y_mod)
 
 # write .bath file
 BathFile=open(output_dir + "vnzl_.bath", "w")
