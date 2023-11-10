@@ -1,11 +1,8 @@
 #!/bin/bash
 
-# Install libraries and programs
-sudo apt-get install gcc -y
-sudo apt-get install gfortran -y
-sudo apt-get install netcdf-bin -y
-sudo apt-get install libnetcdf-dev -y
-sudo apt-get install libnetcdff-dev -y
+# Install libraries and programs.
+chmod +x requirements.sh
+sudo ./requirements.sh
 # Download forecast data: currents (O1h) and winds (ECM).
 cd DATA/fcst_data
 wget http://www.medslik-ii.org/data/O1h.tar.gz
