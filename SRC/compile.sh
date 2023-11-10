@@ -4,7 +4,7 @@ HOME_MEDSLIK=${PWD%/SRC*}
 DIR_SRC=${HOME_MEDSLIK}/SRC
 DIR_EXE=${HOME_MEDSLIK}/EXE
 
-NETCDF_DIR=
+NETCDF_DIR=$HOME/.local/netcdf/netcdf-c-4.9.2/
 
 gfortran  -I${NETCDF_DIR}include -L${NETCDF_DIR}lib  $DIR_SRC/Extract_II.F90 -lnetcdf -lnetcdff -o $DIR_EXE/Extract_II.exe
 

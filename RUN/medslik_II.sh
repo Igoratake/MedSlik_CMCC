@@ -93,7 +93,7 @@ rm files-{oce,met,wav}
 
 
 source ${INP_FILE} 
-python ${EXE_FLDR}/read_oil_data.py $OIL "$OIL_TYPE" 
+python3 ${EXE_FLDR}/read_oil_data.py $OIL "$OIL_TYPE" 
 
 
 #==============================================================================
@@ -288,7 +288,7 @@ fi
 
 if [ "$SAT_DATA" == "YES" ]; then
 
-    python ${EXE_FLDR}/ReadSatData.py $namefileGML $NSLICK
+    python3 ${EXE_FLDR}/ReadSatData.py $namefileGML $NSLICK
 
 fi
 
@@ -785,23 +785,23 @@ if [ $TRACKMODE -eq 0 ]; then
 
    if [ "$SIM_NAME" == "ALGERIA_testcase" ]; then
 
-        python $PLOT_DIR/plot_slick_ALGERIA.py $OUT_DATA/$DIR_output/ ${OUTPUT_NAME}.nc ${wave}
+        python3 $PLOT_DIR/plot_slick_ALGERIA.py $OUT_DATA/$DIR_output/ ${OUTPUT_NAME}.nc ${wave}
 
    elif [ "$SIM_NAME" == "LEBANON_testcase" ]; then
 
-        python $PLOT_DIR/plot_slick_LEBANON.py $OUT_DATA/$DIR_output/ ${OUTPUT_NAME}.nc ${wave}
+        python3 $PLOT_DIR/plot_slick_LEBANON.py $OUT_DATA/$DIR_output/ ${OUTPUT_NAME}.nc ${wave}
 
    elif [ "$SIM_NAME" == "SRG_testcase_eul" ] || [ "$SIM_NAME" == "SRG_testcase_run" ]; then
 
-        python $PLOT_DIR/plot_slick_SRG.py $OUT_DATA/$DIR_output/ ${OUTPUT_NAME}.nc ${wave}
+        python3 $PLOT_DIR/plot_slick_SRG.py $OUT_DATA/$DIR_output/ ${OUTPUT_NAME}.nc ${wave}
 
    else
       
-        python $PLOT_DIR/MEDSLIKII_plot_slick.py $OUT_DATA/$DIR_output/ ${OUTPUT_NAME}.nc ${wave}
+        python3 $PLOT_DIR/MEDSLIKII_plot_slick.py $OUT_DATA/$DIR_output/ ${OUTPUT_NAME}.nc ${wave}
        
    fi
 
-   python $PLOT_DIR/MEDSLIKII_plot_oilfate.py $OUT_DATA/$DIR_output/
+   python3 $PLOT_DIR/MEDSLIKII_plot_oilfate.py $OUT_DATA/$DIR_output/
    mv *.png $OUT_DATA/$DIR_output
 fi
 
@@ -815,7 +815,7 @@ if [ $TRACKMODE -eq 1 ]; then
 
    else
  
-      python $PLOT_DIR/MEDSLIKII_plot_traj.py $OUT_DATA/$DIR_output/ ${OUTPUT_NAME}${year}${month}${day}_${hour}${minutes}_F.trj $SIM_LENGTH 
+      python3 $PLOT_DIR/MEDSLIKII_plot_traj.py $OUT_DATA/$DIR_output/ ${OUTPUT_NAME}${year}${month}${day}_${hour}${minutes}_F.trj $SIM_LENGTH 
       mv trajectory.png $OUT_DATA/$DIR_output
 
    fi

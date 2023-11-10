@@ -63,7 +63,7 @@ def ReadSatData_EMSA_MEDESS(path_image,N_OS) :
 
     name="initial" 
 
-    file1=file(name+".txt",'w')
+    file1=open(name+".txt",'w')
     file1.writelines(document)
     file1.close()
 
