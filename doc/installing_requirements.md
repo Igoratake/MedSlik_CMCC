@@ -1,9 +1,10 @@
 # INSTALLING REQUIREMENTS for MEDSLIK-II v2.01
 
-1. Install fortran compiler from apt-get.
+1. Install fortran compiler and sed program from apt-get.
 ```
 sudo apt-get install gcc
 sudo apt-get install gfortran
+sudo apt-get install sed
 ```
 2. Download NetCDF libraries. You can do that using apt-get.
 ```
@@ -102,11 +103,16 @@ make install
 ```
 sudo apt-get install cdo
 ```
-13. You need to install conda or miniconda with python3.x, following the instructions on conda [website](https://docs.conda.io/projects/miniconda/en/latest/). Then, create a new conda environment and install pip requirements.
+13. You need to install conda or miniconda with python3.x, following the instructions on conda [website](https://docs.conda.io/projects/miniconda/en/latest/). Then, create a new conda environment with pip.
 ```
 conda create --name mdk2.01
 conda activate mdk2.01
 conda install pip
+```
+14. Extract the zip file, enter the medslik folder and install pip requirements.
+```
+tar -zxvf MEDSLIK_II_2.01.zip MEDSLIK_II_2.01
+cd MEDSLIK_II_2.01
 pip install -r pip_requirements.txt
 ```
 You can now run medslik following the steps in the [explanatory file](https://github.com/Igoratake/Medslik-II/tree/medslik_II_2_01/doc/running_medslik.md).

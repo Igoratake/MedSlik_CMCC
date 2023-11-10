@@ -78,8 +78,8 @@ fi
 if [ "$MODEL" == "MRC" ]
 then
 currents=74
-#region=medf
-region=vnzl  ## 2.01 Name of your region: vnzl means Venezuela for paria_casestudy
+#region=vnzl  ## 2.01 Name of your region: vnzl means Venezuela for paria_casestudy, lebn for lebanon
+region=lebn
 fi
 
 if [ "$WIND" == "ERAi" ]

@@ -2,6 +2,7 @@
 
 sudo apt-get install gcc -y
 sudo apt-get install gfortran -y
+sudo apt-get install sed -y
 # Create a .local directory within your home.
 mkdir -p $HOME/.local
 cd $HOME/.local
@@ -70,4 +71,3 @@ cmake .
 make
 make check
 make install
-mkdir -p ./medslik
