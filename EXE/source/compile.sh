@@ -1,5 +1,5 @@
-DIR_EXE=${PWD%/source*}
-DIR_SRC=$PWD
+DIR_EXE=$PWD
+DIR_SRC=${PWD}/source/
 
 NETCDF_DIR=$HOME/.local/netcdf/netcdf-c-4.9.2
 gfortran  -I$NETCDF_DIR/lib  $DIR_SRC/Extract_II.for -lnetcdf -lnetcdff -o $DIR_EXE/Extract_II.exe

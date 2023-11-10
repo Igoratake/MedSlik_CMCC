@@ -1,47 +1,26 @@
-# Medslik-II version 2.00 07/2018
+# [MEDSLIK-II](http://www.medslik-ii.org/index.html) v2.00 (07/2018)
 
-This version currently has all the files, pre and post processing scripts as in its original releases.
+MEDSLIK-II software can be run on GNU/Linux Operative Systems.
+> You can download MEDSLIK-II source code from the [website](http://www.medslik-ii.org/users/login.php), after registering.
 
-Please bear in minf that some of the scripts might be outdated and need older versions in order to be able to run.
+## GET STARTED in 3 STEPS!
+1. You need to install conda or miniconda with python3.x, following the instructions on conda [website](https://docs.conda.io/projects/miniconda/en/latest/). Then, create a new conda environment and install pip requirements.
+```
+conda create --name mdk2.00
+conda activate mdk1.02
+pip install -r pip_requirements.txt
+```
+2. Extract the tarball contents and enter the main software folder.
+```
+tar –zxvf MEDSLIK_II_v2.tar.gz MEDSLIK_II_v2
+cd MEDSLIK_II_v2
+```
+3. You can now run the test case for Medslik II (v1.02).
+```
+chmod +x run_testcase.sh
+sudo ./run_testcase.sh
+```
 
-Modifying files is adviced to use this version properly.
+For more details about running MEDSLIK-II 1.02 and installing software requirements, please see the [documentation folder](https://github.com/Igoratake/Medslik-II/tree/medslik_II_2_00/doc/).
 
-Down below, the instructions to use it are displayed as it was intended to be.
-
-# Quick-start guide
-
-The currently supported architectures is Linux.
-Software Requirements:
-1. FORTRAN 90/95 compiler (gfortran is fully compatible):
-to Install gfortran
-compiler:
-sudo apt-get install gfortran
-2. NetCDF library.
-sudo apt-get install netcdf-bin
-sudo apt-get install libnetcdf-dev
-Installation
-1. Download the model and put the tarball in your home directory.
-2. Extract the contents of the tarball:
-tar -xvzf MEDSLIK_II_v2.0.tar.gz MEDSLIK_II_v2.0
-3. Open /home/user/MEDSLIK_II_v2.0/EXE/source/compile.sh and give the correct path for your netCDF installation to HOME_MEDSLIK.
-
-4. Now go to /home/user/MEDSLIK_II_v2.0/EXE and compile the code:
-sh source/compile.sh
-5. The model should be compiled now. Two last steps:
-open /home/user/MEDSLIK_II_v2.0/EXE/medslik_II_ens.sh and inform the correct MEDSLIK installation folder (/home/user/MEDSLIK_II_v2.0) to the HOME_MEDSLIK variable
-repeat the same procedure for /home/user/MEDSLIK_II_v2.0/EXE/RUN.sh
-6. You should be now ready to run the test case. Start by extracting the file paria_casestudy.tar.gz
-
-7. Copy the input files to your MEDSLIK-II installation
-copy the contents from the oce_files folder into
-/home/user/MEDSLIK_II_v2/DATA/fcst/H3k
-copy the contents from the met_files folder into
-/home/user/MEDSLIK_II_v2/DATA/fcst/SK1
-copy the contents from the bnc_files folder into
-/home/user/MEDSLIK_II_v2/EXE/data
-copy the contents from the xp_files folder into
-/home/user/MEDSLIK_II_v2/EXE
-8. You are ready to launch your simulation:
-go to /home/user/MEDSLIK_II_v2/EXE/
-launch the model: ./RUN.sh
-9. The MEDSLIK-II outputs can be found in /home/user/MEDSLIK_II_v2/EXE/outputs
+# Enjoy!
