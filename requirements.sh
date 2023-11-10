@@ -70,9 +70,3 @@ cmake .
 make
 make check
 make install
-mkdir -p ./medslik
-INSTALLATION_FOLDER=./medslik
-mv MEDSLIK_II_1.02.tar.gz $INSTALLATION_FOLDER
-cd $INSTALLATION_FOLDER
-tar –zxvf MEDSLIK_II_1.01.tar.gz MEDSLIK_II_1.01
-cd MEDSLIK_II_1.01

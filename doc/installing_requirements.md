@@ -101,6 +101,7 @@ make install
 12. You need to install conda or miniconda with python3.x, following the instructions on conda [website](https://docs.conda.io/projects/miniconda/en/latest/). Then, create a new conda environment and install pip requirements.
 ```
 conda create --name mdk2.00
+conda activate mdk2.00
 pip install -r pip_requirements.txt
 ```
 You can now run medslik following the steps in the [explanatory file](https://github.com/Igoratake/Medslik-II/tree/medslik_II_2_00/doc/running_medslik.md).
