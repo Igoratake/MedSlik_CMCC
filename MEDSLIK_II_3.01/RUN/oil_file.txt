@@ -1,8 +1,8 @@
-Sylvestre
-28.40          API of Oil
-0.885          Density of Oil
-0.928          Residual Density of Oil
-64.16          Residual Percent of Oil
-14.10          Viscosity of Oil
-38.00          Temperature at which Viscosity determined
-0.366          Vapour Pressure of Oil (bar)
+Loreto
+34.00          API of Oil
+0.855          Density of Oil
+0.904          Residual Density of Oil
+59.04          Residual Percent of Oil
+8.40          Viscosity of Oil
+27.00          Temperature at which Viscosity determined
+0.374          Vapour Pressure of Oil (bar)
