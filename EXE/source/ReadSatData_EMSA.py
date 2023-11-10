@@ -12,7 +12,7 @@ path_image=sys.argv[1]
 N_OS=sys.argv[2]
 index=int(float(N_OS)-1)
 
-print index
+print(index)
 from xml.dom.minidom import parse
 dom1=parse(path_image)
 #myuid=dom1.getElementsByTagName("prm:OilSpill")[0].getAttribute("uid")
@@ -45,14 +45,14 @@ n_points=str(n_points0/2)
 Lat=coord1[0].split('.')
 Lat_degrees=Lat[0]
 Lat_min=(float(Lat_dec)-float(Lat_degrees))*60
-print Lat_degrees
-print Lat_min
+print(Lat_degrees)
+print(Lat_min)
 
 Lon=coord1[1].split('.')
 Lon_degrees=Lon[0]
 Lon_min=(float(Lon_dec)-float(Lon_degrees))*60
-print Lon_degrees
-print Lon_min
+print(Lon_degrees)
+print(Lon_min)
 
 Area_split=area.split('>')[1].split('<')[0]
 #dens=0.898
@@ -86,7 +86,7 @@ for i in range(0, n_points0-1,2):
 name="initial" #+year+month+day+hour+minutes 
 
 
-file1=file(name+".txt",'w')
+file1=open(name+".txt",'w')
 file1.writelines(document)
 file1.close()
 
@@ -108,6 +108,6 @@ document2=document2+"step_output "+"001"+"\n"
 #document2=document2+"wind "+winds+"\n"          
 #document2=document2+"currents "+currents+"\n"
 
-file2=file("medslik_sat.inp",'w')
+file2=open("medslik_sat.inp",'w')
 file2.writelines(document2)
 file2.close()
