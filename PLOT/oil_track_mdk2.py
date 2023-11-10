@@ -207,11 +207,11 @@ for ii in time_line:
         
     # Plot trajectory
     # m.scatter(x, y, s=5., c=numpy.log(box_plot), vmin=numpy.log(numpy.percentile(box_plot,1)),vmax=numpy.log(numpy.percentile(box_plot,95)), edgecolor='')
-    m.scatter(x, y, s=[1.], c=numpy.log(box_plot), vmin=numpy.log(0.05),vmax=numpy.log(1.0), edgecolor='')
+    m.scatter(x, y, s=[1.], c=numpy.log(box_plot), vmin=numpy.log(0.05),vmax=numpy.log(1.0))
     m.plot(x0,y0,'k+',markersize=5)
     
     # Colorbar setup
-    ticks = numpy.log([0.05, 0.1, 0.5, 1.0])
+    ticks = numpy.log([0.01, 0.05, 0.1, 0.5, 1.0])
     cbar = plt.colorbar(ticks=ticks, format='$%.2f$', orientation='horizontal')
     cbar.ax.set_xticklabels(['0.01','0.05','0.1','0.5','1.0'])    
     cbar.set_label('tons/km2')

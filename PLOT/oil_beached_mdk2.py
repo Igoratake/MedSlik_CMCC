@@ -248,7 +248,7 @@ for ii in time_index:
             ax1=plt.subplot(111)           
 
             if iCP[ss]>0:
-                cs = plt.scatter(x_m[ss],y_m[ss], s=(iCP[ss]/np.max(iCP))*80, c = iCP[ss], vmin = np.percentile(iCP[aa],5), vmax = np.percentile(iCP[aa],95),edgecolor='',alpha=0.3,cmap='gist_rainbow')                
+                cs = plt.scatter(x_m[ss],y_m[ss], s=(iCP[ss]/np.max(iCP))*80, c = iCP[ss], vmin = np.percentile(iCP[aa],5), vmax = np.percentile(iCP[aa],95),alpha=0.3,cmap='gist_rainbow')                
                 cbar = m.colorbar(cs,location='bottom',pad=0.2)#pad="5%")
                 cbar.set_label('tons/km')
 
