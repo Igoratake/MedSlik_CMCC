@@ -38,4 +38,4 @@ cd ../output
 cd output
 ```
 
-For details about running the test cases and more, please see medslik [manual](https://github.com/Igoratake/Medslik-II/blob/medslik_II_1_02/doc/MEDSLIK_II_v2.0_user_manual.pdf).
+For details about running the test cases and more, please see medslik [manual](https://github.com/Igoratake/Medslik-II/blob/medslik_II_2_00/doc/MEDSLIK_II_v2.0_user_manual.pdf).
