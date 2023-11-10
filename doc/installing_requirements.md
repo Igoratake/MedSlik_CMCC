@@ -98,10 +98,15 @@ make
 make check
 make install
 ```
-12. You need to install conda or miniconda with python3.x, following the instructions on conda [website](https://docs.conda.io/projects/miniconda/en/latest/). Then, create a new conda environment and install pip requirements.
+12. You need to install conda or miniconda with python3.x, following the instructions on conda [website](https://docs.conda.io/projects/miniconda/en/latest/). Then, create a new conda environment with pip.
 ```
 conda create --name mdk2.00
 conda activate mdk2.00
+```
+13. Extract the tarball,enter the medslik folder and install pip requirements.
+```
+tar –zxvf MEDSLIK_II_2.01.tar.gz MEDSLIK_II_2.01
+cd MEDSLIK_II_2.01
 pip install -r pip_requirements.txt
 ```
 You can now run medslik following the steps in the [explanatory file](https://github.com/Igoratake/Medslik-II/tree/medslik_II_2_00/doc/running_medslik.md).
