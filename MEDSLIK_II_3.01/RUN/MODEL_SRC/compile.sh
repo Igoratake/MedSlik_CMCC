@@ -9,10 +9,6 @@ DIR_EXE=/users_home/opa/ia19223/Medslik-II/MEDSLIK_II_3.01/RUN
 DIR_SRC=$DIR_EXE/MODEL_SRC
 NETCDF=/juno/opt/spacks/0.20.0/opt/spack/linux-rhel8-icelake/intel-2021.6.0/netcdf-fortran
 
-# compile extract
-echo "ifort -O3 -o $DIR_EXE/Extract_II.exe $DIR_SRC/Extract_II.for -I$NETCDF/4.6.0-5vpiqkqbf5m6prlbpl4gie5rdixzybks/include -L/$NETCDF/4.6.0-5vpiqkqbf5m6prlbpl4gie5rdixzybks/lib   -lnetcdff -lnetcdf -fPIC -shared-intel -mcmodel=large"
-ifort -O3 -o $DIR_EXE/Extract_II.exe $DIR_SRC/Extract_II.for -I$NETCDF/4.6.0-5vpiqkqbf5m6prlbpl4gie5rdixzybks/include -L/$NETCDF/4.6.0-5vpiqkqbf5m6prlbpl4gie5rdixzybks/lib   -lnetcdff -lnetcdf -fPIC -shared-intel -mcmodel=large
-
 # compile jday
 echo "gfortran -o $DIR_EXE/jday $DIR_SRC/jday.f"
 gfortran -o $DIR_EXE/jday $DIR_SRC/jday.f

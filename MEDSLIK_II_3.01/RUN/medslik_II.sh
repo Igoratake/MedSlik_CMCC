@@ -299,7 +299,7 @@ then
    ln -s $FD/$pre_name${DataFc}$tail_name'_U.nc' $FD/${DataFc}'_U.nc'
    echo "${DataFc}_U.nc 1" >> tmp1.tmp
 else
-   echo "${DataFc}_U.nc 0" >> tmp1.tmp
+   echo "${DataFc}_U.nc 1" >> tmp1.tmp
    echo "For this run you need the file" $pre_name${DataFc}$tail_name'_U.nc'
 fi
 
@@ -308,7 +308,7 @@ then
    ln -s $FD/$pre_name${DataFc}$tail_name'_V.nc' $FD/${DataFc}'_V.nc'
    echo "${DataFc}_V.nc 1" >> tmp1.tmp
 else
-   echo "${DataFc}_V.nc 0" >> tmp1.tmp
+   echo "${DataFc}_V.nc 1" >> tmp1.tmp
    echo "For this run you need the file" $pre_name${DataFc}$tail_name'_V.nc'
 fi
 
@@ -317,7 +317,7 @@ then
    ln -s $FD/$pre_name${DataFc}$tail_name'_T.nc' $FD/${DataFc}'_T.nc'
    echo "${DataFc}_T.nc 1" >> tmp1.tmp
 else
-   echo "${DataFc}_T.nc 0" >> tmp1.tmp
+   echo "${DataFc}_T.nc 1" >> tmp1.tmp
    echo "For this run you need the file" $pre_name${DataFc}$tail_name'_T.nc'
 fi
 
@@ -339,7 +339,7 @@ then
    echo "${File_wind} 1" >> tmp2.tmp
    echo $FD_wind_in/${Data_wind}.nc ": File exists"
 else
-   echo "${File_wind} 0" >> tmp2.tmp
+   echo "${File_wind} 1" >> tmp2.tmp
    echo "For this run you need the file" ${Data_wind}.nc
 fi
 
@@ -407,7 +407,7 @@ mkdir ../OUT/$DIR_output
 #7. EXTRACT CURRENTS, WIND AND SST DATA
 #####################################################################
 echo 'READING CURRENTS & WIND DATA'
-./Extract_II.exe $F_DATA
+# ./Extract_II.exe $F_DATA
 ######################################################################
 #8. RUN
 #####################################################################
