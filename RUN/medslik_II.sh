@@ -62,7 +62,7 @@ source config1.txt
 #namefileGML=
 #N_OS=
 #####################
-python read_oil_data.py $OIL "$OIL_TYPE"
+python3 read_oil_data.py $OIL "$OIL_TYPE"
 
 ###############################################################################
 #0.                               OPTIONS
@@ -157,7 +157,7 @@ rm initial0.txt
 if [ "$SAT_DATA" == "YES" ]
 then
 
-python MODEL_SRC/ReadSatData_EMSA.py $namefileGML $N_OS
+python3 MODEL_SRC/ReadSatData_EMSA.py $namefileGML $N_OS
 
 
 myFile="medslik_sat.inp"
