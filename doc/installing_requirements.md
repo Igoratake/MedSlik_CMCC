@@ -1,4 +1,4 @@
-# INSTALLING REQUIREMENTS for MEDSLIK-II v1.02
+# INSTALLING REQUIREMENTS for MEDSLIK-II v2.01
 
 1. Install fortran compiler from apt-get.
 ```
@@ -98,10 +98,15 @@ make
 make check
 make install
 ```
-12. You need to install conda or miniconda with python3.x, following the instructions on conda [website](https://docs.conda.io/projects/miniconda/en/latest/). Then, create a new conda environment and install pip requirements.
+12. Install cdo.
+```
+sudo apt-get install cdo
+```
+13. You need to install conda or miniconda with python3.x, following the instructions on conda [website](https://docs.conda.io/projects/miniconda/en/latest/). Then, create a new conda environment and install pip requirements.
 ```
 conda create --name mdk2.01
 conda activate mdk2.01
+conda install pip
 pip install -r pip_requirements.txt
 ```
 You can now run medslik following the steps in the [explanatory file](https://github.com/Igoratake/Medslik-II/tree/medslik_II_2_01/doc/running_medslik.md).

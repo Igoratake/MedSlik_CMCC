@@ -8,6 +8,7 @@ MEDSLIK-II software can be run on GNU/Linux Operative Systems.
 ```
 conda create --name mdk2.01
 conda activate mdk2.01
+conda install pip
 pip install -r pip_requirements.txt
 ```
 2. Extract the tarball contents and enter the main software folder.
