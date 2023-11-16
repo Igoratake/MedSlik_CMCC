@@ -1,5 +1,5 @@
 SIM_NAME=cook_island
-sim_length=0012   # choose the simulation length (in hours, 4 characters)
+sim_length=0028   # choose the simulation length (in hours, 4 characters)
 
 # insert oil slick data: time and date of observation
 
@@ -7,20 +7,20 @@ day=15
 month=11
 year=23
 hour=11
-minutes=52
+minutes=50
 
 
 # insert oil slick data: coordinate of the center of the slick
 
 lat_degree=-17
-lat_minutes=-34.395
+lat_minutes=-42.336
 lon_degree=-149
-lon_minutes=-11.776
+lon_minutes=-16.650
 
 # insert oil slick data: spill rate, spill duration and age
 
-duration=0000             # spill duration, in hours, 4 characters, if the spill is instantaneous type 0000
-spillrate=01000.00        # spill rate in tons/hours,  if the spill is instantaneous write the total tons spilled
+duration=0005             # spill duration, in hours, 4 characters, if the spill is instantaneous type 0000
+spillrate=00200.00        # spill rate in tons/hours,  if the spill is instantaneous write the total tons spilled
 age=0
 grid_size=150.0         # spatial resolution (m) of the oil tracer grid
 

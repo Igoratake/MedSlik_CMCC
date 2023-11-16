@@ -1,5 +1,5 @@
 SIM_NAME=cook_island
-sim_length=0012   # choose the simulation length (in hours, 4 characters)
+sim_length=0028   # choose the simulation length (in hours, 4 characters)
 
 # insert oil slick data: time and date of observation
 

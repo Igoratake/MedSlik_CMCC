@@ -17,14 +17,17 @@ def generate_coastline_gshhs(gshhs,grid,output_dir):
 	grid = xr.open_dataset(grid)
 
 	# 1 degree buffer to collect more coastline
-	buffer = 1 
-	coordinates = box(grid.lat.min() - buffer,grid.lon.min() - buffer,
-				  	  grid.lat.max() + buffer,grid.lon.max() + buffer)
+	buffer = 1
+	#defining minimum and maximum of coordinates box search 
+	xmin = grid.lon.min() - buffer
+	xmax = grid.lon.max() - buffer
+	ymin = grid.lat.min() - buffer
+	ymax = grid.lat.max() - buffer
 
 	shp = gpd.read_file(gshhs)
 
 	# Cropping to a smaller area
-	shp = shp[shp.intersects(coordinates)]
+	shp = shp.cx[xmin:xmax, ymin:ymax]
 
 	# writes the first line of the .map file. It should contain the # of "isles"
 	CoastFile=open(output_file,'w')
@@ -85,5 +88,5 @@ oce_filename = args.input
 # feel free to send us comments/corrections.
 
 # extract coastline
-output_file = output_dir + "/medf.map"
+output_file = output_dir + "/dtm.map"
 generate_coastline_gshhs(gshhs_filename,oce_filename,output_file)

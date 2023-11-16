@@ -59,7 +59,7 @@ oce_filename = args.input
 mdk_x, mdk_y, mdk_z, llat, llon = interp_gebco(gebco_filename,oce_filename)
 
 # write .bath file
-BathFile=open(output_dir + "medf_.bath", "w")
+BathFile=open(output_dir + "dtm.bath", "w")
 BathFile.write("MEDSLIK-II compatible bathymetry file. Degraded resolution based on GEBCO 30''\n")
 BathFile.write("%-7.4f %-7.4f %-7.4f %-7.4f \n" % (np.min(mdk_x),np.max(mdk_x),np.min(mdk_y),np.max(mdk_y)))
 BathFile.write("%d %d \n" % (llat,llon))

@@ -6,7 +6,7 @@
 -17 -34.395       Latitude of Spill (degrees & minutes)
 -149 -11.776       Longitude of Spill (degrees & minutes)
 out            Three-letter Prefix for Output Filenames
-0012           Length of Simulation (hrs)
+0028           Length of Simulation (hrs)
 001            Interval for Printing Results to Output File
 00             Indicates that the spill positions will/will not (1/0) be corrected in accordance with the file 'medslik.crn'
 01000.00      Spill Rate (units/hr)

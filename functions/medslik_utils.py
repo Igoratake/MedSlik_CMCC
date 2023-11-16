@@ -63,7 +63,7 @@ def validate_date(date):
     '''
 
     try: 
-        dt=datetime.datetime.strptime(date,'%d/%m/%Y')
+        dt=datetime.datetime.strptime(date,'%d/%m/%Y %H:%M')
         if dt > datetime.datetime.today():
             dt = 'Date provided is in the future. No data will be available'               
         
