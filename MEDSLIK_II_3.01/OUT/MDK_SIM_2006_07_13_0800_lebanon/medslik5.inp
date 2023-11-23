@@ -1,0 +1,113 @@
+01   01        Mode (1/0 for oil slick/trajectory simulation); Number of superimposed spills
+0    0         Indicates if simulation is to restart at the given hour
+13 07 2006     Date of Spill
+0800           Hour of Spill
+0144           Duration of Spill (hrs)
+33 41       Latitude of Spill (degrees & minutes)
+35 10       Longitude of Spill (degrees & minutes)
+out            Three-letter Prefix for Output Filenames
+0480           Length of Simulation (hrs)
+001            Interval for Printing Results to Output File
+00             Indicates that the spill positions will/will not (1/0) be corrected in accordance with the file 'medslik.crn'
+130.35      Spill Rate (units/hr)
+tons           Units for Oil Volume (tons, bbls or cu.m)
+0             Slick Age
+0             0/1 if Satellite Data is used
+Ragusa
+19.80          API of Oil
+0.935          Density of Oil
+0.953          Residual Density of Oil
+85.18          Residual Percent of Oil
+277.00          Viscosity of Oil
+38.00          Temperature at which Viscosity determined
+0.250          Vapour Pressure of Oil (bar)
+01             Indicates SST from Climatology (0), MFS water-current Forecasts (1) or User-defined (8)
+00.0           Sea Surface Temperature in case preceding index = 8
+00             Indicates if booms deployed (0 or 1)
+150.0            Spatial resolution (m) of the oil tracer grid
+21
+060713_U.nc 1
+060713_V.nc 1
+060713_T.nc 1
+060714_U.nc 1
+060714_V.nc 1
+060714_T.nc 1
+060715_U.nc 1
+060715_V.nc 1
+060715_T.nc 1
+060716_U.nc 1
+060716_V.nc 1
+060716_T.nc 1
+060717_U.nc 1
+060717_V.nc 1
+060717_T.nc 1
+060718_U.nc 1
+060718_V.nc 1
+060718_T.nc 1
+060719_U.nc 1
+060719_V.nc 1
+060719_T.nc 1
+060720_U.nc 1
+060720_V.nc 1
+060720_T.nc 1
+060721_U.nc 1
+060721_V.nc 1
+060721_T.nc 1
+060722_U.nc 1
+060722_V.nc 1
+060722_T.nc 1
+060723_U.nc 1
+060723_V.nc 1
+060723_T.nc 1
+060724_U.nc 1
+060724_V.nc 1
+060724_T.nc 1
+060725_U.nc 1
+060725_V.nc 1
+060725_T.nc 1
+060726_U.nc 1
+060726_V.nc 1
+060726_T.nc 1
+060727_U.nc 1
+060727_V.nc 1
+060727_T.nc 1
+060728_U.nc 1
+060728_V.nc 1
+060728_T.nc 1
+060729_U.nc 1
+060729_V.nc 1
+060729_T.nc 1
+060730_U.nc 1
+060730_V.nc 1
+060730_T.nc 1
+060731_U.nc 1
+060731_V.nc 1
+060731_T.nc 1
+060801_U.nc 1
+060801_V.nc 1
+060801_T.nc 1
+060802_U.nc 1
+060802_V.nc 1
+060802_T.nc 1
+21
+erai060713.eri 1
+erai060714.eri 1
+erai060715.eri 1
+erai060716.eri 1
+erai060717.eri 1
+erai060718.eri 1
+erai060719.eri 1
+erai060720.eri 1
+erai060721.eri 1
+erai060722.eri 1
+erai060723.eri 1
+erai060724.eri 1
+erai060725.eri 1
+erai060726.eri 1
+erai060727.eri 1
+erai060728.eri 1
+erai060729.eri 1
+erai060730.eri 1
+erai060731.eri 1
+erai060801.eri 1
+erai060802.eri 1

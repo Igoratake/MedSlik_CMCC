@@ -5,7 +5,7 @@ module load  gcc-12.2.0/12.2.0   intel-2021.6.0/2021.6.0  intel-2021.6.0/libszip
 # source ../mdk2.conf
 
 # set folders
-DIR_EXE=/users_home/opa/ia19223/Medslik-II/MEDSLIK_II_3.01/RUN
+DIR_EXE=.
 DIR_SRC=$DIR_EXE/MODEL_SRC
 NETCDF=/juno/opt/spacks/0.20.0/opt/spack/linux-rhel8-icelake/intel-2021.6.0/netcdf-fortran
 

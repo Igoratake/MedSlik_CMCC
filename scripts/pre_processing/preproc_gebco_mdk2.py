@@ -12,7 +12,10 @@ def interp_gebco(gebco,grid):
 
 	# interpolation on medslik grid
 	med = gebco.interp(lon=grid.lon.values.tolist(),lat=grid.lat.values.tolist())
-	med['elevation'] = med.elevation *-1	
+	#converting from begative depths to positive
+	med['elevation'] = med.elevation *-1
+	#filling nan to -9999 as expected by medslik
+	med = med.fillna(-9999)	
 
 	# Convert bathymetry to MDK-II
 	mdk_z=[]

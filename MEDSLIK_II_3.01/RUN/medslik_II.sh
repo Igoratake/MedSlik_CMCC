@@ -46,8 +46,8 @@ rm tmp*.tmp
 rm oil_file.txt
 rm initial*.txt
 
-HOME_MEDSLIK=/users_home/opa/ia19223/Medslik-II/MEDSLIK_II_3.01
-F_DATA=/users_home/opa/ia19223/Medslik-II/MEDSLIK_II_3.01/METOCE_INP/ #str
+HOME_MEDSLIK=.
+F_DATA=${HOME_MEDSLIK}/METOCE_INP/ #str
 
 source config1.txt
 

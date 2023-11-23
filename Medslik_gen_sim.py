@@ -28,25 +28,27 @@ from scripts import *
 
 
 # ================= MEDSLIK MODEL INPUTS ================= #
-download = False
-simdir         = 'cases/'
-simname        = 'cook_island'      ### Simulation name - format (string)
-sim_date       = '15/11/2023' ### Simulation start day  - format DD/MM/YYYY (string)
-sim_hour       = '11:50'      ### Simulation start hour - format HH:mm (string)
-longitude      = -149.2775   #-149.19627       ### Longitude of Simulation spill location - format Decimal degrees (float)
-latitude       = -17.7056   #-17.57325        ### Latitude of Simulation spill  - format Decimal degrees (float)
-delta          = 1.0          ### Standard delta to collect an area around lat and discharge point - format degrees (float)
-sim_lenght     = 28           ### Length of the simulation - format hours (int)
-spill_duration = 5            ### Duration of the spill - format hours (int)
-oil_api        = 26.96           ### Oil API - format (float)
-oil_volume     = 1000            ### Volume of oil in tons - format (float) 
-use_satellite  = False        ### Usage of Satellite imagery to model multiple slicks - True/False
+download        = False
+simdir          = 'cases/'
+simname         = 'lebanon_remake' ### Simulation name - format (string)
+sim_date        = '13/07/2006'     ### Simulation start day  - format DD/MM/YYYY (string)
+sim_hour        = '08:00'          ### Simulation start hour - format HH:mm (string)
+longitude       = 35.1667          ### Longitude of Simulation spill location - format Decimal degrees (float)
+latitude        = 33.6933          ### Latitude of Simulation spill  - format Decimal degrees (float)
+delta           = 1.0              ### Standard delta to collect an area around lat and discharge point - format degrees (float)
+sim_lenght      = 480              ### Length of the simulation - format hours (int)
+spill_duration  = 144              ### Duration of the spill - format hours (int)
+oil_api         = 20               ### Oil API - format (float)
+oil_volume      = 130.35 * 144     ### Volume of oil in tons - format (float) 
+use_satellite   = False            ### Usage of Satellite imagery to model multiple slicks - True/False
+use_slk_contour = True             ### Usage of slicks countours - True/False
+number_slick    = 1
 
 # Obtaining spill rate from oil volume and spill duration
 if spill_duration != 0:
     spill_rate = oil_volume/spill_duration
 else:
-    spill_rate = oil_volume    
+    spill_rate = oil_volume
 
 # ================= DOWNLOAD OPTIONS ================= #
 down = 'global'               ### Download data from global copernicus or local models - format(string) global/local
@@ -193,16 +195,16 @@ if __name__ == '__main__':
             df.columns = ['lat','lon','SST','u_srf','u_10m','u_30m','u_120m','v_srf','v_10m','v_30m','v_120m']
             df = df[['lat','lon','SST','u_srf','v_srf','u_10m','v_10m','u_30m','v_30m','u_120m','v_120m']]
 
+            #making sure that .mrc files in 0 hour are written as 24
+            #tis code also makes sure that the file is written correctly even in the transition of months
             if dt.hour == 0:
-
                 hour = 24
-                day = dt.day-1
-
+                day = (dt - datetime.timedelta(hours=1)).day
             else:
                 hour = dt.hour
                 day = dt.day
 
-            with open(f'cases/{simname}/oce_files/merc{dt.year-2000}{dt.month:02d}{day:02d}{hour:02d}.mrc', 'w') as f:
+            with open(f'cases/{simname}/oce_files/merc{dt.year-2000:02d}{dt.month:02d}{day:02d}{hour:02d}.mrc', 'w') as f:
                 f.write(f"Ocean forecast data for {day:02d}/{dt.month:02d}/{dt.year} {hour:02d}:00\n")
                 f.write("Subregion of the Global Ocean:\n")
                 f.write(f"{df.lon.min():02.2f}  {df.lon.max():02.2f}  {df.lat.min():02.2f} {df.lat.max():02.2f}   {len(tot.lon)}   {len(tot.lat)}   Geog. limits\n")
@@ -232,7 +234,7 @@ if __name__ == '__main__':
             df = df.rename({'lonNaT':'lon','latNaT':'lat'},axis=1)
             df = df.sort_values(['lon','lat'], ascending=[True,False])
             
-            with open(f'cases/{simname}/met_files/erai{dt.year-2000}{dt.month:02d}{dt.day:02d}.eri', 'w') as file:
+            with open(f'cases/{simname}/met_files/erai{dt.year-2000:02d}{dt.month:02d}{dt.day:02d}.eri', 'w') as file:
                 file.write(f" 10m winds forecast data for {dt.day:02d}/{dt.month:02d}/{dt.year}\n")
                 file.write(" Subregion of the Global Ocean with limits:\n")
                 file.write(f"  {df.lon.min():02.5f}  {df.lon.max():02.5f}  {df.lat.max():02.5f}  {df.lat.min():02.5f}   {len(met.lon)}   {len(met.lat)}   Geog. limits\n")
@@ -277,9 +279,24 @@ if __name__ == '__main__':
     print('Preparing configuration files... ')
 
     # get dimensions from ncfiles
-    my_o = xr.open_dataset(glob(f'cases/{simname}/oce_files/*nc')[0]).isel(depth=0,time=0).votemper.values.shape
-    # my_w = xr.open_dataset(glob(f'cases/{simname}/met_files/*nc')[0]).isel(time=0).U10M.values.shape
-    my_w = my_o
+    for var in ['votemper','thetao']:
+        try:
+            my_o = xr.open_dataset(glob(f'cases/{simname}/oce_files/*nc')[0]).isel(depth=0,time=0)[var].values.shape
+            found_variable = True
+        except:
+            continue
+        if not found_variable:
+            raise ValueError("Check the sea state variables available in your dataset")
+        found_variable = False
+
+    for var in ['U10M','u10']:
+        try:
+            my_w = xr.open_dataset(glob(f'cases/{simname}/met_files/*nc')[0]).isel(time=0)[var].values.shape
+            found_variable = True
+        except:
+            continue
+        if not found_variable:
+            raise ValueError("Check the air state variables available in your dataset")
 
     nmax = np.max([np.max(my_o),np.max(my_w)])
     imx_o = my_o[1]
@@ -309,7 +326,7 @@ if __name__ == '__main__':
     subprocess.run([f"{config} sed -i s#RUNNAME#{simname}#g {config_file}"],shell=True)
     subprocess.run([f"{config} sed -i s/DD/{dt_sim.day:02d}/ {config_file}"],shell=True)
     subprocess.run([f"{config} sed -i s/MM/{dt_sim.month:02d}/ {config_file}"],shell=True)
-    subprocess.run([f"{config} sed -i s/YY/{dt_sim.year-2000}/ {config_file}"],shell=True)
+    subprocess.run([f"{config} sed -i s/YY/{dt_sim.year-2000:02d}/ {config_file}"],shell=True)
     subprocess.run([f"{config} sed -i s/c_Hour/{dt_sim.hour:02d}/ {config_file}"],shell=True)
     subprocess.run([f"{config} sed -i s/c_minute/{dt_sim.minute:02d}/ {config_file}"],shell=True)   
 
@@ -338,6 +355,24 @@ if __name__ == '__main__':
     # oil characteristics
     subprocess.run([f"{config} sed -i s/APIOT/{oil_api}/ {config_file}"],shell=True)
 
+    #number of slicks
+    subprocess.run([f"{config} sed -i s/N_SLICK/{number_slick}/ {config_file}"],shell=True)
+
+    #slick countour
+    if use_slk_contour == True:
+        slik = 'YES'
+        with open('MEDSLIK_II_3.01/RUN/slick_countour.txt', 'r') as file1:
+            content = file1.read()
+        subprocess.run([f'cp MEDSLIK_II_3.01/RUN/slick_countour.txt {simdir}{simname}/xp_files/'],shell=True)
+        with open(config_file, 'a') as file2:
+        # Append the contents of the first file to config file
+            file2.write(content)
+    else:
+        slik = 'NO'  
+
+    #Writing that will use slick countor
+    subprocess.run([f"{config} sed -i s/SSLICK/{slik}/ {config_file}"],shell=True)
+
     # copy METOCEAN files to MEDSLIK-II installation
     subprocess.run([f'cp {simdir}{simname}/oce_files/* MEDSLIK_II_3.01/METOCE_INP/PREPROC/OCE/'],shell=True)
     subprocess.run([f'cp {simdir}{simname}/oce_files/* MEDSLIK_II_3.01/RUN/TEMP/OCE/'],shell=True)
@@ -353,5 +388,5 @@ if __name__ == '__main__':
     # Compile and start running
     subprocess.run([f'cd MEDSLIK_II_3.01/RUN/; sh MODEL_SRC/compile.sh; ./RUN.sh'],shell=True,check=True)
 
-    subprocess.run([f'cp -r MEDSLIK_II_3.01/OUT/MDK_SIM_{dt_sim.year}_{str(dt_sim.month).zfill(2)}_{str(dt_sim.day).zfill(2)}*/ {simdir}{simname}/out_files/'],shell=True)
+    subprocess.run([f'cp -r MEDSLIK_II_3.01/OUT/MDK_SIM_{dt_sim.year:02d}_{str(dt_sim.month).zfill(2)}_{str(dt_sim.day).zfill(2)}*/ {simdir}{simname}/out_files/'],shell=True)
     subprocess.run([f'rm -rf {simdir}{simname}/out_files/MET {simdir}{simname}/out_files/OCE'],shell=True)

@@ -29,7 +29,7 @@ OIL=API
 OIL_TYPE=APIOT
 
 SAT_DATA=NO        # for Point Source choose NO, for slick from satellite data choose YES
-ContourSlick=NO       # for Point Source choose NO, for manually slick contour insertion choose YES
+ContourSlick=SSLICK       # for Point Source choose NO, for manually slick contour insertion choose YES
 
 # SLICK CONTOUR from SATELLITE DATA
 # if you have selected SAT_DATA=YES fill the following section, otherwise leave it blank.
@@ -42,6 +42,6 @@ N_OS=1   # write the number of the slick to be simulated
 # MANUALLY INSERTION OF SLICK CONTOUR
 #if you have selected ContourSlick=YES fill the following section, otherwise leave it blank.
 
-NSlick=1           # Number of Slicks
+NSlick=N_SLICK           # Number of Slicks
 
 # insert latitude and longitude of slick points contour.

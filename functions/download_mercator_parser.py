@@ -3,6 +3,7 @@ import argparse
 import os
 import subprocess
 import datetime
+import pandas as pd
 
 class MotuOptions:
     def __init__(self, attrs: dict):
@@ -38,7 +39,8 @@ def download(date_start, date_end,
         "depth_min": depth_min,
         "depth_max": depth_max,
         "variable": var,
-        "motu": "https://nrt.cmems-du.eu/motu-web/Motu",
+        # "motu": "https://nrt.cmems-du.eu/motu-web/Motu",
+        "motu": "http://my.cmems-du.eu/motu-web/Motu",
         "out_dir": output_path,
         "out_name": output_name,
         "auth_mode": "cas",
@@ -72,26 +74,38 @@ if __name__ == '__main__':
 
     outputs = []
 
+    #get datetime of sim and compare with limits to mercator datasets
+    conf_date = args.date_start.split('T')[0]
+
     if args.down == 'global':
-        loc = 'glo'
-        service_id = "GLOBAL_ANALYSISFORECAST_PHY_001_024-TDS"
-        ref = '0.083deg'
-        temp = 'thetao'
+        loc='glo'
+        if pd.to_datetime(conf_date) < pd.to_datetime('2020-11-21') == False:
+            service_id = 'GLOBAL_ANALYSISFORECAST_PHY_001_024-TDS'
+            product_id_curr = 'cmems_mod_glo_phy-cur_anfc_0.083deg_P1D-m'
+            product_id_temp = 'cmems_mod_glo_phy-thetao_anfc_0.083deg_P1D-m'
+        else:
+            service_id = 'GLOBAL_MULTIYEAR_PHY_001_030-TDS'
+            product_id_curr = 'cmems_mod_glo_phy_my_0.083_P1D-m'
+            product_id_temp = 'cmems_mod_glo_phy_my_0.083_P1D-m'
 
     else:
-        loc = 'med'
-        service_id = "MEDSEA_ANALYSISFORECAST_PHY_006_013-TDS"
-        ref = '4.2km'
-        temp = 'tem'
-        
+        loc='med'
+        if pd.to_datetime(conf_date) < pd.to_datetime('2020-11-21') == False:
+            service_id = 'MEDSEA_ANALYSISFORECAST_PHY_006_013-TDS'
+            product_id_curr = 'cmems_mod_med_phy-cur_anfc_4.2km_P1D-m'
+            product_id_temp = 'cmems_mod_med_phy-tem_anfc_4.2km_P1D-m'
+        else:
+            service_id = 'MEDSEA_MULTIYEAR_PHY_006_004-TDS'
+            product_id_curr = 'med-cmcc-cur-rean-d'
+            product_id_temp = 'med-cmcc-tem-rean-d'
 
     for var in ['curr','temp']:
 
         if var == 'curr':
-            product_id = f"cmems_mod_{loc}_phy-cur_anfc_{ref}_P1D-m"
+            product_id = product_id_curr
             varr = ['uo','vo']
         elif var == 'temp':
-            product_id = f"cmems_mod_{loc}_phy-{temp}_anfc_{ref}_P1D-m"
+            product_id = product_id_temp
             varr = ['thetao']
         
         outputname = f'{var}_tempo.nc'

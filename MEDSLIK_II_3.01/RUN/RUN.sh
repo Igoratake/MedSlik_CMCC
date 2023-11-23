@@ -1,9 +1,8 @@
 #!/bin/bash
 
 # set where you have placed MEDSLIK_II folder
-HOME_MEDSLIK=/users_home/opa/ia19223/Medslik-II/MEDSLIK_II_3.01
 
-MEDSLIK=${HOME_MEDSLIK}/RUN
+MEDSLIK=.
 
 # generate update timelog file
 start_time=$(date +%s.%N)

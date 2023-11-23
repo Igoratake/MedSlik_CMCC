@@ -1,8 +1,8 @@
-Aboozar
-26.96          API of Oil
-0.893          Density of Oil
-0.934          Residual Density of Oil
-65.48          Residual Percent of Oil
-36.60          Viscosity of Oil
-20.00          Temperature at which Viscosity determined
-0.379          Vapour Pressure of Oil (bar)
+Ragusa
+19.80          API of Oil
+0.935          Density of Oil
+0.953          Residual Density of Oil
+85.18          Residual Percent of Oil
+277.00          Viscosity of Oil
+38.00          Temperature at which Viscosity determined
+0.250          Vapour Pressure of Oil (bar)
