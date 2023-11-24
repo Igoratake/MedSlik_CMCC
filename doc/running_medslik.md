@@ -23,14 +23,13 @@ cd ../..
 ```
 4. Copy the _Algeria_ test case input file in the execution folder.
 ```
-cd EXE
-cp test_cases/TEST_ALGERIA/medslik_inputfile.txt .
-cp test_cases/TEST_ALGERIA/observation_0808071050.txt .
+cp EXE/test_cases/TEST_ALGERIA/medslik_inputfile.txt ./EXE
+cp EXE/test_cases/TEST_ALGERIA/observation_0808071050.txt ./EXE
 ```
 5. Compile the source code and execute.
 ```
-sh source/compile.sh
-./RUN.sh
+sh EXE/source/compile.sh
+./EXE/RUN.sh
 ```
 6. You can now find the output files in the relative output folder and list them.
 ```

@@ -1,5 +1,5 @@
-DIR_EXE=$HOME/MEDSLIK_II_1.01/EXE
-DIR_SRC=$HOME/MEDSLIK_II_1.01/EXE/source
+DIR_EXE=$PWD/EXE
+DIR_SRC=$PWD/EXE/source
 
 gfortran  -I/usr/include -L/usr/lib  $DIR_SRC/Extract_II.for -lnetcdf -lnetcdff -o $DIR_EXE/Extract_II.exe
 gfortran -o $DIR_EXE/jday $DIR_SRC/jday.f 

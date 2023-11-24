@@ -50,7 +50,7 @@ rm tmp*.tmp
 rm oil_file.txt
 rm initial*.txt
 
-HOME_MEDSLIK=$HOME/MEDSLIK_II_1.01
+HOME_MEDSLIK=$PWD
 F_DATA=$HOME_MEDSLIK/DATA
 
 source medslik_inputfile.txt
