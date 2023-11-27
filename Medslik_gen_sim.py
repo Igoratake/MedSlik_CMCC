@@ -39,10 +39,10 @@ delta           = 1.0              ### Standard delta to collect an area around 
 sim_lenght      = 480              ### Length of the simulation - format hours (int)
 spill_duration  = 144              ### Duration of the spill - format hours (int)
 oil_api         = 20               ### Oil API - format (float)
-oil_volume      = 130.35 * 144     ### Volume of oil in tons - format (float) 
+oil_volume      = 130.35 * 144           ### Volume of oil in tons - format (float) 
 use_satellite   = False            ### Usage of Satellite imagery to model multiple slicks - True/False
-use_slk_contour = True             ### Usage of slicks countours - True/False
-number_slick    = 1
+use_slk_contour = False            ### Usage of slicks countours - True/False
+number_slick    = 1                ### Number of slicks to be simulated - format (int)
 
 # Obtaining spill rate from oil volume and spill duration
 if spill_duration != 0:
@@ -272,7 +272,7 @@ if __name__ == '__main__':
 
     # gshhs in intermediate resolution
     subprocess.run([f'{sys.executable}', 'scripts/pre_processing/preproc_gshhs_mdk2.py', 
-                    'data/gshhs/i/GSHHS_i_L1.shp',
+                    'data/gshhs/h/GSHHS_h_L1.shp',
                     grid_string, f'{simdir}{simname}/bnc_files/'])
 
     # prepare medslik_II.for and config1.txt
@@ -388,5 +388,5 @@ if __name__ == '__main__':
     # Compile and start running
     subprocess.run([f'cd MEDSLIK_II_3.01/RUN/; sh MODEL_SRC/compile.sh; ./RUN.sh'],shell=True,check=True)
 
-    subprocess.run([f'cp -r MEDSLIK_II_3.01/OUT/MDK_SIM_{dt_sim.year:02d}_{str(dt_sim.month).zfill(2)}_{str(dt_sim.day).zfill(2)}*/ {simdir}{simname}/out_files/'],shell=True)
+    subprocess.run([f'cp -r MEDSLIK_II_3.01/OUT/MDK_SIM_{dt_sim.year:02d}_{str(dt_sim.month).zfill(2)}_{str(dt_sim.day).zfill(2)}_{simname}/ {simdir}{simname}/out_files/'],shell=True)
     subprocess.run([f'rm -rf {simdir}{simname}/out_files/MET {simdir}{simname}/out_files/OCE'],shell=True)

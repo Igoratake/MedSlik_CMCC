@@ -24,8 +24,16 @@ from glob import glob
 from functions.medslik_utils import *
 from scripts import *
 
-simdir = 'cases/'
-simname = 'lebanon'
+simdir         = 'cases/'
+simname        = 'lebanon'
+sim_date       = '13/07/2006' ### Simulation start day  - format DD/MM/YYYY (string)
+sim_hour       = '08:00'      ### Simulation start hour - format HH:mm (string)
+
+ # Simulation dates
+dt_sim = validate_date(sim_date + ' ' + sim_hour)
+
+if isinstance(dt_sim,str):
+    raise ValueError('Wrong date format.')
 
 if __name__ == '__main__':
 
@@ -40,14 +48,14 @@ if __name__ == '__main__':
     grid_string = glob(f'{simdir}{simname}/oce_files/*.nc')[0] 
 
     # Bathymetry for gebco 2023
-    subprocess.run([f'{sys.executable}', 'scripts/pre_processing/preproc_gebco_mdk2.py', 
-                    '/Users/iatake/Dropbox (CMCC)/gebco_2023/GEBCO_2023.nc',
-                    grid_string, f'{simdir}{simname}/bnc_files/'])
+    # subprocess.run([f'{sys.executable}', 'scripts/pre_processing/preproc_gebco_mdk2.py', 
+    #                 'data/gebco/GEBCO_2023.nc',
+    #                 grid_string, f'{simdir}{simname}/bnc_files/'])
 
-    # gshhs in intermediate resolution
-    subprocess.run([f'{sys.executable}', 'scripts/pre_processing/preproc_gshhs_mdk2.py', 
-                    '/Users/iatake/Dropbox (CMCC)/gshhg-shp-2.3.7/GSHHS_shp/i/GSHHS_i_L1.shp',
-                    grid_string, f'{simdir}{simname}/bnc_files/'])
+    # # gshhs in intermediate resolution
+    # subprocess.run([f'{sys.executable}', 'scripts/pre_processing/preproc_gshhs_mdk2.py', 
+    #                 'data/gshhs/i/GSHHS_i_L1.shp',
+    #                 grid_string, f'{simdir}{simname}/bnc_files/'])
 
     # prepare medslik_II.for and config1.txt
     print('Preparing configuration files... ')
@@ -84,9 +92,10 @@ if __name__ == '__main__':
     # copy Extract and config files
     subprocess.run([f'cp {simdir}{simname}/xp_files/medslik_II.for MEDSLIK_II_3.01/RUN/MODEL_SRC/'],shell=True)
     subprocess.run([f'cp {simdir}{simname}/xp_files/config1.txt MEDSLIK_II_3.01/RUN/'],shell=True)
+    subprocess.run([f'cp {simdir}{simname}/xp_files/config2.txt MEDSLIK_II_3.01/RUN/'],shell=True)
 
     # Compile and start running
-    subprocess.run([f'cd MEDSLIK_II_3.01/RUN/; sh MODEL_SRC/compile_testcase.sh; ./RUN.sh'],shell=True,check=True)
+    subprocess.run([f'cd MEDSLIK_II_3.01/RUN/; sh MODEL_SRC/compile.sh; ./RUN.sh'],shell=True,check=True)
 
     subprocess.run([f'cp -r MEDSLIK_II_3.01/OUT/MDK_SIM_{dt_sim.year}_{str(dt_sim.month).zfill(2)}_{str(dt_sim.day).zfill(2)}*/ {simdir}{simname}/out_files/'],shell=True)
     subprocess.run([f'rm -rf {simdir}{simname}/out_files/MET {simdir}{simname}/out_files/OCE'],shell=True)
