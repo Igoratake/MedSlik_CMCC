@@ -1,32 +1,32 @@
-SIM_NAME=lebanon_remake
-sim_length=0480   # choose the simulation length (in hours, 4 characters)
+SIM_NAME=South_Sicilia
+sim_length=0048   # choose the simulation length (in hours, 4 characters)
 
 # insert oil slick data: time and date of observation
 
-day=13
-month=07
-year=06
-hour=08
+day=28
+month=04
+year=22
+hour=13
 minutes=00
 
 
 # insert oil slick data: coordinate of the center of the slick
 
-lat_degree=33
-lat_minutes=41.598
-lon_degree=35
-lon_minutes=10.002
+lat_degree=36
+lat_minutes=36.000
+lon_degree=13
+lon_minutes=12.000
 
 # insert oil slick data: spill rate, spill duration and age
 
-duration=0144             # spill duration, in hours, 4 characters, if the spill is instantaneous type 0000
-spillrate=00130.35        # spill rate in tons/hours,  if the spill is instantaneous write the total tons spilled
+duration=0120             # spill duration, in hours, 4 characters, if the spill is instantaneous type 0000
+spillrate=00016.67        # spill rate in tons/hours,  if the spill is instantaneous write the total tons spilled
 age=0
 grid_size=150.0         # spatial resolution (m) of the oil tracer grid
 
 # insert oil type (API or NAME)
 OIL=API
-OIL_TYPE=20
+OIL_TYPE=28
 
 SAT_DATA=NO        # for Point Source choose NO, for slick from satellite data choose YES
 ContourSlick=NO       # for Point Source choose NO, for manually slick contour insertion choose YES

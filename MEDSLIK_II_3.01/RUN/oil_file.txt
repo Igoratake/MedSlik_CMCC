@@ -1,8 +1,8 @@
-Ragusa
-19.80          API of Oil
-0.935          Density of Oil
-0.953          Residual Density of Oil
-85.18          Residual Percent of Oil
-277.00          Viscosity of Oil
+Arabian heavy (Safaniya)
+27.90          API of Oil
+0.888          Density of Oil
+0.924          Residual Density of Oil
+69.60          Residual Percent of Oil
+19.00          Viscosity of Oil
 38.00          Temperature at which Viscosity determined
-0.250          Vapour Pressure of Oil (bar)
+0.516          Vapour Pressure of Oil (bar)
