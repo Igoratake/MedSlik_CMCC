@@ -36,7 +36,6 @@ sim_date        = '28/04/2022'     ### Simulation start day  - format DD/MM/YYYY
 sim_hour        = '13:00'          ### Simulation start hour - format HH:mm (string)
 longitude       = 13.2          ### Longitude of Simulation spill location - format Decimal degrees (float)
 latitude        = 36.6          ### Latitude of Simulation spill  - format Decimal degrees (float)
-delta           = 1.0              ### Standard delta to collect an area around lat and discharge point - format degrees (float)
 sim_lenght      = 48              ### Length of the simulation - format hours (int)
 spill_duration  = 120              ### Duration of the spill - format hours (int)
 oil_api         = 28               ### Oil API - format (float)
@@ -44,6 +43,20 @@ oil_volume      = 2000           ### Volume of oil in tons - format (float)
 use_satellite   = False            ### Usage of Satellite imagery to model multiple slicks - True/False
 use_slk_contour = False            ### Usage of slicks countours - True/False
 number_slick    = 1                ### Number of slicks to be simulated - format (int)
+
+# ================= ENVIRONMENTAL FORCINGS  ================= #
+#Select either a fixed delta for lat and lon or specify the bounding box
+delta           = 0.0              ### Standard delta to collect an area around lat and discharge point - format degrees (float)
+if delta == 0:
+    lat_min         = 38.2927818
+    lat_max         = 41.8927803
+    lon_min         = 14.8626471
+    lon_max         = 19.5685139
+else:
+    lat_min         = latitude - delta
+    lat_max         = latitude + delta
+    lon_min         = longitude - delta
+    lon_max         = longitude + delta
 
 # Obtaining spill rate from oil volume and spill duration
 if spill_duration != 0:
@@ -151,8 +164,8 @@ if __name__ == '__main__':
                 ds = xr.open_dataset(file)  
 
                 #Trimming into smaller regional box
-                ds = ds.sel(lon = slice(longitude - delta,longitude + delta),
-                            lat = slice(latitude - delta,latitude + delta))
+                ds = ds.sel(lon = slice(lon_min,lon_max),
+                            lat = slice(lat_min,lat_max))
                 
                 #Selecting only 4 layers
                 tot = ds.sel(depth=[0,10,30,120],method='nearest')
@@ -223,8 +236,8 @@ if __name__ == '__main__':
             met = xr.open_dataset(file)
 
             #Trimming into smaller regional box
-            met = met.sel(lon = slice(longitude - delta,longitude + delta),
-                          lat = slice(latitude  + delta,latitude - delta))
+            met = met.sel(lon = slice(lon_min,lon_max),
+                          lat = slice(lat_max,lat_min))
             
             #saving the sampled netcdf in cases directory
             met.to_netcdf(f'cases/{simname}/met_files/{varr}_{year}{month}{day}_{simname}.nc')
