@@ -31,22 +31,23 @@ process_files   = True       ### False if data is already present
 
 # ================= MEDSLIK MODEL INPUTS ================= #
 simdir          = 'cases/'
-simname         = 'South_Sicilia' ### Simulation name - format (string)
-sim_date        = '28/04/2022'     ### Simulation start day  - format DD/MM/YYYY (string)
+simname         = 'taranto_manual' ### Simulation name - format (string)
+sim_date        = '23/11/2023'     ### Simulation start day  - format DD/MM/YYYY (string)
 sim_hour        = '13:00'          ### Simulation start hour - format HH:mm (string)
-longitude       = 13.2          ### Longitude of Simulation spill location - format Decimal degrees (float)
-latitude        = 36.6          ### Latitude of Simulation spill  - format Decimal degrees (float)
-sim_lenght      = 48              ### Length of the simulation - format hours (int)
-spill_duration  = 120              ### Duration of the spill - format hours (int)
-oil_api         = 28               ### Oil API - format (float)
-oil_volume      = 2000           ### Volume of oil in tons - format (float) 
+longitude       = 40.09278          ### Longitude of Simulation spill location - format Decimal degrees (float)
+latitude        = 17.21558          ### Latitude of Simulation spill  - format Decimal degrees (float)
+sim_lenght      = 24              ### Length of the simulation - format hours (int)
+spill_duration  = 0              ### Duration of the spill - format hours (int)
+oil_api         = 26.96               ### Oil API - format (float)
+oil_volume      = 1000           ### Volume of oil in tons - format (float) 
 use_satellite   = False            ### Usage of Satellite imagery to model multiple slicks - True/False
 use_slk_contour = False            ### Usage of slicks countours - True/False
 number_slick    = 1                ### Number of slicks to be simulated - format (int)
 
 # ================= ENVIRONMENTAL FORCINGS  ================= #
 #Select either a fixed delta for lat and lon or specify the bounding box
-delta           = 0.0              ### Standard delta to collect an area around lat and discharge point - format degrees (float)
+loc                 = 'med'
+delta               = 0.0              ### Standard delta to collect an area around lat and discharge point - format degrees (float)
 if delta == 0:
     lat_min         = 38.2927818
     lat_max         = 41.8927803
@@ -79,11 +80,12 @@ if __name__ == '__main__':
     if isinstance(dt_sim,str):
         raise ValueError('Wrong date format.')
     
-    if 30.37 < float(latitude) < 45.7 and -17.25 < float(longitude) < 35.9:
-        print('Coordinates lie within Mediterranean Sea')
-        loc = 'med'
-    else:
-        loc = 'glob'
+    # if loc == None:
+    #     if 30.37 < float(latitude) < 45.7 and -17.25 < float(longitude) < 35.9: 
+    #         print('Coordinates lie within Mediterranean Sea')
+    #         loc = 'med'
+    #     else:
+    #         loc = 'glob'
     
     if type == 'analysis':
         if loc == 'med' and time_res == 'day':
@@ -199,7 +201,7 @@ if __name__ == '__main__':
             #dropping temperature columns
             df = df.drop(['thetao10','thetao30','thetao120'],axis=1)
             #sort first by latitude and then by longitude
-            df = df.sort_values(['lat','lon'])
+            df = df.sort_values(['lon','lat'])
             df.columns = ['lat','lon','SST','u_srf','u_10m','u_30m','u_120m','v_srf','v_10m','v_30m','v_120m']
             df = df[['lat','lon','SST','u_srf','v_srf','u_10m','v_10m','u_30m','v_30m','u_120m','v_120m']]
 
