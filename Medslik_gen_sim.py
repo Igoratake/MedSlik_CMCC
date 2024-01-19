@@ -28,18 +28,18 @@ from scripts import *
 
 
 # ================= MEDSLIK MODEL INPUTS ================= #
-download        = False
+download        = True
 simdir          = 'cases/'
-simname         = 'lebanon_remake' ### Simulation name - format (string)
-sim_date        = '13/07/2006'     ### Simulation start day  - format DD/MM/YYYY (string)
-sim_hour        = '08:00'          ### Simulation start hour - format HH:mm (string)
-longitude       = 35.1667          ### Longitude of Simulation spill location - format Decimal degrees (float)
-latitude        = 33.6933          ### Latitude of Simulation spill  - format Decimal degrees (float)
+simname         = 'paria_remake' ### Simulation name - format (string)
+sim_date        = '24/04/2017'     ### Simulation start day  - format DD/MM/YYYY (string)
+sim_hour        = '13:00'          ### Simulation start hour - format HH:mm (string)
+longitude       = -63.549667          ### Longitude of Simulation spill location - format Decimal degrees (float)
+latitude        = 10.810733          ### Latitude of Simulation spill  - format Decimal degrees (float)
 delta           = 1.0              ### Standard delta to collect an area around lat and discharge point - format degrees (float)
-sim_lenght      = 480              ### Length of the simulation - format hours (int)
-spill_duration  = 144              ### Duration of the spill - format hours (int)
-oil_api         = 20               ### Oil API - format (float)
-oil_volume      = 130.35 * 144           ### Volume of oil in tons - format (float) 
+sim_lenght      = 48              ### Length of the simulation - format hours (int)
+spill_duration  = 120              ### Duration of the spill - format hours (int)
+oil_api         = 28               ### Oil API - format (float)
+oil_volume      = 1.5 * 120           ### Volume of oil in tons - format (float) 
 use_satellite   = False            ### Usage of Satellite imagery to model multiple slicks - True/False
 use_slk_contour = False            ### Usage of slicks countours - True/False
 number_slick    = 1                ### Number of slicks to be simulated - format (int)
@@ -56,6 +56,65 @@ cop_username = None           ### Username to access copernicus datasets. Can be
 cop_password = None           ### Password to access copernicus datasets. Can be replaced here for practicity. - format None or string
 era_api_key  = None           ### API key to access era5 datasets. Can be replaced here for practicity. - format None or string
 
+def download_data():
+
+    if 30.37 < float(latitude) < 45.7 and -17.25 < float(longitude) < 35.9 and down=='global':
+            print('Coordinates lie within Mediterranean Sea\n Your data is set to global.\n'
+                    'Press y to continue with global or n to change to Med Sea Data')     
+            
+            while True:
+                check = input().lower()
+                if check == 'n':
+                    down = 'local'
+                    break
+                elif check =='y':
+                    break
+                else:
+                    print('wrong input. Try again')
+        
+    # Download area
+    print (f'Download coordinates are:'
+        f'Min lat = {(latitude-delta):.2f} Max lat = {(latitude+delta):.2f}'
+        f'Min lon = {(longitude+delta):.2f} Max lon = {(longitude+delta):.2f}')
+        
+    dtini = dt_sim - datetime.timedelta(days=1)
+    if (datetime.datetime.today()-dt_sim).days <10:
+        print('ERA5 data might not be available in the selected date')
+        
+    inidate = f'{dtini.year}-{str(dtini.month).zfill(2)}-{str(dtini.day).zfill(2)}'
+    inidate2 = inidate + 'T00:00:00Z'         
+
+    dtend = dt_sim + datetime.timedelta(days= (sim_lenght/24) + 2) 
+
+    enddate = f'{dtend.year}-{str(dtend.month).zfill(2)}-{str(dtend.day).zfill(2)}'
+    enddate2 = enddate + 'T00:00:00Z'
+
+    if cop_username == None:
+        print('Please input your copernicus user name')
+        cop_username = input()
+    
+    if cop_password == None:
+        print('Please input your copernicus password')
+        cop_password = input()
+    
+
+    ## Mercator download ###
+    output_path = 'data/MERCATOR/'                            
+    # Create a thread to run the external script in the background
+    script_thread = subprocess.run([f'{sys.executable}', 'functions/download_mercator_parser.py',
+                                    inidate2,enddate2,'0','130',
+                                    str(latitude),str(longitude),str(delta),
+                                    down,output_path,
+                                    cop_username,cop_password],check=True) 
+    
+    ### ERA5 download ###
+    #Met Data
+    output_path = 'data/ERA5/'
+
+    # Create a thread to run the external script in the background
+    script_thread = subprocess.run([f'{sys.executable}','functions/download_era5_parser.py',
+                                    str(latitude),str(longitude),str(delta),
+                                    inidate,enddate,output_path],check=True)
 
 
 '''
@@ -81,63 +140,8 @@ if __name__ == '__main__':
     
     if download == True:
 
-        if 30.37 < float(latitude) < 45.7 and -17.25 < float(longitude) < 35.9 and down=='global':
-            print('Coordinates lie within Mediterranean Sea\n Your data is set to global.\n'
-                    'Press y to continue with global or n to change to Med Sea Data')     
-            
-            while True:
-                check = input().lower()
-                if check == 'n':
-                    down = 'local'
-                    break
-                elif check =='y':
-                    break
-                else:
-                    print('wrong input. Try again')
-        
-        # Download area
-        print (f'Download coordinates are:'
-            f'Min lat = {(latitude-delta):.2f} Max lat = {(latitude+delta):.2f}'
-            f'Min lon = {(longitude+delta):.2f} Max lon = {(longitude+delta):.2f}')
-        
-        dtini = dt_sim - datetime.timedelta(days=1)
-        if (datetime.datetime.today()-dt_sim).days <10:
-            print('ERA5 data might not be available in the selected date')
-            
-        inidate = f'{dtini.year}-{str(dtini.month).zfill(2)}-{str(dtini.day).zfill(2)}'
-        inidate2 = inidate + 'T00:00:00Z'         
-
-        dtend = dt_sim + datetime.timedelta(days= (sim_lenght/24) + 2) 
-
-        enddate = f'{dtend.year}-{str(dtend.month).zfill(2)}-{str(dtend.day).zfill(2)}'
-        enddate2 = enddate + 'T00:00:00Z'
-
-        if cop_username == None:
-            print('Please input your copernicus user name')
-            cop_username = input()
-        
-        if cop_password == None:
-            print('Please input your copernicus password')
-            cop_password = input()
-        
-
-        ### Mercator download ###
-        output_path = 'data/MERCATOR/'                            
-        # Create a thread to run the external script in the background
-        script_thread = subprocess.run([f'{sys.executable}', 'functions/download_mercator_parser.py',
-                                        inidate2,enddate2,'0','130',
-                                        str(latitude),str(longitude),str(delta),
-                                        down,output_path,
-                                        cop_username,cop_password],check=True) 
-        
-        ### ERA5 download ###
-        #Met Data
-        output_path = 'data/ERA5/'
-
-        # Create a thread to run the external script in the background
-        script_thread = subprocess.run([f'{sys.executable}','functions/download_era5_parser.py',
-                                        str(latitude),str(longitude),str(delta),
-                                        inidate,enddate,output_path],check=True)
+        #call function to download data from copernicus and era5
+        download_data()
         
         ############# PRE PROCESSING DATA AND FILES #############
 
@@ -190,7 +194,10 @@ if __name__ == '__main__':
             df = df.pivot(index = ['lat','lon'],columns='depth',values = ['thetao','uo','vo']).reset_index()
             
             df.columns = [pair[0]+str(pair[1]).split('.')[0] for pair in df.columns]
-            df = df.drop(['thetao10','thetao29','thetao119'],axis=1)
+            try:
+                df = df.drop(['thetao10','thetao29','thetao119'],axis=1)
+            except:
+                df = df.drop(['thetao9','thetao29','thetao109'],axis=1)
             df = df.sort_values(['lat','lon'])
             df.columns = ['lat','lon','SST','u_srf','u_10m','u_30m','u_120m','v_srf','v_10m','v_30m','v_120m']
             df = df[['lat','lon','SST','u_srf','v_srf','u_10m','v_10m','u_30m','v_30m','u_120m','v_120m']]
