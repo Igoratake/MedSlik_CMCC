@@ -1,8 +1,8 @@
-Aboozar
-26.96          API of Oil
-0.893          Density of Oil
-0.934          Residual Density of Oil
-65.48          Residual Percent of Oil
-36.60          Viscosity of Oil
-20.00          Temperature at which Viscosity determined
-0.379          Vapour Pressure of Oil (bar)
+Arabian medium
+30.80          API of Oil
+0.872          Density of Oil
+0.945          Residual Density of Oil
+61.22          Residual Percent of Oil
+9.40          Viscosity of Oil
+38.00          Temperature at which Viscosity determined
+0.221          Vapour Pressure of Oil (bar)

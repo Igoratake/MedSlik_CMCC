@@ -11,7 +11,7 @@ Model Parameters for Medslik Simulation
 0.00001          Vertical Diffusivity above the thermocline
 0.00001          Vertical Diffusivity below the thermocline
 30.0             Depth of the thermocline
-90000            No of parcels used to model diffusion and dispersion
+25000            No of parcels used to model diffusion and dispersion
 10.  30.   120.  Depths (3) at which velocities are printed in the forecast files
 00               Depth level of water velocity used for slick convection - surface = 0
 Evaporation Parameters

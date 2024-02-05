@@ -15,6 +15,7 @@ import plotly.figure_factory as ff
 import os
 import sys
 import time
+import math
 import datetime
 import subprocess
 import threading
@@ -27,27 +28,27 @@ from scripts import *
 # ================= DATA FORMAT INPUTS ================= #
 type            = 'analysis' ### other options: reanalysis
 time_res        = 'day'      ### other options: 1h
-process_files   = False       ### False if data is already present
+process_files   = True       ### False if data is already present
 
 # ================= MEDSLIK MODEL INPUTS ================= #
 simdir          = 'cases/'
-simname         = 'taranto_juno' ### Simulation name - format (string)
-sim_date        = '23/11/2023'     ### Simulation start day  - format DD/MM/YYYY (string)
-sim_hour        = '13:00'          ### Simulation start hour - format HH:mm (string)
-longitude       = 17.21558          ### Longitude of Simulation spill location - format Decimal degrees (float)
-latitude        = 40.09278          ### Latitude of Simulation spill  - format Decimal degrees (float)
-sim_lenght      = 24              ### Length of the simulation - format hours (int)
+simname         = 'saudi_arabia_juno' ### Simulation name - format (string)
+sim_date        = '30/01/2024'     ### Simulation start day  - format DD/MM/YYYY (string)
+sim_hour        = '02:36'          ### Simulation start hour - format HH:mm (string)
+longitude       = 50.380360         ### Longitude of Simulation spill location - format Decimal degrees (float)
+latitude        = 27.886990          ### Latitude of Simulation spill  - format Decimal degrees (float)
+sim_lenght      = 48              ### Length of the simulation - format hours (int)
 spill_duration  = 0              ### Duration of the spill - format hours (int)
-oil_api         = 26.96               ### Oil API - format (float)
-oil_volume      = 1000           ### Volume of oil in tons - format (float) 
+oil_api         = 30.8               ### Oil API - format (float)
+oil_volume      = 0.18904           ### Volume of oil in tons - format (float) 
 use_satellite   = False            ### Usage of Satellite imagery to model multiple slicks - True/False
-use_slk_contour = False            ### Usage of slicks countours - True/False
-number_slick    = 1                ### Number of slicks to be simulated - format (int)
+use_slk_contour = True            ### Usage of slicks countours - True/False
+number_slick    = 16                ### Number of slicks to be simulated - format (int)
 
 # ================= ENVIRONMENTAL FORCINGS  ================= #
 #Select either a fixed delta for lat and lon or specify the bounding box
 loc                 = 'med'
-delta               = 0.0              ### Standard delta to collect an area around lat and discharge point - format degrees (float)
+delta               = 0.5              ### Standard delta to collect an area around lat and discharge point - format degrees (float)
 if delta == 0:
     lat_min         = 38.19
     lat_max         = 42.01
@@ -64,15 +65,15 @@ if spill_duration != 0:
     spill_rate = oil_volume/spill_duration
 else:
     spill_rate = oil_volume
-
+    
 if __name__ == '__main__':
    
     ############# INITIAL CHECKING AND DOWNLOAD #############
     # Check if coordinates are on sea
     sea =  check_land(longitude,latitude)    
 
-    if sea==0:
-        raise ValueError('Coordinates values are on land. Try another location')
+    # if sea==0:
+    #     raise ValueError('Coordinates values are on land. Try another location')
     
     # Simulation dates
     dt_sim = validate_date(sim_date + ' ' + sim_hour)
@@ -80,11 +81,18 @@ if __name__ == '__main__':
     if isinstance(dt_sim,str):
         raise ValueError('Wrong date format.')
     
-    path = '/data/inputs/METOCEAN/rolling/model/ocean/CMS/GlobOce/MERCATOR/3.0analysis/day/'
+    ###### Analysis ######
+    an_path = '/data/inputs/METOCEAN/rolling/model/ocean/CMS/GlobOce/MERCATOR/3.0analysis/day'
     
     #transforming the directories in an array to search the correct dir for each day faster
-    l = glob('/data/inputs/METOCEAN/rolling/model/ocean/CMS/GlobOce/MERCATOR/3.0analysis/day/*')
+    l = glob(an_path+'/*')
     ll = np.asarray([int(x.split('/')[-1]) for x in l])
+
+    ###### Simulation ######
+    sim_path = '/data/inputs/METOCEAN/rolling/model/ocean/CMS/GlobOce/MERCATOR/2.0simulation/day'
+
+    ###### Forecast ######
+    fcst_path = '/data/inputs/METOCEAN/rolling/model/ocean/CMS/GlobOce/MERCATOR/1.0forecast/day'
         
     ############# PRE PROCESSING DATA AND FILES #############
     #Creating all directories    
@@ -114,20 +122,57 @@ if __name__ == '__main__':
             month = str(date.month).zfill(2)
             year = str(date.year)
 
-            #Select the correct dir
-            week_dir = ll[ll >= int(year+month+day)].min() 
+            #Checking if date is already avaliable on analysis directory
+            an_data = ll[ll >= int(year+month+day)]            
 
             #reading all the daily files in respective directory and storing it into case dir
             for var,varr in zip(['TEMP','RFVL'],['temp','curr']):
-                filename = f'{week_dir}/{year}{month}{day}*{var}*GLO*.nc'
+                
+                # if an_data.size != 0: #meaning there is data on this day
+                if an_data.size > 0:
+                    print(f'For {day}/{month}/{year} - Analysis files will be used')
+                    #Select the correct dir
+                    week_dir = ll[ll >= int(year+month+day)].min()
+                    filename = f'{week_dir}/{year}{month}{day}*{var}*GLO*.nc'              
+                    path_f = os.path.join(an_path,filename)
+                    #searches for the file in the data dir
+                    file = glob(path_f)
 
-                path_f = os.path.join(path,filename)
-                #searches for the file in the data dir
-                file = glob(path_f)
+                    #opening all netcdf available for the date in the date range
+                    ds = xr.open_mfdataset(file)
+                
+                else: # Try to use simulation on that day or forecast
+                    try: #simulation
+                        print(f'For {day}/{month}/{year} - Forecast files will be used')
+                        filename = f'{sim_path}/{year}{month}{day}/{year}{month}{day}*{var}*GLO*.nc'
+                        #searches for the file in the data dir
+                        file = glob(filename)
 
-                ds = xr.open_mfdataset(file)
+                        #opening all netcdf available for the date in the date range
+                        ds = xr.open_mfdataset(file)
+                           
+                    except:                         
+                        print(f'For {day}/{month}/{year} - Analysis files will be used')
 
-                ds = ds.rename({'longitude':'lon','latitude':'lat'})
+                        #Using the simulation date
+                        day_f = str(dt_sim.day).zfill(2)
+                        month_f = str(dt_sim.month).zfill(2)
+                        year_f = str(dt_sim.year)
+
+                        filename = f'{fcst_path}/{year_f}{month_f}{day_f}/{year}{month}{day}*{var}*GLO*.nc'
+                        #searches for the file in the data dir
+                        file = glob(filename)
+
+                        #opening all netcdf available for the date in the date range
+                        ds = xr.open_mfdataset(file)    
+
+                #opening all netcdf available for the date in the date range
+                # ds = xr.open_mfdataset(file)
+
+                try:
+                    ds = ds.rename({'longitude':'lon','latitude':'lat'})
+                except:
+                    pass
 
                 #Trimming into smaller regional box
                 ds = ds.sel(lon = slice(lon_min,lon_max),
@@ -142,7 +187,7 @@ if __name__ == '__main__':
                 tot.to_netcdf(f'cases/{simname}/oce_files/{varr}_{year}{month}{day}_{simname}.nc')
             
         #opening all files in the directory and concatenating them automatically through open_mfdataset
-        concat = xr.open_mfdataset(f'cases/{simname}/oce_files/*.nc')
+        concat = xr.open_mfdataset(f'cases/{simname}/oce_files/*.nc')#,combine='nested')
         concat = concat.drop_duplicates(dim="time", keep="last")
 
         #Interpolating the values in time, transforming it from daily to hourly values
@@ -196,12 +241,23 @@ if __name__ == '__main__':
             day = str(date.day).zfill(2)
             month = str(date.month).zfill(2)
             year = str(date.year)
-            #Searching the path based on dates
-            path = f'/data/inputs/METOCEAN/rolling/model/atmos/ECMWF/IFS_010/3.1analysis/6h/netcdf/{year}{month}{day}/'
-            file = glob(path + '*.nc')
+            #Searching the path based on dates and location
 
-            met = xr.open_mfdataset(file) 
-            met = met[['U10M','V10M']]            
+            
+
+            #if location or northern hemisphere
+            # if latitude > 10:
+            #     path = f'/data/inputs/METOCEAN/rolling/model/atmos/ECMWF/IFS_010/3.1analysis/6h/netcdf/{year}{month}{day}/'
+            #     file = glob(path + '*.nc')
+            #     met = xr.open_mfdataset(file) 
+                
+            # else:
+            #     path = f'/data/inputs/METOCEAN/rolling/model/atmos/NCEP/GFS_025/3.1analysis/6h/netcdf/{year}{month}{day}'
+            #     file = f'{path}/{year}{month}{day}-NCEP---GFS025-GFS-b{year}{month}{day}_antmp-fv01.nc'
+            #     met = xr.open_dataset(file)
+            #     met = met.rename({'10u':'U10M','10v':'V10M'})
+            
+            met = met[['U10M','V10M']]
 
             #Trimming into smaller regional box
             met = met.sel(lon = slice(lon_min,lon_max),
@@ -211,7 +267,7 @@ if __name__ == '__main__':
             met.to_netcdf(f'cases/{simname}/met_files/{year}{month}{day}_{simname}.nc')
 
         concat = xr.open_mfdataset(f'cases/{simname}/met_files/*.nc',combine='nested')
-        concat = concat.drop_duplicates(dim="time", keep="last")
+        concat = concat.drop_duplicates(dim="time", keep="first")
         concat = concat.resample(time="1H").interpolate("linear")
 
         #iterating at each hour to generate the .eri files
@@ -269,7 +325,7 @@ if __name__ == '__main__':
 
     # gshhs in intermediate resolution
     subprocess.run([f'{sys.executable}', 'scripts/pre_processing/preproc_gshhs_mdk2.py', 
-                    'data/gshhs/h/GSHHS_h_L1.shp',
+                    'data/gshhs/f/GSHHS_f_L1.shp',
                     grid_string, f'{simdir}{simname}/bnc_files/'])
 
     ############################ PREPARING FILES TO RUN THE SIMULATION ############################
@@ -278,16 +334,30 @@ if __name__ == '__main__':
     print('Preparing configuration files... ')
 
     # get dimensions from ncfiles
-    for var in ['votemper','thetao','uo','vo']:
+    #currents
+    my_o = xr.open_dataset(glob(f'cases/{simname}/oce_files/*nc')[0])
+
+    variables_to_rename = {'depthu': 'depth', 'depthv': 'depth', 'deptht': 'depth',
+                           'votemper':'thetao',
+                           'vozocrtx':'uo',
+                           'vomecrty':'vo',
+                           'time_counter':'time'}
+    
+    # Rename variables only if they exist in the dataset
+    for old_name, new_name in variables_to_rename.items():
+        if old_name in my_o.variables:
+            my_o = my_o.rename({old_name: new_name})
+
+    for var in ['uo','vo','thetao']:
         try:
-            my_o = xr.open_dataset(glob(f'cases/{simname}/oce_files/*nc')[0]).isel(depth=0,time=0)[var].values.shape
+            my_o = my_o.isel(time=0,depth=0)[var].values.shape
             found_variable = True
         except:
             continue
         if not found_variable:
-            raise ValueError("Check the sea state variables available in your dataset")
-        found_variable = False
+            raise ValueError("Check the air state variables available in your dataset")
 
+    #wind
     for var in ['U10M','u10']:
         try:
             my_w = xr.open_dataset(glob(f'cases/{simname}/met_files/*nc')[0]).isel(time=0)[var].values.shape
@@ -383,6 +453,7 @@ if __name__ == '__main__':
     # copy Extract and config files
     subprocess.run([f'cp {simdir}{simname}/xp_files/medslik_II.for MEDSLIK_II_3.01/RUN/MODEL_SRC/'],shell=True)
     subprocess.run([f'cp {simdir}{simname}/xp_files/config1.txt MEDSLIK_II_3.01/RUN/'],shell=True)
+    subprocess.run([f'cp {simdir}{simname}/xp_files/config2.txt MEDSLIK_II_3.01/RUN/'],shell=True)
 
     ############################ RUN THE SIMULATION ############################
 

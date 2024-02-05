@@ -10,6 +10,11 @@ def interp_gebco(gebco,grid):
 	grid = xr.open_dataset(grid)
 	gebco = xr.open_dataset(gebco)
 
+	try:
+		grid = grid.rename({'nav_lat':'lat','nav_lon':'lon'})
+	except:
+		pass
+
 	# interpolation on medslik grid
 	med = gebco.interp(lon=grid.lon.values.tolist(),lat=grid.lat.values.tolist())
 	#converting from begative depths to positive
