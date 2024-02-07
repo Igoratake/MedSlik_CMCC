@@ -3,14 +3,14 @@ import xarray as xr
 import geopandas as gpd
 import cartopy.crs as ccrs
 from shapely.geometry import Point
-from folium.plugins import HeatMap
-from streamlit_folium import st_folium,folium_static
+# from folium.plugins import HeatMap
+# from streamlit_folium import st_folium,folium_static
 
 #numerical and plotting libs
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import plotly.figure_factory as ff
+# import plotly.figure_factory as ff
 
 #system libs
 import os
