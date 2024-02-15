@@ -22,24 +22,28 @@ from functions.medslik_utils import *
 from scripts import *
 
 simdir         = 'cases/'
-simname        = 'algeria'
-sim_date       = '06/08/2008' ### Simulation start day  - format DD/MM/YYYY (string)
-sim_hour       = '09:51'      ### Simulation start hour - format HH:mm (string)
-longitude       = 6        ### Longitude of Simulation spill location - format Decimal degrees (float)
-latitude        = 38          ### Latitude of Simulation spill  - format Decimal degrees (float)
-sim_lenght      = 36              ### Length of the simulation - format hours (int)
-spill_duration  = 0              ### Duration of the spill - format hours (int)
-oil_api         = 22               ### Oil API - format (float)
-oil_volume      = 240           ### Volume of oil in tons - format (float) 
+simname        = 'lebanon102'
+sim_date       = '13/07/2006' ### Simulation start day  - format DD/MM/YYYY (string)
+sim_hour       = '08:00'      ### Simulation start hour - format HH:mm (string)
+longitude       = 35.16667        ### Longitude of Simulation spill location - format Decimal degrees (float)
+latitude        = 33.38333          ### Latitude of Simulation spill  - format Decimal degrees (float)
+sim_lenght      = 660              ### Length of the simulation - format hours (int)
+spill_duration  = 144              ### Duration of the spill - format hours (int)
+oil_api         = 20               ### Oil API - format (float)
+oil_volume      = 130.35*144           ### Volume of oil in tons - format (float) 
 use_satellite   = False            ### Usage of Satellite imagery to model multiple slicks - True/False
-use_slk_contour = True            ### Usage of slicks countours - True/False
-separate_slicks = True         ### If the sim needs different slicks to have different properties, different sims have to be run
+use_slk_contour = False            ### Usage of slicks countours - True/False
+separate_slicks = False         ### If the sim needs different slicks to have different properties, different sims have to be run
 number_slick    = 1                ### Number of slicks to be simulated - format (int)
 
 if separate_slicks:
     #Using this will create different config files according to the length of the information list
-    s_volume = [240,225,215]
-    s_rate   = [0,0,0]
+    #Algeria
+    # s_volume = [240,225,215]
+    # s_rate   = [0,0,0]
+    #Elba
+    s_volume = [34,1,6,8,3,6,5]
+    s_rate   = [0,0,0,0,0,0,0]
 
 # Obtaining spill rate from oil volume and spill duration
 if spill_duration != 0:
@@ -142,7 +146,7 @@ if __name__ == '__main__':
     dtini = dt_sim - datetime.timedelta(days=1)
          
     #End date, by safety margin is two days after the sim start + sim length
-    dtend = dt_sim + datetime.timedelta(days= (sim_lenght/24) + 2) 
+    dtend = dt_sim + datetime.timedelta(days = (sim_lenght/24) + 2) 
 
     #List of dates between initial and end date
     date_list = pd.date_range(dtini, dtend, freq='D')
@@ -164,9 +168,10 @@ if __name__ == '__main__':
         try:
             dt = pd.to_datetime(rec.time.values)
         except:
-            dt = datetime.datetime.strptime(str(rec.time.values),'%Y-%m-%d %H:%M:%S')
-        else:
-            raise ValueError('Datetime from the dataset in on an unknown format')
+            try:
+                dt = datetime.datetime.strptime(str(rec.time.values),'%Y-%m-%d %H:%M:%S')
+            except:
+                raise ValueError('Datetime from the dataset in on an unknown format')
         
         #transforms it from xarray datset to pandas dataframe to facilitate the processes of adjusting values
         df = rec.to_dataframe().reset_index()
@@ -218,7 +223,10 @@ if __name__ == '__main__':
             date2 = f'{incremental.year}-{incremental.month:02d}-{incremental.day:02d} 01:00'
             met = concat.sel(time = slice(date1,date2))
             #getting date from the netcdf
-            dt = pd.to_datetime(met.time[0].values)
+            try:
+                dt = pd.to_datetime(met.time[0].values)
+            except:
+                dt = datetime.datetime.strptime(str(met.time[0].values),'%Y-%m-%d %H:%M:%S')
             df = met.to_dataframe().reset_index()
             df = df.fillna(9999)
             df = df.pivot(index=['lat','lon'],columns='time',values=['U10M','V10M']).reset_index()
@@ -262,7 +270,7 @@ if __name__ == '__main__':
 
     # # gshhs in intermediate resolution
     subprocess.run([f'{sys.executable}', 'scripts/pre_processing/preproc_gshhs_mdk2.py', 
-                    'data/gshhs/GSHHS_shp/i/GSHHS_i_L1.shp',
+                    'data/gshhs/GSHHS_shp/f/GSHHS_f_L1.shp',
                     grid_string, f'{simdir}{simname}/bnc_files/'])
     
     ##### CONFIG FILES ##### 

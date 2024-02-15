@@ -5,7 +5,7 @@ The intent is to reduce the size of the files, so one can run the siulation with
 
 After this transformation, original pre processing scripts will not work on these slice data. Please use the ones found on the container
 
-This script works exclusively with Algeria Case for version 1.02, which can be found on the following link if you have been subscribed
+This script works exclusively with Lebanon Case for version 1.02, which can be found on the following link if you have been subscribed
 
 http://www.medslik-ii.org/data/cases/Algeria_test_case.tar.gz
 '''
@@ -16,9 +16,10 @@ import xarray as xr
 from glob import glob
 
 #Update these paths according to where the original files have been downloaded/saved
-path_origin = '/Users/iatake/Downloads/Simulation results/V1.02/original/Algeria_test_case/'
+path_origin = '/Users/iatake/Downloads/Simulation results/V1.02/original/Lebanon_test_case/'
 #Update these paths according to where the cropped files will be saved
-path_destin = '/Users/iatake/Dropbox (CMCC)/Work/MEDSLIK-II and Pyslick/Medslik-II/cases/algeria/'
+path_destin = '/Users/iatake/Dropbox (CMCC)/Work/MEDSLIK-II and Pyslick/Medslik-II/cases/lebanon/'
+
 
 #Characteristics of Algeria Oil spill to facilitate the data slicing
 lon_min, lon_max = 4,8
@@ -118,4 +119,4 @@ for day in ['06','07','08']:
                   lat = slice(lat_max,lat_min))
     
     #saving the sampled netcdf in cases directory
-    met.to_netcdf(path_destin + f'met_files/Wind_Med_slice_{day}_Algeria.nc')
+    met.to_netcdf(path_destin + f'met_files/Wind_Med_slice_200808{day}_Algeria.nc')

@@ -22,7 +22,7 @@ from functions.medslik_utils import *
 from scripts import *
 
 simdir         = 'cases/'
-simname        = 'algeria'
+simname        = 'elba'
 separate_slicks = True         ### If the sim needs different slicks to have different properties, different sims have to be run
 
 def run_medslik_sim(separate_slicks = False):
@@ -41,7 +41,7 @@ def run_medslik_sim(separate_slicks = False):
         subprocess.run([f'cd MEDSLIK_II_3.01/RUN/; sh MODEL_SRC/compile.sh; ./RUN.sh'],shell=True,check=True)        
     
     else:
-        slicks = glob('cases/algeria/xp_files/*/')
+        slicks = glob(f'{simdir}{simname}/xp_files/*/')
         for i in range(0,len(slicks)):
             subprocess.run([f'cp {simdir}{simname}/oce_files/*.mrc MEDSLIK_II_3.01/RUN/TEMP/OCE/'],shell=True)
             subprocess.run([f'cp {simdir}{simname}/met_files/*.eri MEDSLIK_II_3.01/RUN/TEMP/MET/'],shell=True)
