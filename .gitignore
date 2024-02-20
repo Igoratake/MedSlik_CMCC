@@ -1,4 +1,8 @@
 ./.git/objects/pack/pack-fc27b1d307d8fe3d9fa5abc3c748b3ca58e9dc6e.pack
 ./.git/objects/99/858676629949dd9361225868bfd7b7550683b3
-./data/gebco/*
-./data/gshhs/*
+data/gebco/GEBCO_2023.nc
+data/gshhs/f/GS*
+data/gshhs/h/GS*
+data/gshhs/i/GS*
+data/gshhs/c/GS*
+data/gshhs/l/GS*
