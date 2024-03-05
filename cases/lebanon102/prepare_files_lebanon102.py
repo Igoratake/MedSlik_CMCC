@@ -22,8 +22,8 @@ path_origin = '/Users/iatake/Downloads/Simulation results/V1.02/original/Lebanon
 path_destin = '/Users/iatake/Dropbox (CMCC)/Work/MEDSLIK-II and Pyslick/Medslik-II/cases/lebanon102/'
 
 #Characteristics of Algeria Oil spill to facilitate the data slicing
-lon_min, lon_max = 35,36
-lat_min, lat_max = 33.5,35
+lon_min, lon_max = 34.5,36
+lat_min, lat_max = 33,35
 
 #Dictionary containing names with the possibility to rename
 variables_to_rename = {'depthu': 'depth', 'depthv': 'depth', 'deptht': 'depth',

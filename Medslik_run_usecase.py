@@ -23,7 +23,7 @@ from scripts import *
 
 simdir         = 'cases/'
 simname        = 'elba'
-separate_slicks = True         ### If the sim needs different slicks to have different properties, different sims have to be run
+separate_slicks = False        ### If the sim needs different slicks to have different properties, different sims have to be run
 
 def run_medslik_sim(separate_slicks = False):
 
@@ -60,4 +60,4 @@ def run_medslik_sim(separate_slicks = False):
 
 if __name__ == '__main__':
 
-    run_medslik_sim(separate_slicks=True)
+    run_medslik_sim(separate_slicks=separate_slicks)

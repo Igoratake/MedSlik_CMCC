@@ -47,7 +47,7 @@ def generate_coastline_gshhs(gshhs,grid,output_dir):
 	shp = gpd.GeoDataFrame(geometry = shp)
 
 	#removing any multiline strings left on the shapefile
-	shp = shp.explode()
+	shp = shp.explode(index_parts=True)
 
 	# writes the first line of the .map file. It should contain the # of "isles"
 	CoastFile=open(output_file,'w')
