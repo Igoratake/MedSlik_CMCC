@@ -13,7 +13,7 @@ minutes=00
 # insert oil slick data: coordinate of the center of the slick
 
 lat_degree=33
-lat_minutes=23.000
+lat_minutes=41.000
 lon_degree=35
 lon_minutes=10.000
 

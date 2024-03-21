@@ -163,7 +163,7 @@ if __name__ == '__main__':
     #Call write mrc function located in medslik.utils file
     write_mrc(concat,simname=simname)
 
-     ##### WINDS ##### 
+    ##### WINDS ##### 
 
     concat = xr.open_mfdataset(f'cases/{simname}/met_files/*.nc',combine='nested')
     concat = concat.drop_duplicates(dim="time", keep="first")

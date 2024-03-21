@@ -38,12 +38,11 @@ number_slick    = 1                ### Number of slicks to be simulated - format
 
 if separate_slicks:
     #Using this will create different config files according to the length of the information list
-    #Algeria
-    # s_volume = [240,225,215]
-    # s_rate   = [0,0,0]
     #Elba
     s_volume = [34,1,6,8,3,6,5]
     s_rate   = [0,0,0,0,0,0,0]
+    s_lat    = [42.9675,42.958,42.9625,42.9625,42.964,42.953,42.9775]
+    s_lon    = [10.0075,9.985,9.9935,10.0175,10.023,9.98,10.0175]
 
 # Obtaining spill rate from oil volume and spill duration
 if spill_duration != 0:
@@ -51,7 +50,7 @@ if spill_duration != 0:
 else:
     spill_rate = oil_volume
 
-def write_config_files(separate_slicks=False,s_volume=None,s_rate=None,s_num=None):
+def write_config_files(separate_slicks=False,s_volume=None,s_rate=None,s_num=None,s_lat=None,s_lon=None):
 
      # # modify config_1.txt
     print('...config1.txt...')
@@ -82,17 +81,30 @@ def write_config_files(separate_slicks=False,s_volume=None,s_rate=None,s_num=Non
     search_and_replace(config_file, 'SIMLENGTH', f'{sim_lenght:04d}') 
 
     #  adding spill coordinates - dd for degrees and mm for minutes
-    # Latitude
-    dd = int(latitude)
-    mm = (float(latitude)-dd)*60
-    search_and_replace(config_file, 'LATd', f'{dd:02d}')
-    search_and_replace(config_file, 'LATm', f'{mm:.3f}')          
+    if separate_slicks == False:
+        # Latitude
+        dd = int(latitude)
+        mm = (float(latitude)-dd)*60
+        search_and_replace(config_file, 'LATd', f'{dd:02d}')
+        search_and_replace(config_file, 'LATm', f'{mm:.3f}')    
     
-    # Longitude
-    dd = int(longitude)
-    mm = (float(longitude)-dd)*60
-    search_and_replace(config_file, 'LONd', f'{dd:02d}')
-    search_and_replace(config_file, 'LONm', f'{mm:.3f}')
+        # Longitude
+        dd = int(longitude)
+        mm = (float(longitude)-dd)*60
+        search_and_replace(config_file, 'LONd', f'{dd:02d}')
+        search_and_replace(config_file, 'LONm', f'{mm:.3f}')
+    else:
+        # Latitude
+        dd = int(s_lat)
+        mm = (float(s_lat)-dd)*60
+        search_and_replace(config_file, 'LATd', f'{dd:02d}')
+        search_and_replace(config_file, 'LATm', f'{mm:.3f}')    
+    
+        # Longitude
+        dd = int(s_lon)
+        mm = (float(s_lon)-dd)*60
+        search_and_replace(config_file, 'LONd', f'{dd:02d}')
+        search_and_replace(config_file, 'LONm', f'{mm:.3f}')
 
     # spill duration
     if separate_slicks == False:
@@ -248,8 +260,8 @@ if __name__ == '__main__':
     search_and_replace(med_for, 'NMAX', str(nmax))
 
     if separate_slicks:
-        for i, (vol, dur) in enumerate(zip(s_volume,s_rate)):
-            write_config_files(separate_slicks=True,s_volume=vol,s_rate=dur,s_num=i)
+        for i, (vol, dur,lat,lon) in enumerate(zip(s_volume,s_rate,s_lat,s_lon)):
+            write_config_files(separate_slicks=True,s_volume=vol,s_rate=dur,s_num=i,s_lat=lat,s_lon=lon)
 
     else:
         write_config_files()

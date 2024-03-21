@@ -13,9 +13,9 @@ minutes=38
 # insert oil slick data: coordinate of the center of the slick
 
 lat_degree=42
-lat_minutes=58.500
+lat_minutes=57.750
 lon_degree=10
-lon_minutes=0.000
+lon_minutes=1.050
 
 # insert oil slick data: spill rate, spill duration and age
 
