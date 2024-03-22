@@ -132,4 +132,4 @@ EXPOSE 8000
 
 # Run the application.
 #This command allows to navigate and test the code in the docker machine. This will not be like this in the future
-CMD ["sleep","3600"]
+CMD ["sleep","15000"]
